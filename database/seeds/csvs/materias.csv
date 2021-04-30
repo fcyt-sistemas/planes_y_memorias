@@ -1,0 +1,229 @@
+codigo,nombre,periodo_lectivo,carga_horaria
+3101,Introducción a la Criminalística,Cuatrimestral,3
+3102,Planimetría,Cuatrimestral,6
+3103,Derecho Penal y Civil en Peritaje,Cuatrimestral,4
+3104,Derecho Constitucional,Cuatrimestral,4
+3105,Matemática,Anual,3
+3106,Física I,Anual,3
+3107,Química I,Anual,3
+3108,Papiloscopía I,Anual,6
+3109,Inglés Técnico I,Anual,3
+3110,Balística I,Anual,6
+3209,Derecho Procesal Penal y Civil,Cuatrimestral,4
+3210,Fotografía,Cuatrimestral,3
+3211,Estadística,Cuatrimestral,3
+3212,Video Filmación I,Cuatrimestral,4
+3213,Deontología Profesional,Cuatrimestral,3
+3214,Balística II,Anual,6
+3215,Física II,Anual,3
+3216,Química II,Anual,3
+3217,Informática I,Anual,2
+3218,Práctica Pericial Papiloscópica,Anual,6
+3219,Inglés Técnico II,Anual,3
+3220,Práctica Pericial Balística,Anual,3
+3221,Papiloscopía II,Anual,6
+3320,Accidentología Vial,Cuatrimestral,0
+3321,Criminología,Cuatrimestral,
+3322,Video Filmación II,Anual,
+3323,Documentología I,Anual,
+3324,Química III,Anual,
+3325,Psicología Social I,Anual,
+3326,Informática II,Anual,
+3327,Inglés Técnico III,Anual,
+3427,Artes Gráficas,Cuatrimestral,
+3428,Psicología Social II,Cuatrimestral,
+3429,Metodología de la Investigación,Anual,
+3430,Documentología II,Anual,
+3431,Medicina Legal,Anual,
+3432,Química IV,Anual,
+3433,Informática III,Anual,
+3434,Práctica Pericial,Anual,
+9101,Introducción a la Accidentología Vial,Anual,0
+9102,Matemática I,Anual,
+9103,Derecho I (Constitucional),Anual,
+9104,Física I,Anual,
+9105,Mecánica I,Cuatrimestral,
+9106,Mecánica II,Cuatrimestral,
+9207,Matemática II,Anual,
+9208,Derecho II (Penal y Civil),Anual,
+9209,Práctica Pericial I,Anual,
+9210,Planimetría I,Cuatrimestral,
+9211,Informática I,Cuatrimestral,
+9212,Física II,Cuatrimestral,
+9213,Informática II,Cuatrimestral,
+9214,Planimetría II,Cuatrimestral,
+9315,Fotografía Judicial Aplicada,Anual,
+9316,Derecho III (Procesal y Civil),Anual,
+9317,Accidentología Vial I,Anual,
+9318,Práctica Pericial II,Anual,
+9319,Fundamentos de Tránsito y Régimen Vigente,Cuatrimestral,
+9320,Deontología Pericial,Cuatrimestral,
+9321,Medicina Legal aplicada a la Accidentología Vial,Cuatrimestral,
+9322,Química Legal,Cuatrimestral,
+9423,Accidentología Vial II,Anual,
+9424,Metodología de la Investigación Científica,Anual,
+9425,Práctica Pericial III,Anual,
+9426,Técnicas de Filmación,Cuatrimestral,
+9427,Estadística y Probabilidad Accidentológica,Cuatrimestral,
+9428,Prevención y Educación Vial,Cuatrimestral,
+9429,Informática III,Cuatrimestral,
+9430,Coordinación Operativa,Cuatrimestral,
+9431,Portugués I,Anual,
+9432,Portugués II,Anual,
+9433,Inglés Técnico I,Anual,
+9434,Inglés Técnico II,Anual,
+9435,Tesis,Anual,
+3435,Tesis,,
+24101,Metodología de Estudio,Cuatrimestral,2
+24102,Derecho Constitucional,Cuatrimestral,3
+24103,Introducción a la Química,Cuatrimestral,3
+24104,Derecho Civil y Penal en el Peritaje,Cuatrimestral,4
+24105,Fotografía Pericial,Cuatrimestral,3
+24106,Matemática I,Anual,3
+24107,Fisíca I,Anual,3
+24108,Inglés Técnico I,Anual,3
+24109,Derechos Humanos,Cuatrimestral,2
+24111,Introducción a la Criminalistica,Cuatrimestral,3
+24113,Química Orgánica,Cuatrimestral,3
+24213,Derecho Procesal Civil y Penal,Cuatrimestral,4
+24214,Video Filmación,Anual,3
+24216,Inglés Técnico II,Anual,3
+24222,Química Documentológica,Cuatrimestral,3
+24322,Artes Gráficas,Cuatrimestral,3
+24323,Deontología Profesional,Cuatrimestral,2
+24327,Documentología I,Anual,4
+24329,Informática II,Anual,4
+24330,Portugués,Anual,3
+24432,Psicología General,Cuatrimestral,2
+24439,Documentología II,Anual,4
+24443,Práctica Pericial Documentológica,Anual,4
+24215,Informática I,Anual,2
+29101,Metodología de Estudio,Cuatrimestral,2
+29102,Introducción a la Accidentología Vial,Anual,4
+29103,Planimetría,Anual,5
+29104,Matemática I,Anual,4
+29105,Derecho Constitucional,Cuatrimestral,3
+29106,Mecánica,Anual,5
+29107,Física I,Anual,3
+29108,Portugués I,Anual,3
+29109,Introducción a la Química,Cuatrimestral,3
+29210,Derecho Civil y Penal,Anual,4
+29211,Matemática II,Anual,4
+29212,Práctica Pericial I,Anual,5
+29213,Fotografía,Cuatrimestral,3
+29214,Física II,Anual,4
+29215,Portugués II,Anual,3
+29216,Informática I,Anual,4
+29217,Química Legal,Cuatrimestral,3
+29318,Derecho Procesal Civil y Penal,Anual,3
+29319,Derechos Humanos,Cuatrimestral,2
+29320,Video Filmación,Cuatrimestral,3
+29321,Accidentología Vial,Anual,5
+29322,Práctica Pericial II,Anual,5
+29323,Deontología Profesional,Cuatrimestral,3
+29324,Inglés I,Anual,3
+29325,Informática II,Anual,4
+29326,Fundamentos de Tránsito y Régimen Vigente,Cuatrimestral,3
+29438,Proyecto Final,Anual,4
+29428,Práctica Pericial III,Anual,5
+29429,Estadística,Cuatrimestral,3
+29430,Prevención y Educación Vial,Cuatrimestral,3
+29431,Psicología General,Cuatrimestral,2
+29432,Sociología,Cuatrimestral,2
+25101,Metodologia de Estudio,Cuatrimestral,2
+29433,Psicología Social,Cuatrimestral,2
+29434,Inglés II,Anual,3
+29435,Medicina Legal Aplicada,Cuatrimestral,2
+29436,Metodología de la Investigación,Cuatrimestral,5
+29437,Coordinación Siniestral,Cuatrimestral,4
+25102,Derecho Constitucional,Cuatrimestral,3
+25103,Introducción a la Química,Cuatrimestral,3
+25104,Derecho Civil y Penal en el Peritaje,Cuatrimestral,4
+25105,Fotografía Pericial,Cuatrimestral,3
+25106,Matemática I,Anual,3
+25107,Física I,Anual,3
+25108,Inglés Técnico I,Anual,3
+25109,Derechos Humanos,Cuatrimestral,2
+25111,Introducción a la Criminalistica,Cuatrimestral,3
+25112,Planimetría,Anual,4
+25220,Química Balística,Cuatrimestral,3
+25213,Derecho Procesal Civil y Penal,Cuatrimestral,4
+25214,Video Filmación,Anual,3
+25215,Informática I,Anual,2
+25216,Inglés Técnico II,Anual,3
+25217,Matemática II,Anual,3
+25218,Física II,Anual,3
+25219,Balística I,Anual,5
+25323,Deontología Profesional,Cuatrimestral,2
+25325,Balística II,Anual,4
+25330,Portugués,Anual,3
+25331,Practica Pericial Balística,Anual,4
+26101,Metodología de Estudio,Cuatrimestral,2
+26102,Derecho Constitucional,Cuatrimestral,3
+26103,Introducción a la Química,Cuatrimestral,3
+26104,Derecho Civil y Penal en el Peritaje,Cuatrimestral,4
+26105,Fotografía Pericial,Cuatrimestral,3
+26106,Matemática I,Anual,3
+26107,Física I,Anual,3
+26108,Inglés Técnico I,Anual,3
+26109,Derechos Humanos,Cuatrimestral,2
+26111,Introducción a la Criminalistica,Cuatrimestral,3
+26213,Derecho Procesal Civil y Penal,Cuatrimestral,4
+26214,Video Filmación,Anual,3
+26215,Informática I,Anual,2
+26216,Inglés Técnico II,Anual,3
+26220,Papiloscopía I,Anual,5
+26323,Deontología Profesional,Cuatrimestral,2
+26326,Papiloscopía II,Anual,5
+26330,Portugués,Anual,3
+26332,Práctica Pericial Papiloscopica,Anual,4
+27101,Metodología de Estudio,Cuatrimestral,2
+27102,Derecho Constitucional,Cuatrimestral,3
+27103,Introducción a la Química,Cuatrimestral,3
+27104,Derecho Civil y Penal en el Peritaje,Cuatrimestral,4
+27105,Fotografía Pericial,Cuatrimestral,3
+27106,Matemática I,Anual,3
+27107,Física I,Anual,3
+27108,Inglés Técnico I,Anual,3
+27109,Derechos Humanos,Cuatrimestral,2
+27110,Química I,Cuatrimestral,4
+27111,Introducción a la Criminalistica,Cuatrimestral,3
+27112,Planimetría,Anual,4
+27213,Derecho Procesal Civil y Penal,Cuatrimestral,4
+27214,Video Filmación,Anual,3
+27215,Informática I,Anual,2
+27216,Inglés Técnico II,Anual,3
+27217,Matemática II,Anual,3
+27218,Física II,Anual,3
+27219,Balística I,Anual,5
+27220,Papiloscopía I,Anual,5
+27221,Química II,Anual,3
+27322,Artes Gráficas,Cuatrimestral,3
+27323,Deontología Profesional,Cuatrimestral,2
+27324,Accidentología Vial,Anual,3
+27325,Balística II,Anual,4
+27326,Papiloscopía II,Anual,4
+27327,Documentología I,Anual,4
+27328,Química III,Anual,3
+27329,Informática II,Anual,3
+27330,Portugués,Anual,3
+27443,Proyecto Final,Anual,4
+27432,Estadística,Cuatrimestral,3
+27433,Psicología General,Cuatrimestral,2
+27434,Sociología,Cuatrimestral,2
+27435,Metodología de la Investigación,Cuatrimestral,5
+27436,Psicología Social,Cuatrimestral,2
+27437,Criminología,Cuatrimestral,2
+27438,Psiquiatría Forense,Cuatrimestral,2
+27439,Medicina Legal,Anual,2
+27440,Documentología II,Anual,4
+27441,Química IV,Anual,3
+27442,Informática III,Anual,3
+29327,Epistemología,Cuatrimestral,3
+25110,Química I,Cuatrimestral,4
+25221,Química II,Anual,3
+25322,Artes Gráficas,Cuatrimestral,3
+25324,Accidentología Vial,Anual,3
+27331,Epistemología,Cuatrimestral,3
+25113,Química Orgánica,Cuatrimestral,3
+26333,Quimica Papiloscópica,Anual,6

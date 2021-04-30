@@ -1,0 +1,35 @@
+id,unidad_academica,codigo,nombre,plan_vigente,tipo_carrera,nro_resolucion
+1,FCYT,17,Tecnicatura Universitaria en Planeamiento Industrial,2003,R,042/02
+2,FCYT,19,Tecnicatura Universitaria en Granja y Producción Avícola,2001,R,ver
+3,FCYT,20,Tecnicatura en Balística,2006,R,907/03 | 860/06
+4,FCYT,21,Tecnicatura en Papiloscopía,2006,R,907/03 MECYT
+5,FCYT,22,Licenciatura en Criminalística,2005,C,200/07 MECYT
+6,FCYT,16,Tecnicatura Universitaria en Telecomunicaciones,2001,R,538/03|1668/06
+7,FCYT,23,Licenciatura en Accidentología Vial,2005,C,83/07 MECYT
+8,FCYT,31,Tecnicatura Universitaria en Producción Agropecuaria,2006,R,123/06
+9,FCYT,32,Licenciatura en Gestión Ambiental,2008,R,981/08 UADER
+10,FCYT,33,Licenciatura en Seguridad Pública,2008,C,ME 632-09
+11,FCYT,34,Licenciatura en Sistemas de Información,2010,C,1152-14 ME
+12,FCYT,36,Maestría en Geomática Aplicada a la Gestión de Riesgos Ambientales,2012,P,1461/12
+13,FCYT,37,Ingeniería en Telecomunicaciones,2015,C,300/14 CS
+14,FCYT,38,Licenciatura en Producción Agropecuaria - Ciclo de Complementación Curricular,2014,C,305-15
+15,FCYT,24,Tecnicatura en Documentología,2006,R,200/07 MCYT
+16,FCYT,15,Ingenieria en Telecomunicaciones con Orien. en Telematica,2000,C,xx
+17,FCYT,14,Tecnicatura Universitaria en Automatización y Control de Procesos Industriales,2003,R,691/03 MECyT
+18,FCYT,01,Licenciatura en Matemática,,C,UADER 029/00
+19,FCYT,02,Profesorado en Matemática,2001,C,MECYT 649/03
+20,FCYT,03,Profesorado en Física,2001,C,MECYT 614/03
+21,FCYT,04,Profesorado en Química,2001,C,MECYT 698/03
+22,FCYT,13,Ingeniería en Automatización y Control de Procesos Industriales,2001,C,xx
+23,FCYT,05,Profesorado en Educación Tecnológica,2001,C,MECYT 443/04
+24,FCYT,06,Licenciatura en Biología,2013,C,1191/07 MECYT
+25,FCYT,07,Profesorado en Biología,2001,C,MECYT 695/03
+26,FCYT,09,Tecnicatura en Acuicultura,2001,R,58/04 MECYT
+27,FCYT,10,Ingeniería en Sistemas Informáticos,2001,C,035/00
+28,FCYT,11,Licenciatura en Sistemas Informáticos,2001,C,148/05 MECyT
+29,FCYT,12,Análisis de Sistemas,2010,C,1610/15 MECyT
+30,FCYT,39,Profesorado de Educación Secundaria y Superior en Tecnología de la Información y la Comunicación,2016,C,2016-1989-E-APN
+31,FCYT,40,Licenciatura en Redes de Comunicaciones,2005,C,1668/06|538/03
+32,FCYT,41,Maestría en Ecología,2001,P,xx
+33,FCYT,42,Licenciatura en Automatización y Control de Procesos Industriales,2008,C,56-09 ME
+34,FCYT,43,Especialización en Educación Científica,2015,P,064/15 Con. Sup

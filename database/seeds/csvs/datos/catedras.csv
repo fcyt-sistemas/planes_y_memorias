@@ -1,0 +1,1536 @@
+"id","unidad_academica","codigo","nombre"
+1,FCYT,"25324",Accidentología Vial
+2,FCYT,"03320",Accidentología Vial
+3,FCYT,"27324",Accidentología Vial
+4,FCYT,"29321",Accidentología Vial
+5,FCYT,"09317",Accidentología Vial I
+6,FCYT,"09423",Accidentología Vial II
+7,FCYT,"09317",Acuicultura Orientada I
+8,FCYT,"09320",Acuicultura Orientada II
+9,FCYT,"19451",Administracion de Recursos Humanos
+10,FCYT,"15575",Administracion de Recursos Humanos
+11,FCYT,"31104",Administración Agropecuaria I
+12,FCYT,"31214",Administración Agropecuaria II
+13,FCYT,"19101",Administración I
+14,FCYT,"19211",Administración II
+15,FCYT,"33333",Administración Policial
+16,FCYT,"34531",Administración de Recursos
+17,FCYT,"22443",Administración de Recursos Humanos
+18,FCYT,"13568",Administración de Recursos Humanos
+19,FCYT,OP069,Administración y Gestión Empresarial
+20,FCYT,"37549",Administración y Gestión de Organizaciones
+21,FCYT,OP043,Aerobiología
+22,FCYT,OP089,Agricultura de Precisión
+23,FCYT,OP040,Agrostología
+25,FCYT,"37106",Algebra
+24,FCYT,"19107",Algebra
+26,FCYT,"02105",Algebra I
+27,FCYT,"01105",Algebra I
+28,FCYT,"02211",Algebra II (Lineal)
+29,FCYT,"01209",Algebra II (Lineal)
+30,FCYT,"02215",Algebra III
+31,FCYT,"01213",Algebra III
+32,FCYT,"13213",Algebra Lineal
+33,FCYT,"15213",Algebra Lineal
+34,FCYT,"12214",Algoritmos y Estructura de Datos
+35,FCYT,"34209",Algoritmos y Estructura de Datos
+36,FCYT,"34209",Algoritmos y Estructuras de Datos
+37,FCYT,"22454",Ambiente Industrial y Medio Ambiente
+38,FCYT,"15574",Ambiente Industrial y Medio Ambiente
+39,FCYT,"13567",Ambito Industrial Y Medio Ambiente
+40,FCYT,"31109",Anatomía Animal
+41,FCYT,"35215",Anatomía Vegetal
+42,FCYT,"08210",Anatomía Vegetal
+43,FCYT,"19102",Anatomía e Histología Aviar
+44,FCYT,"07215",Anatomía y Fisiología Animal
+45,FCYT,"06215",Anatomía y Fisiología Animal
+46,FCYT,"07220",Anatomía y Fisiología Humana
+47,FCYT,"06211",Anatomía y Fisiología Humana
+48,FCYT,"09213",Anatomía y Fisiología I (Vegetal)
+49,FCYT,"09214",Anatomía y Fisiología II (Animal)
+50,FCYT,"07213",Anatomía y Fisiología Vegetal
+51,FCYT,"06213",Anatomía y Fisiología Vegetal
+52,FCYT,OP036,"Anatomía, Histología y Fisiología Humanas"
+53,FCYT,"15458",Antenas
+54,FCYT,OP010,Antropología Biológica
+55,FCYT,"33109",Antropología Cultural
+59,FCYT,"05436",Análisis Institucional
+58,FCYT,"03439",Análisis Institucional
+60,FCYT,"07435",Análisis Institucional
+56,FCYT,"02437",Análisis Institucional
+57,FCYT,"04436",Análisis Institucional
+61,FCYT,"04212",Análisis Matemático I
+62,FCYT,"03213",Análisis Matemático I
+63,FCYT,"37101",Análisis Matemático I
+64,FCYT,"02104",Análisis Matemático I
+65,FCYT,"01104",Análisis Matemático I
+66,FCYT,"02212",Análisis Matemático II
+67,FCYT,"03325",Análisis Matemático II
+68,FCYT,"01210",Análisis Matemático II
+69,FCYT,"37211",Análisis Matemático II
+71,FCYT,"02327",Análisis Matemático III
+70,FCYT,"01321",Análisis Matemático III
+73,FCYT,"01428",Análisis Numérico
+72,FCYT,"02O04",Análisis Numérico
+74,FCYT,"33444",Análisis Prevencional
+75,FCYT,"37323",Análisis de Circuitos
+76,FCYT,OP016,Análisis de Impacto Ambiental
+77,FCYT,"33445",Análisis de Riesgo
+78,FCYT,MG-5,Aplicaciones Teóricas y Prácticas de la Teledetección Ambiental
+79,FCYT,OP065,Aplicaciones WEB
+80,FCYT,"22450",Aplicaciones en Control Automático Industrial
+81,FCYT,OP116,Arquitectura de Aplicaciones Web
+85,FCYT,"37215",Arquitectura de Computadoras
+83,FCYT,"34213",Arquitectura de Computadoras
+84,FCYT,"19233",Arquitectura de Computadoras
+82,FCYT,"34213",Arquitectura de Computadoras
+86,FCYT,OP119,Arquitectura de Dispositivos Móviles
+87,FCYT,OP128,Arquitectura de Móviles
+88,FCYT,"15449",Arquitectura de Ordenadores
+89,FCYT,"25322",Artes Gráficas
+90,FCYT,"27322",Artes Gráficas
+91,FCYT,"03427",Artes Gráficas
+92,FCYT,"24322",Artes Gráficas
+93,FCYT,"03442",Astrofísica
+94,FCYT,"11433",Auditoría
+97,FCYT,"27219",Balística I
+96,FCYT,"25219",Balística I
+95,FCYT,"03110",Balística I
+98,FCYT,"25325",Balística II
+99,FCYT,"03214",Balística II
+100,FCYT,"27325",Balística II
+101,FCYT,"37329",Base de Datos
+102,FCYT,MG-7,Base de Datos Geográficas y Técnicas de Minería de Datos
+103,FCYT,"34315",Bases de Datos
+104,FCYT,"34423",Bases de Datos Avanzadas
+105,FCYT,OP086,Bases de Datos NSQL
+106,FCYT,OP019,Bioclimatología
+107,FCYT,"06321",Biodiversidad Animal I
+108,FCYT,"06321",Biodiversidad Animal I (Invertebrados)
+109,FCYT,"06324",Biodiversidad Animal II
+110,FCYT,"06324",Biodiversidad Animal II (Vertebrados)
+111,FCYT,"06320",Biodiversidad Vegetal I
+112,FCYT,"06320",Biodiversidad Vegetal I (No Vascular)
+113,FCYT,"06323",Biodiversidad Vegetal II
+114,FCYT,"06323",Biodiversidad Vegetal II (Vascular)
+115,FCYT,"08213",Bioestadística
+116,FCYT,"09211",Bioestadística
+117,FCYT,"01S02",Bioestadística
+118,FCYT,"32214",Bioestadística
+119,FCYT,"35208",Bioestadística I
+120,FCYT,"35318",Bioestadística II
+121,FCYT,"21103",Bioestadística Paramétrica y No Paramétrica
+122,FCYT,"06317",Bioestadística Paramétrica y No Paramétrica
+123,FCYT,"08105",Biofísica
+124,FCYT,"03O05",Biofísica
+125,FCYT,"35210",Biofísica
+126,FCYT,"08322",Biogeografía
+127,FCYT,"35539",Biogeografía
+128,FCYT,OP013,Biogeografía
+129,FCYT,"04O05",Bioinorgánica
+130,FCYT,"32106",Biología
+131,FCYT,"32213",Biología Ambiental
+132,FCYT,"07323",Biología Animal I (Invertebrados)
+133,FCYT,"07327",Biología Animal II (Vertebrados)
+134,FCYT,"07219",Biología Celular y Molecular
+135,FCYT,"35216",Biología Celular y Molecular
+136,FCYT,"06210",Biología Celular y Molecular
+137,FCYT,"08214","Biología Celular, Molecular y de los Microorganismos"
+138,FCYT,"04107",Biología I
+139,FCYT,"03107",Biología I
+140,FCYT,"04215",Biología II
+141,FCYT,"03216",Biología II
+142,FCYT,OP011,Biología Molecular
+143,FCYT,"07322",Biología Vegetal I (No Vascular)
+144,FCYT,"07326",Biología Vegetal II (Vascular)
+145,FCYT,"35217",Biología de los Microorganismos y Protistas
+146,FCYT,"35431",Biología del Comportamiento
+147,FCYT,"05438",Biotecnología
+148,FCYT,"31105",Botánica
+149,FCYT,"09107",Botánica General
+150,FCYT,"35105",Botánica General
+151,FCYT,"08106",Botánica General
+152,FCYT,OP038,Briología
+153,FCYT,OP077,Calidad de Sistemas CMMI
+154,FCYT,OP080,Calidad de Sistemas CMMI
+155,FCYT,OP078,Calidad de Software
+156,FCYT,OP076,Calidad del Software (Area Sistemas)
+157,FCYT,OP104,Calidad en el desarrollo de Sistemas
+158,FCYT,"03334",Calor y Termodinámica
+159,FCYT,"15220",Campos Electromagneticos
+160,FCYT,"16335",Campos Electromagnéticos
+161,FCYT,"37322",Campos y Ondas
+162,FCYT,"17215",Ciencia y Tecnología de los Materiales
+163,FCYT,"39329","Ciencia, Tecnología Sociedad y Ambiente"
+164,FCYT,"08209",Ciencias de la Tierra
+165,FCYT,"35211",Ciencias de la Tierra
+166,FCYT,"03214",Ciencias de la Tierra I
+167,FCYT,"04213",Ciencias de la Tierra I
+168,FCYT,"04217",Ciencias de la Tierra II
+169,FCYT,"03218",Ciencias de la Tierra II
+170,FCYT,"15447",Circuitos Integrados
+171,FCYT,"15453",Circuitos de Alta Freccuencia
+172,FCYT,OP082,Citricultura
+173,FCYT,"39002",Cognición y aprendizaje en ciencias
+174,FCYT,"38103",Comercialización de Productos Agrícolas y Agroindustriales
+175,FCYT,"31339",Comercialización de Productos Agrícolas y Agroindustriales
+176,FCYT,"19322","Comercialización, Marketing y Ventas"
+177,FCYT,OP052,Comercio Electrónico
+178,FCYT,"04O07",Complemento de Físico-Química
+179,FCYT,"01S03",Complementos de Investigación Operativa
+180,FCYT,"34428",Computación Avanzada
+181,FCYT,"19103",Computación I
+182,FCYT,"19212",Computación II
+183,FCYT,"15566",Comunicaciones Espaciales
+184,FCYT,"15567",Comunicaciones Moviles
+185,FCYT,"37436",Comunicaciones Móviles
+186,FCYT,"15560",Comunicaciones Opticas I
+187,FCYT,"15565",Comunicaciones Opticas II
+188,FCYT,"34424",Comunicaciones y Redes
+189,FCYT,"11434",Comunicaciones y Redes
+190,FCYT,"37434",Comunicaciones Öpticas y Satelitales
+191,FCYT,"13449",Comunicación de Datos
+192,FCYT,"39109",Comunicacíon Visual
+193,FCYT,"21206",Conservación y Manejo de la Biodiversidad
+194,FCYT,"09318","Construcción, Tecnología y Administración Acuicola"
+195,FCYT,"13340",Control Numérico y Robótica
+196,FCYT,"22341",Control Numérico y Robótica
+197,FCYT,"13560",Control Robusto
+198,FCYT,"15563",Control Robusto
+199,FCYT,OP031,Control de Plagas
+200,FCYT,"22228",Conversión Analógica Digital
+201,FCYT,"13224",Conversión Analógica Digital
+202,FCYT,"09430",Coordinación Operativa
+203,FCYT,"29437",Coordinación Siniestral
+204,FCYT,"17328",Costos Industriales
+205,FCYT,"19104",Crianza e Instalaciones Avícolas
+206,FCYT,CC101,Criminalistica
+207,FCYT,"33216",Criminalística I
+208,FCYT,"33326",Criminalística II
+209,FCYT,"03321",Criminología
+210,FCYT,"27437",Criminología
+211,FCYT,OP077,Criptografía (Area Computación)
+212,FCYT,"39001",Cuestiones contemporáneas de Educación Científica y CTS
+213,FCYT,"31329",Cultivo Extensivo
+214,FCYT,"17106",Cálculo
+215,FCYT,OP078,Cálculo Computacional (Area Computación)
+216,FCYT,"34103",Cálculo Diferencial e Integral
+217,FCYT,"34103",Cálculo Diferencial e Integral
+218,FCYT,"12101",Cálculo I
+219,FCYT,"12101",Cálculo I
+220,FCYT,"12211",Cálculo II
+221,FCYT,"12211",Cálculo II
+222,FCYT,"11431",Cálculo Numérico
+223,FCYT,"37321",Cálculo Superior
+224,FCYT,"02431",Cálculo Superior
+225,FCYT,OP068,Data Minning
+226,FCYT,"09320",Deontología Pericial
+227,FCYT,"03213",Deontología Profesional
+228,FCYT,"22342",Deontología Profesional
+229,FCYT,"26323",Deontología Profesional
+230,FCYT,"29323",Deontología Profesional
+231,FCYT,"24323",Deontología Profesional
+232,FCYT,"16341",Deontología Profesional
+233,FCYT,"13341",Deontología Profesional
+234,FCYT,"25323",Deontología Profesional
+235,FCYT,"27323",Deontología Profesional
+236,FCYT,"15341",Deontología Profesional
+237,FCYT,"32217",Derecho Ambiental
+238,FCYT,"33325",Derecho Civil
+239,FCYT,"29210",Derecho Civil y Penal
+240,FCYT,"26104",Derecho Civil y Penal en el Peritaje
+241,FCYT,"24104",Derecho Civil y Penal en el Peritaje
+242,FCYT,"27104",Derecho Civil y Penal en el Peritaje
+243,FCYT,"25104",Derecho Civil y Penal en el Peritaje
+249,FCYT,"26102",Derecho Constitucional
+248,FCYT,"29105",Derecho Constitucional
+246,FCYT,"03104",Derecho Constitucional
+247,FCYT,"25102",Derecho Constitucional
+245,FCYT,"27102",Derecho Constitucional
+244,FCYT,"24102",Derecho Constitucional
+250,FCYT,"09103",Derecho I (Constitucional)
+251,FCYT,"09208",Derecho II (Penal y Civil)
+252,FCYT,"09316",Derecho III (Procesal y Civil)
+253,FCYT,"33103",Derecho Penal I
+254,FCYT,"33212",Derecho Penal II
+255,FCYT,"03103",Derecho Penal y Civil en Peritaje
+259,FCYT,"25213",Derecho Procesal Civil y Penal
+258,FCYT,"26213",Derecho Procesal Civil y Penal
+260,FCYT,"29318",Derecho Procesal Civil y Penal
+256,FCYT,"27213",Derecho Procesal Civil y Penal
+257,FCYT,"24213",Derecho Procesal Civil y Penal
+261,FCYT,"33104",Derecho Procesal Penal I
+262,FCYT,"33213",Derecho Procesal Penal II
+263,FCYT,"03209",Derecho Procesal Penal y Civil
+280,FCYT,"27109",Derechos Humanos
+279,FCYT,CDDHH,Derechos Humanos
+278,FCYT,"24109",Derechos Humanos
+277,FCYT,"19106",Derechos Humanos
+276,FCYT,DDHH2,Derechos Humanos
+275,FCYT,"31107",Derechos Humanos
+274,FCYT,"17105",Derechos Humanos
+273,FCYT,"08103",Derechos Humanos
+272,FCYT,"32107",Derechos Humanos
+271,FCYT,"25109",Derechos Humanos
+269,FCYT,"35212",Derechos Humanos
+268,FCYT,DDHH7,Derechos Humanos
+267,FCYT,DDHH4,Derechos Humanos
+266,FCYT,"26109",Derechos Humanos
+265,FCYT,DDHH3,Derechos Humanos
+264,FCYT,"22106",Derechos Humanos
+270,FCYT,"29319",Derechos Humanos
+285,FCYT,"03O04",Derechos Humanos y Tecnología
+287,FCYT,"37103",Derechos Humanos y Tecnología
+284,FCYT,"12107",Derechos Humanos y Tecnología
+286,FCYT,"04O04",Derechos Humanos y Tecnología
+282,FCYT,"34106",Derechos Humanos y Tecnología
+281,FCYT,"02O03",Derechos Humanos y Tecnología
+283,FCYT,"19213",Derechos Humanos y Tecnología
+288,FCYT,"32438",Desarrollo Sustentable en Ecosistemas Naturales y Urbanos
+289,FCYT,"37542",Desarrollo de Aplicaciones Distribuidas
+290,FCYT,OP086,Desarrollo de Aplicaciones Web Empresariales
+291,FCYT,OP084,Desarrollo de Aplicaciones Web Enriquecidas
+292,FCYT,OP085,Desarrollos y Arquitectura de Programación Móvil
+298,FCYT,"07218",Didáctica General
+296,FCYT,"03220",Didáctica General
+295,FCYT,"04219",Didáctica General
+297,FCYT,"05218",Didáctica General
+293,FCYT,"39102",Didáctica General
+294,FCYT,"02218",Didáctica General
+299,FCYT,"07432",Didáctica de la Biología
+300,FCYT,"03437",Didáctica de la Física
+301,FCYT,"02322",Didáctica de la Matemática I
+302,FCYT,"02432",Didáctica de la Matemática II
+303,FCYT,"02O01","Didáctica de la Matemática para Nivel Inicial, EGB3 y 2"
+304,FCYT,"02O01","Didáctica de la Matemática para Nivel Inicial, EGB3 y EGB2"
+305,FCYT,"04433",Didáctica de la Química
+306,FCYT,"05325",Didáctica de la Tecnología
+307,FCYT,"05325",Didáctica de la Tecnología I
+308,FCYT,"05435",Didáctica de la Tecnología II
+309,FCYT,"04325",Didáctica de las Ciencias Naturales
+311,FCYT,"07324",Didáctica de las Ciencias Naturales
+310,FCYT,"03328",Didáctica de las Ciencias Naturales
+312,FCYT,"39219",Didáctica de las Tecnologías de la Información y la Comunicacíon I
+313,FCYT,"39327",Didáctica de las Tecnologías de la Información y la Comunicacíon II
+314,FCYT,"38104",Diección y Gerenciamiento
+315,FCYT,"31340",Dirección y Gerenciamiento
+316,FCYT,OP051,Diseño Asistido por Computadoras (AUTOCAD)
+317,FCYT,OP002,Diseño Experimental y Análisis de Datos
+318,FCYT,"39437",Diseño Multimedial
+319,FCYT,OP064,Diseño de Aplicaciones para Bases de Datos (CLARION)
+320,FCYT,"37548",Diseño de Redes y Sistemas de Telecomunicaciones
+321,FCYT,"37439",Diseño de Sistemas Digitales
+322,FCYT,"39004",Diseño y Gestión del currículum
+323,FCYT,OP054,Diseño y Optimización de Aplicaciones (ORACLE)
+324,FCYT,"27327",Documentología I
+325,FCYT,"24327",Documentología I
+326,FCYT,"03323",Documentología I
+327,FCYT,"03430",Documentología II
+328,FCYT,"27440",Documentología II
+329,FCYT,"24439",Documentología II
+330,FCYT,"08424",Ecología
+335,FCYT,"35323",Ecología General
+334,FCYT,"32210",Ecología General
+333,FCYT,"09104",Ecología General
+331,FCYT,"06322",Ecología General
+332,FCYT,"07430",Ecología General
+336,FCYT,OP044,Ecología Vegetal
+337,FCYT,"35429",Ecología de Comunidades y Ecosistemas
+338,FCYT,OP015,Ecología de Ecosistemas Acuáticos
+339,FCYT,"21207",Ecología de Paisaje
+340,FCYT,"06431",Ecología de Poblaciones
+341,FCYT,"21205",Ecología de Poblaciones
+342,FCYT,OP014,Ecología de Poblaciones
+343,FCYT,"06429",Ecología de Restauración
+344,FCYT,"06429",Ecología de Restauración (Seminario Específico)
+346,FCYT,"06428",Ecología de Sistemas
+345,FCYT,"32216",Ecología de Sistemas
+347,FCYT,"06428",Ecología de Sistemas (Seminario Específico)
+348,FCYT,"09109",Ecología de Sistemas Acuáticos
+349,FCYT,OP018,Ecología de la Restauración
+350,FCYT,"21207",Ecología del Paisaje
+351,FCYT,"06426",Ecomorfología Animal
+352,FCYT,OP025,Ecomorfología Animal
+353,FCYT,"15572",Economia
+354,FCYT,"17214",Economía
+355,FCYT,"13565",Economía
+356,FCYT,"32437",Economía Ambiental
+357,FCYT,"39436",Economía de las Tecnologías de la Información y la Comunicación
+358,FCYT,"05439",Economía y Legislación
+359,FCYT,"37546",Economía y Mercados Tecnológicos
+360,FCYT,"31218",Economía y Sociología
+361,FCYT,"02435",Ecuaciones Diferenciales Ordinarias
+362,FCYT,"34212",Ecuaciones Diferenciales y Cálculo Multivariado
+363,FCYT,"34212",Ecuaciones Diferenciales y Cálculo Multivariado
+364,FCYT,OP022,Edafología
+365,FCYT,"32219",Educación Ambiental
+366,FCYT,"06108",Educación Ambiental
+367,FCYT,"07107",Educación Ambiental
+368,FCYT,"02O02",Educación Matemática y Nuevas Tecnologías
+369,FCYT,"03O01",Educación No Formal en Física
+370,FCYT,"04O01",Educación No Formal en Química
+371,FCYT,"32327",Efluentes Líquidos
+372,FCYT,"05216",Electricidad y Electrónica
+373,FCYT,"15452",Electroacustica
+374,FCYT,"03326",Electromagnetismo
+375,FCYT,"15110",Electronica Basica
+376,FCYT,"15564",Electronica de Comunicaciones
+377,FCYT,"15336",Electronica de circuitos
+378,FCYT,"15102",Electrotecnia I
+379,FCYT,"15107",Electrotecnia II
+380,FCYT,"17218",Electrotecnia y Máquinas Eléctricas
+382,FCYT,"16102",Electrotécnia I
+383,FCYT,"13102",Electrotécnia I
+381,FCYT,"22102",Electrotécnia I
+384,FCYT,"16107",Electrotécnia II
+385,FCYT,"13107",Electrotécnia II
+386,FCYT,"22109",Electrotécnia II
+387,FCYT,"10218",Electrónica
+388,FCYT,"22112",Electrónica Básica
+389,FCYT,"13110",Electrónica Básica
+390,FCYT,"16110",Electrónica Básica
+391,FCYT,"37216",Electrónica Básica
+392,FCYT,"13451",Electrónica Industrial
+393,FCYT,"16329",Electrónica de Circuitos
+394,FCYT,"37325",Electrónica de Comunicaciones
+395,FCYT,"13215",Electrónica de Control
+396,FCYT,"22217",Electrónica de Control
+397,FCYT,"22447",Electrónica de Control Industrial
+398,FCYT,"13222",Electrónica de Potencia
+399,FCYT,"22225",Electrónica de Potencia
+400,FCYT,"17323",Electrónica y Dispositivos de Control
+401,FCYT,"08211",Embriología y Anatomía Animal Comparada
+402,FCYT,"35327",Embriología y Anatomía Animal Comparada
+403,FCYT,OP088,Emprendedorismo
+404,FCYT,OP024,Entomología
+405,FCYT,OP034,Entomología Aplicada
+406,FCYT,"33107",Entrenamiento Físico Profesional I
+407,FCYT,"33330",Entrenamiento Físico Profesional III
+408,FCYT,"33220",Entrenamiento Físico-Profesional II
+421,FCYT,"27331",Epistemología
+420,FCYT,"04103",Epistemología
+419,FCYT,"39107",Epistemología
+417,FCYT,"02106",Epistemología
+416,FCYT,"01107",Epistemología
+415,FCYT,OP006,Epistemología
+418,FCYT,"06107",Epistemología
+413,FCYT,"03103",Epistemología
+412,FCYT,"08315",Epistemología
+411,FCYT,"05104",Epistemología
+410,FCYT,"07109",Epistemología
+409,FCYT,"29327",Epistemología
+414,FCYT,"35536",Epistemología
+422,FCYT,"02O05",Epistemología de la Matemática
+423,FCYT,"32212",Epistemología de las Ciencias Ambientales
+424,FCYT,"03O02",Epistemología de las Ciencias Empíricas
+425,FCYT,"04O02",Epistemología de las Ciencias Empíricas
+426,FCYT,"39003",Epistemología e Historia de la ciencia
+427,FCYT,MG-1,Epistemología y Metodología de la Investigación Cientifica
+428,FCYT,OP084,Equipamientos e Instalaciones Rurales
+429,FCYT,"39439",Espacio de Opción Institucional II
+430,FCYT,"39330",Espacio de Opcíon Institucional I
+431,FCYT,OP006,Espistemología
+432,FCYT,"31211",Estadistica Aplicada
+433,FCYT,"03211",Estadística
+434,FCYT,"05102",Estadística
+435,FCYT,MG-2,Estadística
+436,FCYT,"29429",Estadística
+437,FCYT,"17211",Estadística
+438,FCYT,"27432",Estadística
+439,FCYT,"39108",Estadística
+440,FCYT,"33449",Estadística Aplicada
+441,FCYT,OP003,Estadística Multivariada
+442,FCYT,OP004,Estadística No Paramétrica
+443,FCYT,"09427",Estadística y Probabilidad Accidentológica
+444,FCYT,OP129,"Estrategia, Tecnología y Relaciones Humanas"
+445,FCYT,"31345",Estrategias Competitivas y de Negociación
+446,FCYT,"38209",Estrategias Competitivas y de Negociación
+447,FCYT,"05212",Estructura y Resistencia de los Materiales
+448,FCYT,"05212",Estructuras y Resistencia de los Materiales
+449,FCYT,"17213",Estática y Resistencia de Materiales
+450,FCYT,"01434",Etica Profesional
+451,FCYT,"01434",Etica y Deontología Profesional
+452,FCYT,"32431",Evaluación de Impactos Ambientales
+456,FCYT,"07431",Evolución
+455,FCYT,"06427",Evolución
+454,FCYT,"08426",Evolución
+453,FCYT,"35428",Evolución
+457,FCYT,OP039,Ficología
+458,FCYT,"39216",Filosofía de la Educacíon
+459,FCYT,"15103",Fisica I
+460,FCYT,"15108",Fisica II
+461,FCYT,"15337",Fisica III
+462,FCYT,"08316",Fisiología Animal
+463,FCYT,"31212",Fisiología Animal
+464,FCYT,"35321",Fisiología Animal
+467,FCYT,"08212",Fisiología Vegetal
+466,FCYT,"35319",Fisiología Vegetal
+465,FCYT,"31213",Fisiología Vegetal
+468,FCYT,"19106",Fisiología y Genética
+469,FCYT,"24107",Fisíca I
+470,FCYT,OP045,Fitosociología
+471,FCYT,"33105",Formación Policial I
+472,FCYT,"33218",Formación Policial II
+473,FCYT,"33328",Formación Policial III
+474,FCYT,"15576",Formulacion y Administracion de Proyectos
+475,FCYT,OP092,Formulación de Proyectos de Inversión Orientada a la Industria del Software
+476,FCYT,OP091,Formulación de Proyectos de Inversión Orientada a la Industria del Software
+477,FCYT,"13569",Formulación y Administración de Proyectos
+478,FCYT,"31325",Forrajes
+479,FCYT,"03210",Fotografía
+480,FCYT,"29213",Fotografía
+481,FCYT,"09315",Fotografía Judicial Aplicada
+482,FCYT,"25105",Fotografía Pericial
+483,FCYT,"26105",Fotografía Pericial
+484,FCYT,"27105",Fotografía Pericial
+485,FCYT,"24105",Fotografía Pericial
+487,FCYT,"34107",Fundamentos de Computación
+488,FCYT,"34107",Fundamentos de Computación
+486,FCYT,"12219",Fundamentos de Computación
+489,FCYT,OP118,Fundamentos de Gestión de Proyectos
+490,FCYT,"37104",Fundamentos de Informática
+491,FCYT,"15680",Fundamentos de Ordenadores
+492,FCYT,"12104",Fundamentos de Programación
+493,FCYT,"37105",Fundamentos de Programación
+494,FCYT,"12104",Fundamentos de Programación
+495,FCYT,"34102",Fundamentos de Programación
+497,FCYT,"09319",Fundamentos de Tránsito y Régimen Vigente
+496,FCYT,"29326",Fundamentos de Tránsito y Régimen Vigente
+499,FCYT,"19105",Física
+500,FCYT,"10110",Física
+498,FCYT,"31106",Física
+501,FCYT,"32108",Física Aplicada
+502,FCYT,"03O03",Física Aplicada a la Educación Tecnológica
+503,FCYT,"03329",Física Atómica y Nuclear
+504,FCYT,"06105",Física Biológica
+505,FCYT,"07105",Física Biológica
+506,FCYT,"03435",Física Cuántica
+510,FCYT,"32104",Física General
+512,FCYT,"02219",Física General
+511,FCYT,"07103",Física General
+508,FCYT,"06103",Física General
+507,FCYT,"01212",Física General
+509,FCYT,"35102",Física General
+513,FCYT,"04106",Física General I
+514,FCYT,"03106",Física General I
+516,FCYT,"03211",Física General II
+515,FCYT,"04210",Física General II
+526,FCYT,"22103",Física I
+527,FCYT,"16103",Física I
+524,FCYT,"25107",Física I
+528,FCYT,"09104",Física I
+523,FCYT,"27107",Física I
+522,FCYT,"37102",Física I
+525,FCYT,"17109",Física I
+520,FCYT,"03106",Física I
+521,FCYT,"13103",Física I
+519,FCYT,"26107",Física I
+518,FCYT,"05106",Física I
+517,FCYT,"29107",Física I
+539,FCYT,"27218",Física II
+538,FCYT,"13108",Física II
+537,FCYT,"05220",Física II
+536,FCYT,"25218",Física II
+534,FCYT,"37212",Física II
+535,FCYT,"22110",Física II
+532,FCYT,"17212",Física II
+531,FCYT,"16108",Física II
+530,FCYT,"09212",Física II
+529,FCYT,"29214",Física II
+533,FCYT,"03215",Física II
+540,FCYT,"22230",Física III
+541,FCYT,"16228",Física III
+542,FCYT,"13336",Física III
+543,FCYT,"03438",Física Relativista
+544,FCYT,OP110,Física aplicada a la educación tecnológica
+545,FCYT,"03O07",Física de la Atmósfera
+546,FCYT,MG-4,Física de la Teledetección Cuantitativa y Sistemas Sensores
+547,FCYT,"03O06",Física de las Partículas
+548,FCYT,OP111,Física de las partículas
+549,FCYT,"04331",Físico-Química
+550,FCYT,"12108",Gabinete de Idiomas I
+551,FCYT,"12216",Gabinete de Idiomas II
+552,FCYT,"12326",Gabinete de Idiomas III
+553,FCYT,"33101",Garantías Constitucionales y Derechos Humanos
+554,FCYT,MG-11,Generación de Series Temporales y Su Aplicación en Estudio a Macroescala
+555,FCYT,"08321",Genética
+556,FCYT,"06319",Genética
+557,FCYT,"35325",Genética
+558,FCYT,"07321",Genética
+560,FCYT,"09316",Genética y Mejoramiento
+559,FCYT,OP047,Genética y Mejoramiento
+561,FCYT,MG-6,Geoestadística
+562,FCYT,"32434",Geología Ambiental
+563,FCYT,"01102",Geometría I
+564,FCYT,"02102",Geometría I
+565,FCYT,"02210",Geometría II
+566,FCYT,"01208",Geometría II
+567,FCYT,"02320",Geometría III
+568,FCYT,"01318",Geometría III
+569,FCYT,"01O01",Geometría de los Fractales
+570,FCYT,"06212",Geomorfología
+571,FCYT,"07212",Geomorfología
+572,FCYT,OP050,Geomática
+573,FCYT,MG-12,Geomática Aplicada a la Gestión de Riesgos en Estudios de Microescala y Mesoescala
+574,FCYT,OP070,Gerenciamiento de Proyectos Informáticos
+575,FCYT,OP080,Gerenciamiento de Proyectos Informáticos (Area Sistemas)
+576,FCYT,"38105",Gestion y Normas de Calidad Agropecuarias y Agroindustriales
+577,FCYT,"08427",Gestión Ambiental
+578,FCYT,"35434",Gestión Ambiental
+579,FCYT,"32329",Gestión Ambiental
+580,FCYT,"17324",Gestión Ambiental y Seguridad Industrial
+581,FCYT,OP076,Gestión Industrial
+582,FCYT,"32325",Gestión Recurso Aire
+583,FCYT,"32326",Gestión Recurso Suelo
+584,FCYT,"32324",Gestión Recursos Agua
+585,FCYT,OP066,Gestión de Calidad
+586,FCYT,OP083,Gestión de Proyectos
+587,FCYT,"19462",Gestión de Proyectos y Calidad
+588,FCYT,"22449",Gestión de Proyectos y Gestión de Calidad
+589,FCYT,"05213",Gestión de la Producción
+590,FCYT,"05332",Gestión de las Organizaciones
+591,FCYT,"31341",Gestión y Normas de Calidad Agropecuarias y Agroindustriales
+592,FCYT,"31328",Granja
+593,FCYT,OP026,Herpetología
+594,FCYT,OP082,Herramientas Aplicadas para la Toma de Decisiones
+595,FCYT,EJE_4,Herramientas Metodológicas para la Gestión Ambiental Vinculada a Ecosistemas Terrestres / Mecanismos de Control y Mitigación
+596,FCYT,"22335",Hidráulica y Neumática
+597,FCYT,"13334",Hidráulica y Neumática
+598,FCYT,"15573",Higiene Legiatacion y Seguridad Laboral
+599,FCYT,"32439",Higiene y Seguridad Ambiental
+600,FCYT,"31343",Higiene y Seguridad Laboral en la Empresa Agropecuaria
+601,FCYT,"38207",Higiene y Seguridad Laboral en la Empresa Agropecuaria
+602,FCYT,"22331","Higiene, Seguridad y Legislación Laboral"
+603,FCYT,"16334","Higiene, Seguridad y Legislación Laboral"
+604,FCYT,"13330","Higiene, Seguridad y Legislación Laboral I"
+605,FCYT,"13566","Higiene, Seguridad y Legislación Laboral II"
+606,FCYT,"37544","Higiene, Seguridad y Medioambiente"
+607,FCYT,OP035,Histología y Embriología Animal
+608,FCYT,"39217",Historia Argentina y Latinoamericana
+609,FCYT,"01326",Historia Social y Política
+610,FCYT,"02434",Historia y Fundamentos de la Matemática
+611,FCYT,"01324",Historia y Fundamentos de la Matemática
+612,FCYT,"39326",Historia y Política de la Educacíon Argentina
+613,FCYT,OP080,Horticultura
+614,FCYT,OP029,Ictiología
+615,FCYT,"13562",Identificación de Sistemas
+616,FCYT,OR01,Idioma
+617,FCYT,OP062,Idioma Extranjero
+623,FCYT,"07104",Idioma Extranjero I
+622,FCYT,"03101",Idioma Extranjero I
+621,FCYT,OR001,Idioma Extranjero I
+624,FCYT,"05109",Idioma Extranjero I
+619,FCYT,"02103",Idioma Extranjero I
+618,FCYT,"6-OP1",Idioma Extranjero I
+620,FCYT,"04101",Idioma Extranjero I
+625,FCYT,ING-1,Idioma Extranjero I (Otros requisitos)
+631,FCYT,"6-OP2",Idioma Extranjero II
+630,FCYT,"02107",Idioma Extranjero II
+629,FCYT,OR002,Idioma Extranjero II
+632,FCYT,"07108",Idioma Extranjero II
+627,FCYT,"05222",Idioma Extranjero II
+626,FCYT,"04102",Idioma Extranjero II
+628,FCYT,"03102",Idioma Extranjero II
+633,FCYT,ING-2,Idioma Extranjero II (Otros requisitos)
+634,FCYT,"39218",Impacto Socio-Político de las Tecnologías de la Información y la Comunicacíon
+635,FCYT,"19324",Incubación
+636,FCYT,OP085,Industrias Lácteas
+637,FCYT,"15111",Informatica I
+638,FCYT,"15217",Informatica II
+639,FCYT,"15227",Informatica III
+645,FCYT,OR02,Informática
+646,FCYT,"31102",Informática
+644,FCYT,CC103,Informática
+643,FCYT,"08208",Informática
+647,FCYT,OR003,Informática
+641,FCYT,"35103",Informática
+640,FCYT,"04104",Informática
+642,FCYT,"03104",Informática
+648,FCYT,OP131,Informática Agropecuaria
+649,FCYT,OP055,Informática Agropecuaria
+650,FCYT,OP087,Informática Aplicada al Diseño
+651,FCYT,OP056,Informática Bancaria
+652,FCYT,OP057,Informática Educativa
+667,FCYT,"33112",Informática I
+666,FCYT,"24215",Informática I
+665,FCYT,"16111",Informática I
+664,FCYT,"26215",Informática I
+663,FCYT,"01103",Informática I
+662,FCYT,"27215",Informática I
+661,FCYT,"29216",Informática I
+660,FCYT,"17101",Informática I
+659,FCYT,"25215",Informática I
+657,FCYT,"13111",Informática I
+656,FCYT,"03217",Informática I
+655,FCYT,"02108",Informática I
+654,FCYT,"32105",Informática I
+653,FCYT,"09211",Informática I
+658,FCYT,"22113",Informática I
+676,FCYT,"03326",Informática II
+680,FCYT,"27329",Informática II
+679,FCYT,"22219",Informática II
+678,FCYT,"33225",Informática II
+677,FCYT,"16217",Informática II
+675,FCYT,"32218",Informática II
+674,FCYT,"02326",Informática II
+668,FCYT,"13217",Informática II
+672,FCYT,"01217",Informática II
+671,FCYT,"29325",Informática II
+670,FCYT,"17110",Informática II
+669,FCYT,"09213",Informática II
+673,FCYT,"24329",Informática II
+687,FCYT,"03433",Informática III
+686,FCYT,"13225",Informática III
+684,FCYT,"22229",Informática III
+685,FCYT,"16227",Informática III
+682,FCYT,"27442",Informática III
+681,FCYT,"33343",Informática III
+683,FCYT,"09429",Informática III
+688,FCYT,"13444",Informática Industrial
+689,FCYT,OP130,Informática aplicada al Diseño
+690,FCYT,OP081,Informática en la Gestión Empresarial
+691,FCYT,"11437",Informática y Relaciones Humanas
+692,FCYT,OP073,Informática y Relaciones Humanas (Area Sistemas)
+693,FCYT,OP049,Informática y Salud
+694,FCYT,OP081,Informáticas Aplicadas (Area Sistemas)
+695,FCYT,MG-8,Infraestructura de Datos Espaciales y Mapas Interactivos en Línea
+696,FCYT,"15570",Ingenieria Legal
+697,FCYT,"15678",Ingenieria de Software
+698,FCYT,"13563",Ingeniería Legal
+699,FCYT,"37435",Ingeniería Legal
+700,FCYT,"10544",Ingeniería de Gestión
+701,FCYT,OP075,Ingeniería de Requerimiento
+702,FCYT,"37432",Ingeniería de Software
+703,FCYT,"34208",Ingeniería de Software I
+704,FCYT,"34208",Ingeniería de Software I
+705,FCYT,"34314",Ingeniería de Software II
+706,FCYT,OP090,Ingeniería del Software Como Servicio
+707,FCYT,"15219",Ingles I
+708,FCYT,"15225",Ingles II
+709,FCYT,"15332",Ingles III
+710,FCYT,"15451",Ingles IV
+711,FCYT,"08107",Ingles Técnico
+712,FCYT,CC104,Inglés
+719,FCYT,"33113",Inglés I
+717,FCYT,"22221",Inglés I
+716,FCYT,"16219",Inglés I
+718,FCYT,"29324",Inglés I
+714,FCYT,"13219",Inglés I
+713,FCYT,"37110",Inglés I
+715,FCYT,"17216",Inglés I
+725,FCYT,"37214",Inglés II
+724,FCYT,"16225",Inglés II
+723,FCYT,"22227",Inglés II
+726,FCYT,"33226",Inglés II
+721,FCYT,"17325",Inglés II
+720,FCYT,"13226",Inglés II
+722,FCYT,"29434",Inglés II
+727,FCYT,"33344",Inglés III
+728,FCYT,"22333",Inglés III
+729,FCYT,"16331",Inglés III
+730,FCYT,"13332",Inglés III
+731,FCYT,"13442",Inglés IV
+732,FCYT,"35107",Inglés Técnico
+738,FCYT,"09433",Inglés Técnico I
+740,FCYT,"03109",Inglés Técnico I
+741,FCYT,"19107",Inglés Técnico I
+737,FCYT,"24108",Inglés Técnico I
+739,FCYT,"27108",Inglés Técnico I
+735,FCYT,"32102",Inglés Técnico I
+734,FCYT,"31103",Inglés Técnico I
+733,FCYT,"26108",Inglés Técnico I
+736,FCYT,"25108",Inglés Técnico I
+750,FCYT,"25216",Inglés Técnico II
+748,FCYT,"27216",Inglés Técnico II
+747,FCYT,"03219",Inglés Técnico II
+746,FCYT,"26216",Inglés Técnico II
+749,FCYT,"09434",Inglés Técnico II
+744,FCYT,"31210",Inglés Técnico II
+743,FCYT,"32209",Inglés Técnico II
+742,FCYT,"19214",Inglés Técnico II
+745,FCYT,"24216",Inglés Técnico II
+751,FCYT,"03327",Inglés Técnico III
+752,FCYT,"22336",Instalaciones Industriales
+753,FCYT,"13335",Instalaciones Industriales
+754,FCYT,"17326",Instalaciones Industriales y Práctica Laboral
+755,FCYT,"15562",Instrumentacion Electronica
+756,FCYT,"22338",Instrumentación de Procesos Industriales
+757,FCYT,"13337",Instrumentación de Procesos Industriales
+758,FCYT,"05329",Instrumentación y Control
+759,FCYT,"13450",Instrumentación y Mediciones Eléctricas
+760,FCYT,"37219",Instrumentos y Mediciones
+763,FCYT,"22220",Instrumentos y Mediciones I
+762,FCYT,"16218",Instrumentos y Mediciones I
+764,FCYT,"15218",Instrumentos y Mediciones I
+761,FCYT,"13218",Instrumentos y Mediciones I
+767,FCYT,"16224",Instrumentos y Mediciones II
+766,FCYT,"15224",Instrumentos y Mediciones II
+768,FCYT,"13223",Instrumentos y Mediciones II
+765,FCYT,"22226",Instrumentos y Mediciones II
+769,FCYT,"37328",Instrumentos y Mediciones en Telecomunicaciones
+770,FCYT,"34422",Inteligencia Artificial
+771,FCYT,OP059,Inteligencia Artificial
+772,FCYT,OP117,Inteligencia Artificial
+773,FCYT,"15446",Interconexion de sistemas abriertos
+774,FCYT,"34534",Interfaz Hombre Máquina
+775,FCYT,"11435",Interfaz Hombre Máquina 
+776,FCYT,OP095,Introducción a Comunicaciones y Redes
+777,FCYT,"12217",Introducción a Técnicas de Gestión Empresaria 
+778,FCYT,"29102",Introducción a la Accidentología Vial
+779,FCYT,"09101",Introducción a la Accidentología Vial
+780,FCYT,"09210",Introducción a la Acuicultura
+781,FCYT,"19108",Introducción a la Avicultura
+782,FCYT,"07216",Introducción a la Bioestadística
+783,FCYT,"06214",Introducción a la Bioestadística
+784,FCYT,"35101",Introducción a la Biología
+785,FCYT,"27111",Introducción a la Criminalistica
+786,FCYT,"25111",Introducción a la Criminalistica
+787,FCYT,"26111",Introducción a la Criminalistica
+788,FCYT,"24111",Introducción a la Criminalistica
+789,FCYT,"03101",Introducción a la Criminalística
+790,FCYT,"33335",Introducción a la Criminología
+792,FCYT,OP094,Introducción a la Criptografía
+791,FCYT,OP071,Introducción a la Criptografía
+793,FCYT,"17220",Introducción a la Investigación Operativa
+794,FCYT,"32101",Introducción a la Problemática Ambiental
+795,FCYT,"19115",Introducción a la Programación
+796,FCYT,OP087,Introducción a la Programación Funcional
+797,FCYT,"25103",Introducción a la Química
+798,FCYT,"27103",Introducción a la Química
+799,FCYT,"26103",Introducción a la Química
+800,FCYT,"24103",Introducción a la Química
+801,FCYT,"29109",Introducción a la Química
+802,FCYT,"39105",Introducción a la Tecnología
+803,FCYT,"05107",Introducción a la Tecnología
+804,FCYT,"31334",Introducción al Derecho Laboral Agrario
+805,FCYT,"05O02",Introducción al Diseño Gráfico
+806,FCYT,"34426",Investigación Operativa
+807,FCYT,"11430",Investigación Operativa
+808,FCYT,"02O06",Investigación Operativa
+809,FCYT,"01322",Investigación Operativa
+810,FCYT,OP085,La Plataforma de Desarrollo NET
+811,FCYT,"15338",Lababoratorio de Comunicacion de Datos
+812,FCYT,"15343",Lababoratorio de Electronica de circuitos
+813,FCYT,"15339",Lababoratorio de Telematica
+818,FCYT,"13105",Laboratorio I
+817,FCYT,"15105",Laboratorio I
+816,FCYT,"22105",Laboratorio I
+815,FCYT,"16105",Laboratorio I
+814,FCYT,"03110",Laboratorio I
+819,FCYT,"15112",Laboratorio II
+820,FCYT,"03222",Laboratorio II
+821,FCYT,"13112",Laboratorio II
+822,FCYT,"22114",Laboratorio II
+823,FCYT,"16112",Laboratorio II
+828,FCYT,"15221",Laboratorio III
+827,FCYT,"03332",Laboratorio III
+826,FCYT,"16213",Laboratorio III
+829,FCYT,"13220",Laboratorio III
+824,FCYT,"19216",Laboratorio III
+825,FCYT,"22215",Laboratorio III
+830,FCYT,"13555",Laboratorio de Automatización
+831,FCYT,"16338",Laboratorio de Comunicación de Datos y Telemática
+832,FCYT,"16343",Laboratorio de Electrónica de Circuitos
+833,FCYT,"37541",Laboratorio de Interconexión de Redes
+834,FCYT,"19457",Laboratorio de Interconexión de Redes
+835,FCYT,"15682",Laboratorio de Modelado y Simulacion de Redes
+836,FCYT,"15345",Laboratorio de Procesamiento Digital
+837,FCYT,"04221",Laboratorio de Química
+839,FCYT,"16223",Laboratorio de Señales y Sistemas
+838,FCYT,"15223",Laboratorio de Señales y Sistemas
+841,FCYT,OP093,Las TIC en la Enseñanza de Educación Tecnológica
+840,FCYT,OP094,Las TIC en la Enseñanza de Educación Tecnológica
+842,FCYT,"34105",Lecto - Comprensión en Inglés
+843,FCYT,"21O01",Lectocomprensión del Idioma Inglés
+844,FCYT,"39103",Lectura y Escritura Académica
+845,FCYT,"02109",Lectura y Producción de Textos Científicos
+846,FCYT,"01106",Lectura y Producción de Textos Científicos
+847,FCYT,"05110",Lectura y Producción de Textos Científicos
+848,FCYT,"07111",Lectura y Producción de Textos Científicos
+849,FCYT,"06106",Lectura y Producción de Textos Científicos
+850,FCYT,"04109",Lectura y Producción de Textos Científicos
+851,FCYT,"03109",Lectura y Producción de Textos Científicos
+852,FCYT,"19456",Legislacion en Redes y Servicios Telemáticos
+853,FCYT,OP021,Legislación Ambiental
+854,FCYT,OP086,Legislación Informática
+855,FCYT,"22455",Legislación Profesional
+856,FCYT,"17329",Legislación y Ejercicio Profesional
+857,FCYT,"39435",Legislación y Ética en el uso de las Tecnologías de la Información y la Comunicacíon
+858,FCYT,"39110",Lengua Extranjera I
+859,FCYT,"39214",Lenguaje Digital y Audiovisual
+860,FCYT,"39220",Lenguaje Extranjero II
+861,FCYT,OP046,Limnología
+862,FCYT,OP049,Limnología
+863,FCYT,"21102",Limnología General y Aplicada
+864,FCYT,"15334",Lineas de Transmision
+865,FCYT,"04O06",Los Radios Isótopos
+866,FCYT,"16333",Líneas de Transmisión
+867,FCYT,OP100,Lógica Difusa y Redes Neuronales
+868,FCYT,"02101",Lógica y Matemática Elemental
+869,FCYT,"01101",Lógica y Matemática Elemental
+870,FCYT,"34104",Lógica y Álgebra
+871,FCYT,"34104",Lógica y Álgebra
+872,FCYT,"12102",Lógica y Álgebra
+873,FCYT,"12102",Lógica y Álgebra
+874,FCYT,"37218",MIcroprocesadores y Microcontroladores
+875,FCYT,"31217",Manejo y Conservación de Suelos
+876,FCYT,"31108",Maquinarias Rurales
+877,FCYT,"31342",Marketing Agropecuario
+878,FCYT,"38206",Marketing Agropecuario
+879,FCYT,OP028,Mastozoología
+880,FCYT,"13446",Matematica Aplicada al Control de Procesos
+881,FCYT,"15101",Matematica I
+882,FCYT,"15106",Matematica II
+883,FCYT,"15330",Matematica III
+890,FCYT,"08101",Matemática
+889,FCYT,"09103",Matemática
+888,FCYT,"32100",Matemática
+887,FCYT,"07101",Matemática
+885,FCYT,"03105",Matemática
+884,FCYT,"31100",Matemática
+886,FCYT,"06104",Matemática
+891,FCYT,"22445",Matemática Aplicada al Control de Procesos
+892,FCYT,OP063,Matemática Avanzada
+893,FCYT,"01S01",Matemática Borrosa
+894,FCYT,"01O03",Matemática Creativa
+895,FCYT,"12212",Matemática Discreta
+896,FCYT,"34211",Matemática Discreta
+897,FCYT,"34211",Matemática Discreta
+898,FCYT,"02216",Matemática Discreta I
+899,FCYT,"01214",Matemática Discreta I
+900,FCYT,"01320",Matemática Discreta II
+901,FCYT,"03105",Matemática General
+902,FCYT,"04105",Matemática General
+910,FCYT,"09102",Matemática I
+912,FCYT,"26106",Matemática I
+909,FCYT,"05105",Matemática I
+913,FCYT,"25106",Matemática I
+908,FCYT,"16101",Matemática I
+911,FCYT,"22101",Matemática I
+906,FCYT,"27106",Matemática I
+903,FCYT,"24106",Matemática I
+904,FCYT,"13101",Matemática I
+907,FCYT,"29104",Matemática I
+905,FCYT,"35104",Matemática I
+922,FCYT,"27217",Matemática II
+920,FCYT,"35214",Matemática II
+919,FCYT,"29211",Matemática II
+918,FCYT,"25217",Matemática II
+921,FCYT,"13106",Matemática II
+916,FCYT,"09207",Matemática II
+915,FCYT,"05211",Matemática II
+914,FCYT,"16106",Matemática II
+917,FCYT,"22108",Matemática II
+924,FCYT,"16221",Matemática III
+925,FCYT,"22223",Matemática III
+923,FCYT,"13329",Matemática III
+926,FCYT,"19109",Matemática y Estadística
+927,FCYT,"03223",Mecánica
+928,FCYT,"29106",Mecánica
+929,FCYT,"05217",Mecánica Aplicada
+930,FCYT,"09105",Mecánica I
+931,FCYT,"09106",Mecánica II
+932,FCYT,"17321",Mecánica de los Fluidos y Elementos de Máquinas
+934,FCYT,"03431",Medicina Legal
+933,FCYT,"27439",Medicina Legal
+935,FCYT,"29435",Medicina Legal Aplicada
+936,FCYT,"09321",Medicina Legal aplicada a la Accidentología Vial
+937,FCYT,"31215",Medio Ambiente y Climatología
+938,FCYT,"06430",Medio Ambiente y Salud
+939,FCYT,"07434",Medio Ambiente y Salud
+940,FCYT,"25101",Metodologia de Estudio
+941,FCYT,"29101",Metodología de Estudio
+942,FCYT,"24101",Metodología de Estudio
+943,FCYT,"27101",Metodología de Estudio
+944,FCYT,"26101",Metodología de Estudio
+945,FCYT,"06425",Metodología de Investigación
+946,FCYT,"37109",Metodología de Programación
+947,FCYT,"29436",Metodología de la Investigación
+948,FCYT,"37547",Metodología de la Investigación
+949,FCYT,"22448",Metodología de la Investigación
+950,FCYT,"27435",Metodología de la Investigación
+951,FCYT,"11436",Metodología de la Investigación
+952,FCYT,"03429",Metodología de la Investigación
+953,FCYT,"19450",Metodología de la Investigación
+954,FCYT,"34425",Metodología de la Investigación
+955,FCYT,"35322",Metodología de la Investigación
+956,FCYT,"32322",Metodología de la Investigación
+961,FCYT,"38101",Metodología de la Investigación Científica
+960,FCYT,"08323",Metodología de la Investigación Científica
+959,FCYT,"09424",Metodología de la Investigación Científica
+958,FCYT,"21104",Metodología de la Investigación Científica
+957,FCYT,"31338",Metodología de la Investigación Científica
+962,FCYT,"33448",Metodología de la Investigación Científica Aplicada
+963,FCYT,"01215",Metodología de la Investigación Científica I
+964,FCYT,"33336",Metodología de la Investigación Criminal
+965,FCYT,"07328",Metodología de la Investigación Educativa
+966,FCYT,"04328",Metodología de la Investigación Educativa
+967,FCYT,"03331",Metodología de la Investigación Educativa
+968,FCYT,"05326",Metodología de la Investigación Educativa
+969,FCYT,"01325",Metodología de la Investigación II
+970,FCYT,"02329",Metodología de la Investigacíon Educativa
+971,FCYT,OP037,Metodología del Estudio de la Vegetación
+972,FCYT,"19225",Metodologías de Programación
+973,FCYT,OP083,Metricas de Software
+974,FCYT,"05103",Metrología
+975,FCYT,"31219",Microbiología
+976,FCYT,OP007,Microbiología
+977,FCYT,"19215",Microbiología e Inmunología
+978,FCYT,OP046,Microbiología y Patología
+979,FCYT,"09319",Microbiología y Patología
+980,FCYT,"15448",Microondas
+981,FCYT,"33446",Minoridad y Familia
+982,FCYT,"02O08",Modelos Matemáticos a través de grafos
+983,FCYT,"10541",Modelos y Simulación
+984,FCYT,OP075,Modelos y Simulación (Area Sistemas)
+985,FCYT,"13447",Máquinas Eléctricas
+986,FCYT,EJE_1,Métodos de Estudio/Epistemología/Estadística
+987,FCYT,"13571",NOOOOAmbiente Industrial y Medio Ambiente
+988,FCYT,"13573",NOOOOFormulación y Administración de Proyectos
+989,FCYT,"13572",NOOOOOAdministración de Recursos Humanos
+990,FCYT,"13570","NOOOOOHigiene, Seguridad y Legislación Laboral II"
+991,FCYT,OP032,Nematología
+992,FCYT,"31330",Nutrición Animal
+993,FCYT,"19216",Nutrición I
+994,FCYT,"19325",Nutrición II
+995,FCYT,"31323",Nutrición Vegetal
+996,FCYT,"09315",Nutrición y Alimentación
+997,FCYT,"38102",OPTATIVA I
+998,FCYT,"38210",OPTATIVA II
+999,FCYT,"21208",Optativa
+1000,FCYT,"34427",Optativa 1
+1001,FCYT,"34429",Optativa 2
+1002,FCYT,"34535",Optativa 3
+1003,FCYT,"12327",Optativa Analista (Área Sistemas)
+1015,FCYT,"34299",Optativa I
+1014,FCYT,"01323",Optativa I
+1013,FCYT,"15O-1",Optativa I
+1012,FCYT,"02328",Optativa I
+1011,FCYT,"35435",Optativa I
+1010,FCYT,"04330",Optativa I
+1007,FCYT,"37440",Optativa I
+1008,FCYT,"08428",Optativa I
+1006,FCYT,"05328",Optativa I
+1005,FCYT,"13O-1",Optativa I
+1004,FCYT,"03333",Optativa I
+1009,FCYT,"31216",Optativa I
+1016,FCYT,"34427",Optativa I (Lic Sistemas Información)
+1028,FCYT,"01429",Optativa II
+1027,FCYT,"04437",Optativa II
+1026,FCYT,"37550",Optativa II
+1025,FCYT,"34322",Optativa II
+1024,FCYT,"13O-2",Optativa II
+1023,FCYT,"15O-2",Optativa II
+1021,FCYT,"03440",Optativa II
+1020,FCYT,"02436",Optativa II
+1019,FCYT,"35537",Optativa II
+1018,FCYT,"08429",Optativa II
+1017,FCYT,"31324",Optativa II
+1022,FCYT,"05437",Optativa II
+1029,FCYT,"34429",Optativa II (Lic Sistemas Información)
+1034,FCYT,"01432",Optativa III
+1032,FCYT,"13O-3",Optativa III
+1033,FCYT,"35538",Optativa III
+1030,FCYT,"31332",Optativa III
+1031,FCYT,"15O-3",Optativa III
+1035,FCYT,"34535",Optativa III (LIc Sist Informáticos)
+1036,FCYT,"31337",Optativa IV
+1037,FCYT,"15O-4",Optativa IV
+1038,FCYT,"13O-4",Optativa IV
+1039,FCYT,"10546",Optativa Ingeniero (Area Sistemas y/o Computación)
+1040,FCYT,"10545",Optativa Ingeniero (Area Social y/o Exacta)
+1041,FCYT,"11439",Optativa Licenciatura (Area Sistemas y/o Computación)
+1042,FCYT,"03324",Optica Geométrica y Física
+1043,FCYT,"32435",Ordenación del Territorio
+1044,FCYT,"15571",Organizacion Industrial y Gestion de Calidad
+1045,FCYT,"13564",Organización Industrial y Gestión de Calidad
+1046,FCYT,"17322",Organización Insdustrial
+1047,FCYT,"33215",Organización y Legislación Policial I
+1048,FCYT,"33341",Organización y Legislación Policial III
+1049,FCYT,OP027,Ornitología
+1050,FCYT,OP041,Paleobotánica
+1051,FCYT,OP008,Paleontología
+1052,FCYT,"35433",Paleontología
+1053,FCYT,OP023,Paleovertebrados
+1054,FCYT,OP042,Palinología
+1057,FCYT,"26220",Papiloscopía I
+1056,FCYT,"27220",Papiloscopía I
+1055,FCYT,"03108",Papiloscopía I
+1058,FCYT,"26326",Papiloscopía II
+1059,FCYT,"27326",Papiloscopía II
+1060,FCYT,"03221",Papiloscopía II
+1061,FCYT,"34318",Paradigmas y Lenguajes
+1062,FCYT,OP033,Parasitología
+1063,FCYT,"19329",Pasantías
+1068,FCYT,"02213",Pedagogía
+1067,FCYT,"07214",Pedagogía
+1066,FCYT,"05214",Pedagogía
+1069,FCYT,"39101",Pedagogía
+1064,FCYT,"03215",Pedagogía
+1065,FCYT,"04214",Pedagogía
+1070,FCYT,"39005",Pensamiento científico en espacios de enseñanza - aprendizaje
+1071,FCYT,OP048,Piscicultura
+1072,FCYT,"09212",Piscicultura
+1073,FCYT,"33443",Planeamiento en Seguridad
+1074,FCYT,"33447",Planes de Autoprotección
+1075,FCYT,"19458",Planificacion y Desarrollo de Redes Telematicas
+1076,FCYT,"31220",Planificación de la Empresa Agropecuaria
+1077,FCYT,OP090,Planificación de la Empresa Agrícola
+1078,FCYT,OP093,Planificación de la Empresa Apícola
+1079,FCYT,OP091,Planificación de la Empresa Avícola
+1080,FCYT,"19217",Planificación de la Empresa Avícola
+1081,FCYT,OP092,Planificación de la Empresa Porcina
+1082,FCYT,"17327",Planificación y Control de la Producción
+1083,FCYT,"31346","Planificación, Gestión y Producción de la Empresa Avícola"
+1084,FCYT,"25112",Planimetría
+1085,FCYT,"29103",Planimetría
+1086,FCYT,"03102",Planimetría
+1087,FCYT,"27112",Planimetría
+1088,FCYT,"09210",Planimetría I
+1089,FCYT,"09214",Planimetría II
+1090,FCYT,"32432",Política Ambiental
+1095,FCYT,"02433",Política Educativa
+1094,FCYT,"07433",Política Educativa
+1093,FCYT,"05434",Política Educativa
+1092,FCYT,"03436",Política Educativa
+1091,FCYT,"04434",Política Educativa
+1096,FCYT,"26330",Portugués
+1097,FCYT,"27330",Portugués
+1098,FCYT,CC105,Portugués
+1099,FCYT,"24330",Portugués
+1100,FCYT,"25330",Portugués
+1101,FCYT,"29108",Portugués I
+1102,FCYT,"09431",Portugués I
+1103,FCYT,"33114",Portugués I
+1106,FCYT,"09432",Portugués II
+1105,FCYT,"29215",Portugués II
+1104,FCYT,"33227",Portugués II
+1107,FCYT,"33345",Portugués III
+1108,FCYT,"19326",Portugués Técnico
+1109,FCYT,"25331",Practica Pericial Balística
+1110,FCYT,"09428",Prevención y Educación Vial
+1111,FCYT,"29430",Prevención y Educación Vial
+1112,FCYT,"06101",Principios de Biología
+1113,FCYT,"07110",Principios de Biología
+1114,FCYT,"15228",Probabilibades y estadisticas
+1119,FCYT,"13227",Probabilidad y Estadística
+1118,FCYT,"04216",Probabilidad y Estadística
+1117,FCYT,"03217",Probabilidad y Estadística
+1116,FCYT,"34317",Probabilidad y Estadística
+1115,FCYT,"12320",Probabilidad y Estadística
+1120,FCYT,"02214",Probabilidad y Estadística I
+1121,FCYT,"01211",Probabilidad y Estadística I
+1122,FCYT,"02321",Probabilidad y Estadística II
+1123,FCYT,"01319",Probabilidad y Estadística II
+1124,FCYT,"22222",Probabilidades y Estadística
+1125,FCYT,"16220",Probabilidades y Estadística
+1126,FCYT,"37220",Probabilidades y Procesos Aleatorios
+1127,FCYT,OP122,Problemas de la didáctica de la Biología
+1128,FCYT,OP121,Problemas de la didáctica de la Física
+1129,FCYT,OP123,Problemas de la didáctica de la Matemática
+1130,FCYT,OP120,Problemas de la didáctica de la Química
+1131,FCYT,"39006",Problemas de la didáctica de la:
+1132,FCYT,"19327",Procesado
+1133,FCYT,EJE_3,"Procesamiento Digital de Imágenes, Geoestadística, Mienería de Datos y Mapas Interactivos en Línea"
+1134,FCYT,"13448",Procesamiento de Señales
+1135,FCYT,"37431",Procesamiento de Señales
+1136,FCYT,"15568",Procesamiento de señales en Comunicacion
+1137,FCYT,"05O03",Procesos Agropecuarios
+1138,FCYT,"05330",Procesos Productivos
+1139,FCYT,"31333",Producciones Alternativas
+1140,FCYT,"19328",Producción Avicola
+1141,FCYT,OP101,Producción Industrial
+1142,FCYT,"31327",Producción Intensiva
+1143,FCYT,OP081,Producción Lechera
+1144,FCYT,"19218",Producción Parrilleros
+1145,FCYT,"19219",Producción Ponedoras
+1146,FCYT,OP083,Producción de Carne
+1147,FCYT,"05O04",Producción de Servicios
+1148,FCYT,"34320",Programación Avanzada
+1149,FCYT,"12215",Programación I
+1150,FCYT,"12324",Programación II
+1152,FCYT,"34210",Programación Orientada a Objetos
+1151,FCYT,"34210",Programación Orientada a Objetos
+1153,FCYT,OP058,Programación Visual
+1154,FCYT,OP084,Programación de Arquitecturas Arduino
+1155,FCYT,"19454",Programación en Comunicaciones
+1156,FCYT,"33442",Protección contra Siniestros
+1157,FCYT,"19461",Protocolos y Servicios en Entornos WWW
+1158,FCYT,OP030,Protozoología Aplicada
+1159,FCYT,"05O04",Proudcción de Servicios
+1160,FCYT,"10547",Proyecto
+1165,FCYT,"37545",Proyecto Final
+1164,FCYT,"19460",Proyecto Final
+1163,FCYT,"29438",Proyecto Final
+1162,FCYT,"08430",Proyecto Final
+1161,FCYT,"27443",Proyecto Final
+1166,FCYT,"32430",Proyecto Final Integrador
+1167,FCYT,"13557",Proyecto Final de Control Automático
+1168,FCYT,"06432",Proyecto Final de Tesis
+1169,FCYT,"22453",Proyecto Final de Tésis
+1170,FCYT,"39323",Proyecto Tecnológico Aplicado a las Tecnólogias de la Informacíon y la Comunicacíon I
+1171,FCYT,"39432",Proyecto Tecnológico Aplicado a las Tecnólogias de la Informacíon y la Comunicacíon II
+1172,FCYT,"05223",Proyecto Tecnológico I
+1173,FCYT,"05333",Proyecto Tecnológico II
+1174,FCYT,"05442",Proyecto Tecnológico III
+1175,FCYT,"13339",Proyecto de Automatización Industrial
+1176,FCYT,"22340",Proyecto de Automatización Industrial
+1177,FCYT,"01435",Proyecto de Investigación
+1178,FCYT,"13333",Proyecto de Sistemas Digitales
+1179,FCYT,"22334",Proyecto de Sistemas Digitales
+1180,FCYT,"15559",Proyecto final de Telecomunicaciones
+1181,FCYT,"39431",Proyectos E-Learning
+1182,FCYT,"07329",Práctica Docente I (EGB 3)
+1183,FCYT,"05327",Práctica Docente I (EGB3)
+1184,FCYT,"03330",Práctica Docente I (EGB3)
+1185,FCYT,"04329",Práctica Docente I (EGB3)
+1186,FCYT,"02330",Práctica Docente I (EGB3)
+1187,FCYT,"39104",Práctica Docente I Contextos y Prácticas Educativas
+1189,FCYT,"39213",Práctica Docente II
+1188,FCYT,"04440",Práctica Docente II
+1190,FCYT,"03443",Práctica Docente II (Polimodal y Superior)
+1191,FCYT,"02438",Práctica Docente II (Polimodal y Superior)
+1192,FCYT,"07437",Práctica Docente II (Polimodal y Superior)
+1193,FCYT,"05441",Práctica Docente II (Polimodal y Superior)
+1194,FCYT,"39322",Práctica Docente III
+1195,FCYT,"39433",Práctica Docente IV y Residencia
+1196,FCYT,"03434",Práctica Pericial
+1197,FCYT,"03220",Práctica Pericial Balística
+1198,FCYT,"24443",Práctica Pericial Documentológica
+1200,FCYT,"09209",Práctica Pericial I
+1199,FCYT,"29212",Práctica Pericial I
+1201,FCYT,"29322",Práctica Pericial II
+1202,FCYT,"09318",Práctica Pericial II
+1203,FCYT,"29428",Práctica Pericial III
+1204,FCYT,"09425",Práctica Pericial III
+1205,FCYT,"26332",Práctica Pericial Papiloscopica
+1206,FCYT,"03218",Práctica Pericial Papiloscópica
+1207,FCYT,"31336",Práctica Profesional
+1208,FCYT,"33334",Prácticas Guiadas y Evaluadas
+1214,FCYT,"04324",Psicología Educacional
+1213,FCYT,"03327",Psicología Educacional
+1212,FCYT,"07325",Psicología Educacional
+1211,FCYT,"02323",Psicología Educacional
+1210,FCYT,"05324",Psicología Educacional
+1209,FCYT,"39215",Psicología Educacional
+1215,FCYT,"29431",Psicología General
+1216,FCYT,"24432",Psicología General
+1217,FCYT,"27433",Psicología General
+1218,FCYT,"33222",Psicología Social
+1219,FCYT,"27436",Psicología Social
+1220,FCYT,CC106,Psicología Social
+1221,FCYT,"29433",Psicología Social
+1222,FCYT,"03325",Psicología Social I
+1223,FCYT,"03428",Psicología Social II
+1224,FCYT,"39325",Psicología del Sujeto
+1225,FCYT,"27438",Psiquiatría Forense
+1226,FCYT,OP073,Puertos de Comunicación de PC
+1227,FCYT,"26333",Quimica Papiloscópica
+1228,FCYT,"37108",Química
+1229,FCYT,"10329",Química
+1230,FCYT,"05101",Química
+1231,FCYT,OP012,Química Ambiental
+1232,FCYT,"04435",Química Ambiental
+1233,FCYT,"04438",Química Analítica
+1234,FCYT,"32323",Química Analítica Ambiental
+1235,FCYT,"13445",Química Aplicada
+1236,FCYT,"04O03",Química Aplicada a la Educación Tecnológica
+1237,FCYT,"25220",Química Balística
+1238,FCYT,"06109",Química Biológica
+1239,FCYT,"32215",Química Biológica
+1240,FCYT,"35209",Química Biológica
+1241,FCYT,"04432",Química Biológica
+1242,FCYT,"07106",Química Biológica
+1243,FCYT,"19220",Química Biológica
+1244,FCYT,"24222",Química Documentológica
+1249,FCYT,"35100",Química General
+1248,FCYT,"17104",Química General
+1247,FCYT,"32103",Química General
+1246,FCYT,"06102",Química General
+1245,FCYT,"07102",Química General
+1250,FCYT,"31101",Química General y Orgánica
+1251,FCYT,"03108",Química I
+1252,FCYT,"25110",Química I
+1253,FCYT,"04108",Química I
+1254,FCYT,"27110",Química I
+1255,FCYT,"03107",Química I
+1256,FCYT,"08100",Química I (General e Inorgánica)
+1257,FCYT,"09101",Química I (General e Inorgánica)
+1262,FCYT,"04211",Química II
+1261,FCYT,"25221",Química II
+1260,FCYT,"03216",Química II
+1258,FCYT,"27221",Química II
+1259,FCYT,"03212",Química II
+1263,FCYT,"08104",Química II (Orgánica y Biológica)
+1264,FCYT,"09102",Química II (Orgánica y Vegetal)
+1265,FCYT,"03324",Química III
+1266,FCYT,"27328",Química III
+1267,FCYT,"27441",Química IV
+1268,FCYT,"03432",Química IV
+1269,FCYT,"17107",Química Industrial
+1270,FCYT,"04327",Química Industrial
+1271,FCYT,"19110",Química Inorgánica
+1272,FCYT,"04322",Química Inorgánica
+1273,FCYT,"09322",Química Legal
+1274,FCYT,"29217",Química Legal
+1275,FCYT,"32211",Química Orgánica
+1276,FCYT,"35106",Química Orgánica
+1277,FCYT,"25113",Química Orgánica
+1278,FCYT,"24113",Química Orgánica
+1279,FCYT,"04323",Química Orgánica I
+1280,FCYT,"04326",Química Orgánica II
+1281,FCYT,"04O08",Química en la Vida Cotidiana
+1282,FCYT,"04O08",Química en la vida cotidiana
+1283,FCYT,MG-9,Radares de Apertura Sintética y su Sinergia con Datos Ópticos
+1284,FCYT,"19453",Redes LAN
+1285,FCYT,"13554",Redes Neuronales y Lógica Difusa
+1286,FCYT,"19452",Redes WAN
+1287,FCYT,"39328",Redes de Computadoras y Telemática
+1288,FCYT,"37438",Redes de Datos
+1289,FCYT,"15679",Redes y Servicios Avanzados de Telecomunicaciones
+1290,FCYT,"15681",Redes y Servicios Moviles II
+1291,FCYT,"15344",Redes y Servicios Móviles
+1292,FCYT,"16337",Redes y Servicios Móviles
+1293,FCYT,"16226",Redes y Servicios de Telecomunicaciones 
+1294,FCYT,"15226",Redes y Servicios de Telecomunicaciones
+1295,FCYT,"15561",Redes y Servicios de Telecomunicaciones II
+1296,FCYT,OP082,Redes y Servicios en Programación Móvil
+1297,FCYT,"31331",Reproducción Animal
+1298,FCYT,"31326",Reproducción Vegetal
+1299,FCYT,"13561",Robótica Avanzada
+1300,FCYT,"19221",Sanidad Avícola
+1301,FCYT,"31221",Sanidad Vegetal
+1302,FCYT,"31222",Sanidad y Manejo Animal
+1303,FCYT,OP072,Seguridad Informática
+1304,FCYT,"33217",Seguridad Pública I
+1305,FCYT,"33327",Seguridad Pública II
+1306,FCYT,"34530",Seguridad y Auditoria
+1307,FCYT,"19459",Seguridad y Auditoria de Redes Telemáticas
+1308,FCYT,OP096,Seguridad y Redes
+1309,FCYT,"02324",Seminario
+1310,FCYT,"33339",Seminario - Taller Política Criminal y Criminología Regional
+1311,FCYT,"33340",Seminario - Taller Psicología de la Delincuencia
+1312,FCYT,"33342",Seminario - Taller Reparación de la Víctima
+1313,FCYT,"33337",Seminario - Taller Sociología de la Desviación
+1314,FCYT,MG-13,Seminario 1
+1315,FCYT,MG-14,Seminario 2
+1316,FCYT,MG-15,Seminario 3
+1317,FCYT,"33338",Seminario Delitos Económicos
+1318,FCYT,"01430",Seminario I
+1319,FCYT,"01433",Seminario II
+1320,FCYT,"33451",Seminario Métodos de Capacitación
+1321,FCYT,"33450",Seminario Seguridad Domiciliaria y Gerencia de Crisis
+1322,FCYT,OP067,Seminario de Administración y Gestión Empresarial
+1323,FCYT,"06318",Seminario de Legislación Ambiental
+1324,FCYT,OP103,Seminario de Lenguajes - Lenguaje Java II
+1325,FCYT,OP102,Seminario de Lenguajes- Lenguaje Java l
+1326,FCYT,"38211",Seminario de Tesis
+1327,FCYT,EJE_5,Seminarios de Aplicaciones de Geomática a la Gestión de Riesgo
+1328,FCYT,"37543",Servicio de Telecomunicaciones y Redes
+1329,FCYT,"37326",Señales y Sistemas
+1330,FCYT,"15215",Señales y Sistemas I
+1331,FCYT,"16215",Señales y Sistemas I
+1332,FCYT,"15342",Señales y Sistemas II
+1333,FCYT,"16342",Señales y Sistemas II
+1334,FCYT,"17108",Sistema de Representación Gráfica II
+1335,FCYT,"37213",Sistemas Digitales
+1336,FCYT,"22104",Sistemas Digitales I
+1337,FCYT,"15104",Sistemas Digitales I
+1338,FCYT,"16104",Sistemas Digitales I
+1339,FCYT,"13104",Sistemas Digitales I
+1342,FCYT,"13109",Sistemas Digitales II
+1341,FCYT,"15109",Sistemas Digitales II
+1343,FCYT,"22111",Sistemas Digitales II
+1340,FCYT,"16109",Sistemas Digitales II
+1344,FCYT,"13216",Sistemas Digitales III
+1345,FCYT,"16216",Sistemas Digitales III
+1346,FCYT,"15216",Sistemas Digitales III
+1347,FCYT,"22218",Sistemas Digitales III
+1348,FCYT,"16222",Sistemas Digitales IV
+1349,FCYT,"22224",Sistemas Digitales IV
+1350,FCYT,"13221",Sistemas Digitales IV
+1351,FCYT,"15222",Sistemas Digitales IV
+1352,FCYT,"10542",Sistemas Inteligentes
+1353,FCYT,"22444",Sistemas Multivariables de Control Automático
+1354,FCYT,"13559",Sistemas No Lineales
+1355,FCYT,"12323",Sistemas Operativos
+1356,FCYT,"19342",Sistemas Operativos
+1357,FCYT,"15454",Sistemas Operativos
+1358,FCYT,"34316",Sistemas Operativos
+1359,FCYT,"37324",Sistemas Operativos
+1360,FCYT,"19455",Sistemas Operativos de Redes y Sistemas Distribuidos
+1361,FCYT,"39321",Sistemas Tecnológicos
+1362,FCYT,"13338",Sistemas de Adquisición y Control de Datos
+1363,FCYT,"22339",Sistemas de Adquisición y Control de Datos
+1364,FCYT,"22446",Sistemas de Comunicaciones Industriales
+1365,FCYT,"22452",Sistemas de Control Automático Avanzados
+1367,FCYT,"22332",Sistemas de Control Automático I
+1366,FCYT,"13331",Sistemas de Control Automático I
+1368,FCYT,"13443",Sistemas de Control Automático II
+1369,FCYT,"13452",Sistemas de Control Automático III
+1370,FCYT,"13558",Sistemas de Control Automático IV
+1371,FCYT,"22451",Sistemas de Control Digital
+1372,FCYT,"13553",Sistemas de Control Digital y Estocástico 
+1373,FCYT,"12322",Sistemas de Datos
+1374,FCYT,"15569",Sistemas de Deteccion y Exploracion
+1375,FCYT,"32433",Sistemas de Información Ambiental
+1376,FCYT,"12109",Sistemas de Información Contable
+1380,FCYT,MG-3,Sistemas de Información Geográfica
+1379,FCYT,OP088,Sistemas de Información Geográfica
+1378,FCYT,"08425",Sistemas de Información Geográfica
+1377,FCYT,"35432",Sistemas de Información Geográfica
+1381,FCYT,OP074,Sistemas de Información Geográfica (GIS) (Area Sistemas)
+1382,FCYT,EJE_2,Sistemas de Información Geográfica/Cartografía/Teledetección
+1383,FCYT,"12213",Sistemas de Información I
+1384,FCYT,"12321",Sistemas de Información II
+1385,FCYT,"11432",Sistemas de Información III
+1386,FCYT,"32321","Sistemas de Medición, Control y Mitigación"
+1387,FCYT,"37107",Sistemas de Representación
+1388,FCYT,"17102",Sistemas de Representación Gráfica I
+1389,FCYT,"39212",Sistemas de Representacíon y Comunicación
+1390,FCYT,"37433",Sistemas de Sonido e Imagen
+1391,FCYT,"15333",Sistemas de Telecomunicaciones I
+1392,FCYT,"16332",Sistemas de Telecomunicaciones I
+1393,FCYT,"15340",Sistemas de Telecomunicaciones II
+1394,FCYT,"16340",Sistemas de Telecomunicaciones II
+1395,FCYT,"12103",Sistemas y Organizaciones
+1396,FCYT,"34101",Sistemas y Organizaciones
+1397,FCYT,"08318",Sistemática Animal I
+1398,FCYT,"35324",Sistemática Animal I
+1399,FCYT,"08320",Sistemática Animal II
+1400,FCYT,"35430",Sistemática Animal II
+1401,FCYT,OP001,Sistemática Filogenética
+1402,FCYT,"35320",Sistemática Vegetal I
+1403,FCYT,"08317",Sistemática Vegetal I
+1404,FCYT,"35326",Sistemática Vegetal II
+1405,FCYT,"08319",Sistemática Vegetal II
+1406,FCYT,"27434",Sociología
+1407,FCYT,"29432",Sociología
+1408,FCYT,"06216",Sociología de la Ciencia
+1409,FCYT,"01216",Sociología de la Ciencia
+1414,FCYT,"03219",Sociología de la Educación
+1412,FCYT,"05219",Sociología de la Educación
+1413,FCYT,"04218",Sociología de la Educación
+1410,FCYT,"02217",Sociología de la Educación
+1411,FCYT,"07217",Sociología de la Educación
+1415,FCYT,"31344",Sociología de la Organización
+1416,FCYT,"38208",Sociología de la Organización
+1417,FCYT,"33332",Sociología de la Organización Policial
+1418,FCYT,OP009,Sociología de las Ciencias
+1419,FCYT,OP097,Sofware Libre
+1420,FCYT,"11438",Síntesis de Sistemas
+1421,FCYT,"33452",TESIS
+1422,FCYT,"31347",TESIS DE GRADO
+1423,FCYT,"38212",TESIS DE GRADO
+1424,FCYT,"39008",TIC aplicada a educación científica
+1425,FCYT,OP089,TICS Orientadas a la Planificación Local Estratégica
+1426,FCYT,"12105",Taller Informático I
+1427,FCYT,"12106",Taller Informático II
+1428,FCYT,"33223",Taller de Ceremonial y Protocolo
+1429,FCYT,"33111",Taller de Comunicación Oral y Escrita
+1430,FCYT,CC102,Taller de Comunicación Oral y Escrita
+1431,FCYT,"39438",Taller de Educación Sexual Integral
+1433,FCYT,"12328",Taller de Integración 
+1434,FCYT,"04220",Taller de Integración
+1432,FCYT,"34321",Taller de Integración
+1435,FCYT,"03221",Taller de Integración
+1436,FCYT,"02439",Taller de Investigación en la  Enseñanza de la Matemática
+1437,FCYT,"04439",Taller de Investigación en la Enseñanza de Química
+1438,FCYT,"07436",Taller de Investigación en la Enseñanza de la Biología
+1439,FCYT,"03441",Taller de Investigación en la Enseñanza de la Física
+1440,FCYT,"05440",Taller de Investigación en la Enseñanza de la Tecnología
+1441,FCYT,"33224",Taller de Oratoria Profesional
+1442,FCYT,"33110",Taller de Primeros Auxilios
+1443,FCYT,"39007",Taller de investigación e intervención en prácticas de enseñanza
+1444,FCYT,OP126,Taller de investigación e intervención en prácticas de enseñanza - Biología
+1445,FCYT,OP125,Taller de investigación e intervención en prácticas de enseñanza - Física
+1446,FCYT,OP127,Taller de investigación e intervención en prácticas de enseñanza - Matemática
+1447,FCYT,OP124,Taller de investigación e intervención en prácticas de enseñanza - Química
+1448,FCYT,"39009",Taller del Trabajo final integrador
+1449,FCYT,"15455",Tecnicas de Conmutacion
+1450,FCYT,"15229",Tecnicas de Investigacion
+1451,FCYT,"15214",Tecnicas de Trabajo Intelectual
+1452,FCYT,OP074,Tecnología OLAP
+1453,FCYT,"39106",Tecnología de la Información y la Comunicación I
+1454,FCYT,"39211",Tecnología de la Informacíon y la Comunicacíon II
+1455,FCYT,"39324",Tecnología de la Informacíon y la Comunicacíon III
+1456,FCYT,"05215",Tecnología de los Materiales
+1457,FCYT,"17219",Tecnología de los Procesos de Producción
+1458,FCYT,OP079,Tecnologías de Ambientes Mainframes (Area Computación)
+1459,FCYT,OP115,Tecnologías de Desarrollo de Software
+1460,FCYT,"39434",Tecnologías de Producción Agroindustrial
+1461,FCYT,"05O01",Tecnologías de la Energía
+1462,FCYT,"05221",Tecnologías de la Información y la Comunicación
+1463,FCYT,"05221",Tecnologías de la Información y la Comunicación I
+1464,FCYT,"05331",Tecnologías de la Información y la Comunicación II
+1465,FCYT,OP053,Tecnologías en Ambientes Mainframes
+1466,FCYT,OP050,Tecnologías sobre HTTP y la WWW
+1467,FCYT,"37437",Telecomunic y Redes
+1468,FCYT,"13556",Telecomunicaciones
+1469,FCYT,OP005,Teledetección
+1470,FCYT,"15457",Television
+1471,FCYT,"15335",Teoria de la Comunicacion
+1472,FCYT,"37217",Teoría de Circuitos
+1473,FCYT,"34532",Teoría de Computabilidad
+1474,FCYT,"16336",Teoría de Comunicación
+1475,FCYT,"10543",Teoría de Lenguajes
+1476,FCYT,OP079,Teoría de Lenguajes
+1477,FCYT,OP105,Teoría de Lenguajes
+1478,FCYT,"37330",Teoría de la Comunicación
+1479,FCYT,"21101",Teoría de los Sistemas Ecológicos
+1480,FCYT,"01O02",Teoría del Caos
+1481,FCYT,MG-10,Teoría y Práctica de los Inventarios Biológicos y de Campo Nociones de Geoposicionamiento
+1482,FCYT,"17217",Termodinámica y Maquinas Térmicas
+1483,FCYT,"34533",Tesina de Grado
+1486,FCYT,"03435",Tesis
+1485,FCYT,"09435",Tesis
+1484,FCYT,"21209",Tesis
+1487,FCYT,"35540",Tesis de Licenciatura
+1488,FCYT,"02325",Topología
+1489,FCYT,"01427",Topología
+1490,FCYT,"32436",Toxicología Ambiental
+1491,FCYT,"19330",Trabajo Final de Integración
+1492,FCYT,"15331",Transmision de datos
+1493,FCYT,"16330",Transmisión de Datos
+1494,FCYT,"37327",Transmisión y Propagación de Ondas
+1495,FCYT,"15450",Tratamiento Digital de Senales I
+1496,FCYT,"15456",Tratamiento Digital de Señales II
+1497,FCYT,"32320",Tratamiento de Residuos Sólidos
+1498,FCYT,"33106",Técnica de Defensa Personal I
+1499,FCYT,"33219",Técnica de Defensa Personal II
+1500,FCYT,"33102",Técnica y Práctica Contravencional
+1501,FCYT,"33214",Técnica y Práctica Prevencional
+1502,FCYT,"33329",Técnicas de Defensa Personal III
+1503,FCYT,"09426",Técnicas de Filmación
+1504,FCYT,OP017,Técnicas de Gestión Ambiental
+1505,FCYT,"22337",Técnicas de Investigación
+1506,FCYT,"16339",Técnicas de Investigación
+1507,FCYT,"13228",Técnicas de Investigación
+1508,FCYT,"05108",Técnicas de Representación
+1509,FCYT,"22216",Técnicas de Trabajo Intelectual
+1510,FCYT,"13214",Técnicas de Trabajo Intelectual
+1511,FCYT,"16214",Técnicas de Trabajo Intelectual
+1512,FCYT,EJE_6,Tésis de Maestría
+1513,FCYT,"33108",Uso de Armamento Policial y Tiro I
+1514,FCYT,"33221",Uso de Armamento Policial y Tiro II
+1515,FCYT,"33331",Uso de Armamento Policial y Tiro III
+1516,FCYT,"02O07",Variables Complejas
+1517,FCYT,"01431",Variables Complejas
+1522,FCYT,"26214",Video Filmación
+1521,FCYT,"24214",Video Filmación
+1520,FCYT,"25214",Video Filmación
+1519,FCYT,"29320",Video Filmación
+1518,FCYT,"27214",Video Filmación
+1523,FCYT,"03212",Video Filmación I
+1524,FCYT,"03322",Video Filmación II
+1525,FCYT,"35213",Zoología General
+1526,FCYT,"09108",Zoología General
+1527,FCYT,"08102",Zoología General
+1528,FCYT,"15677","redes de Area Local, Metropolitana y extensa"
+1529,FCYT,"22107",Álgebra
+1530,FCYT,"17103",Álgebra y Geometría Analítica
+1531,FCYT,"12325",Ética Profesional
+1532,FCYT,"34319",Ética Profesional
+1533,FCYT,"19323",Ética y Deontología
+1534,FCYT,"32328",Ética y Deontología Profesional
+1535,FCYT,"31335",Ética y Deontología Profesional
