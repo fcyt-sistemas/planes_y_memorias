@@ -82,7 +82,10 @@
                                     </a>  
                                     <a class="dropdown-item" href="{{ route('docentes') }}">
                                          {{ __('Administrar docentes') }}
-                                    </a>   
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('usuarios') }}">
+                                         {{ __('Administrar usuarios') }}
+                                    </a>    
                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
