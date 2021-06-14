@@ -147,6 +147,12 @@ class Memoria extends Model
             $query->where('memorias.sede_id',$sede);
         }
     }
+
+    public function scopeAnio($query,$anio_academico){
+        if($anio_academico!=''){
+            $query->where('memorias.anio_academico',$anio_academico);
+        }
+    }
     
     public function scopeCarrera($query,$carrera){
         if($carrera!=''){
