@@ -81,7 +81,7 @@
               </div>
             </li>
             @endforeach
-            <li class="list-group-item">{{$memorias->appends(Request::only(['sede','carrera','asignatura','profesor','entregadas','aprobadas','revisadas']))->links()}}</li>
+            <li class="list-group-item">{{$memorias->appends(Request::only(['sede','carrera','asignatura','profesor','entregadas','aprobadas','revisadas', 'anio_academico']))->links()}}</li>
           </ul>
         </div>
       </div>

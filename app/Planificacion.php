@@ -145,6 +145,12 @@ class Planificacion extends Model
             $query->where('planificaciones.sede_id',$sede);
         }
     }
+
+    public function scopeAnio($query,$anio_academico){
+        if($anio_academico!=''){
+            $query->where('planificaciones.anio_academico',$anio_academico);
+        }
+    }
     
     public function scopeCarrera($query,$carrera){
         if($carrera!=''){
