@@ -226,6 +226,8 @@ class MemoriaController extends Controller
       return view('revisor.memorias.review', compact('memoria', 'catedras', 'planes', 'carreras', 'sedes'));
     } elseif (Auth::user()->hasRole('user') && \Session::get('tipoUsuario') == 'user') {
       return view('usuario.memorias.show', compact('memoria', 'catedras', 'planes', 'carreras', 'sedes'));
+    } elseif (Auth::user()->hasRole('lectura') && \Session::get('tipoUsuario') == 'lectura') {
+      return view('lectura.memorias.show', compact('memoria', 'catedras', 'planes', 'carreras', 'sedes'));
     }
   }
 
@@ -288,6 +290,28 @@ class MemoriaController extends Controller
     PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
     $pdf = PDF::loadView('admin.memorias.impresion', compact('memoria'));
     return $pdf->download($memoria->catedra->nombre . '-' . $memoria->anio_academico . '.pdf');
+  }
+
+  public function reporteMemoria(Request $request)
+  {
+    /**
+     * toma en cuenta que para ver los mismos
+     * datos debemos hacer la misma consulta
+     **/
+    $memorias = Memoria::whereSede($request->get('sede'))
+      ->carrera($request->get('carrera'))
+      ->asignatura($request->get('asignatura'))
+      ->profesor($request->get('profesor'))
+      ->entregada($request->get('entregadas'))
+      ->aprobada($request->get('aprobadas'))
+      ->revisada($request->get('revisadas'))
+      ->anio($request->get('anio_academico'))
+      ->get();
+    PDF::setOptions(['defaultFont' => 'sans-serif']);
+
+    $pdf = PDF::loadView('admin.memorias.reporte', compact('memorias'));
+
+    return $pdf->download('memorias.pdf');
   }
 
   public function getCarreras($id)

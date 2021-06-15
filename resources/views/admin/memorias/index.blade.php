@@ -84,7 +84,13 @@
               </div>
             </li>
             @endforeach
-            <li class="list-group-item">{{$memorias->appends(Request::only(['sede','carrera','asignatura','profesor','entregadas','aprobadas','revisadas', 'anio_academico']))->links()}}</li>
+            <li class="list-group-item">{{$memorias->appends(Request::only(['sede','carrera','asignatura','profesor','entregadas','aprobadas','revisadas','anio_academico']))->links()}}
+              <div align="right">
+                <div class="btn">
+                  {!!link_to_route('reporteMemoria.pdf', $title = 'Reporte para Impresión', $parameters = Request::only(['sede','carrera','asignatura','profesor','anio_academico']), $attributes = ['class'=>'btn btn-secondary'])!!}
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>

@@ -325,6 +325,7 @@ class PlanificacionController extends Controller
       ->carrera($request->get('carrera'))
       ->asignatura($request->get('asignatura'))
       ->profesor($request->get('profesor'))
+      ->anio($request->get('anio_academico'))
       ->get();
     //dd($request->get('sede'));
     //return view('admin.planificaciones.pdf', compact('planificacion'));
