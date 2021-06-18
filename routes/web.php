@@ -27,6 +27,7 @@ Route::get('/planificaciones/{id}/aprobar', 'PlanificacionController@aprobar');
 Route::get('/planificaciones/{id}/programa', 'PlanificacionController@pdf')->name('programa.pdf');
 Route::get('/planificaciones/{id}/impresion', 'PlanificacionController@impresion')->name('planificacion.impresion');
 Route::get('/planificaciones/reporte', 'PlanificacionController@reporte')->name('reporte.pdf');
+Route::get('/memorias/reporte', 'MemoriaController@reporte')->name('memoria.reporte');
 Route::resource('planificacion','PlanificacionController');
 Route::resource('memorias','MemoriaController');
 Route::resource('revisores','RevisorController');
@@ -41,7 +42,6 @@ Route::get('/memorias/{id}/revisar', 'MemoriaController@revisar');
 Route::get('/memorias/{id}/duplicar', 'MemoriaController@duplicar');
 Route::get('/memorias/{id}/aprobar', 'MemoriaController@aprobar');
 Route::get('/memorias/{id}/impresion', 'MemoriaController@impresion')->name('memoria.impresion');
-Route::get('/memorias/reporte', 'MemoriaController@reporteMemoria')->name('reporteMemoria.pdf');
 
 
 //rutas del servicio dinamicas

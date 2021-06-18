@@ -20,12 +20,12 @@
                             No hay elementos cargados
                           </div>
                       @endif  
-                      @foreach($memorias as $p)
+                      @foreach($memorias as $m)
                         <li class="list-group-item"> 
-                               Docente: <b><i>{{$p->docente->apellidos}}, {{$p->docente->nombres}}</i></b></br>
-                               <b>{{$p->carrera->nombre}}</b> (Plan {{$p->plan->nombre}}, Resol {{$p->plan->nro_resolucion}})</br>
-                               <b>{{$p->catedra->nombre}}, {{$p->anio_academico}}</b></br>
-                               {{strip_tags($p->equipo_docente)}}</br>
+                               Docente: <b><i>{{$m->docente->apellidos}}, {{$m->docente->nombres}}</i></b></br>
+                               <b>{{$m->carrera->nombre}}</b> (Plan {{$m->plan->nombre}}, Resol {{$m->plan->nro_resolucion}})</br>
+                               <b>{{$m->catedra->nombre}}, {{$m->anio_academico}}</b></br>
+                               {{strip_tags($m->equipo_docente)}}</br>
 		                </li>
                        @endforeach
                     </ul>

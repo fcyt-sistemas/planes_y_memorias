@@ -292,7 +292,7 @@ class MemoriaController extends Controller
     return $pdf->download($memoria->catedra->nombre . '-' . $memoria->anio_academico . '.pdf');
   }
 
-  public function reporteMemoria(Request $request)
+  public function reporte(Request $request)
   {
     /**
      * toma en cuenta que para ver los mismos
@@ -302,9 +302,6 @@ class MemoriaController extends Controller
       ->carrera($request->get('carrera'))
       ->asignatura($request->get('asignatura'))
       ->profesor($request->get('profesor'))
-      ->entregada($request->get('entregadas'))
-      ->aprobada($request->get('aprobadas'))
-      ->revisada($request->get('revisadas'))
       ->anio($request->get('anio_academico'))
       ->get();
     PDF::setOptions(['defaultFont' => 'sans-serif']);
