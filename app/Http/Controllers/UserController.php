@@ -9,8 +9,10 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\User;
 use App\Role;
+use Illuminate\Database\Events\QueryExecuted;
 use Session;
 use Redirect;
+use DB;
 
 class UserController extends Controller
 {
@@ -40,7 +42,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        $roles = Role::where('name', 'admin')->orWhere('name', 'lectura')->get();
+        $roles = Role::all();
         return view('admin.usuarios.create', compact('roles'));
     }
 
@@ -102,8 +104,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        /* $usuario = User::find($id);
-        return view('admin.usuarios.edit', compact('usuario')); */
+        $usuario = User::find($id);
+        $roles = Role::all();
+        //$rol = $usuario->roles();
+        //return dd($usuario, $roles, $rol);
+        return view('admin.usuarios.edit', compact('usuario', 'roles'));
     }
 
     /**
@@ -114,11 +119,13 @@ class UserController extends Controller
      */
     public function update($id, Request $request)
     {
-        /* $usuario = User::find($id);
+        $usuario = User::find($id);
         $usuario->fill($request->all());
         $usuario->save();
+        $usuario->roles()->attach(Role::where('name',$request->role)->first());
+        //$rol = DB::table('role_user')->where('user_id', '=', $id)->orderBy('created_at', 'desc')->first();
         Session::flash('message', 'Usuario actualizado correctamente!');
-        return Redirect::to('/usuarios'); */
+        return Redirect::to('/usuarios');
     }
 
     /**
