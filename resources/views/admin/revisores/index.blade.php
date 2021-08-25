@@ -48,6 +48,7 @@
                             </div> 
 		                </li>
                        @endforeach
+                       <li class="list-group-item">{{$revisores->links()}}</li>
                       </ul>
                 </div>
             </div>

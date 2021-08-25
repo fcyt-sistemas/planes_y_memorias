@@ -42,7 +42,7 @@
                             <label class="input-group-text" for="role">Rol:</label>
                         </div>
                         <select name="role" id="role" required>
-                            <option value="" selected disabled hidden>Seleccione un rol...</option>
+                            <option value="{{$rol->name}}" selected disabled hidden>{{$rol->description}}</option>
                             @foreach($roles as $role)
                             <option value="{{$role->name}}">{{$role->description}}</option>
                             @endforeach

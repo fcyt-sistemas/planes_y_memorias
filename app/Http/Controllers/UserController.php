@@ -13,6 +13,7 @@ use Illuminate\Database\Events\QueryExecuted;
 use Session;
 use Redirect;
 use DB;
+use App\Role_User;
 
 class UserController extends Controller
 {
@@ -106,9 +107,8 @@ class UserController extends Controller
     {
         $usuario = User::find($id);
         $roles = Role::all();
-        //$rol = $usuario->roles();
-        //return dd($usuario, $roles, $rol);
-        return view('admin.usuarios.edit', compact('usuario', 'roles'));
+        $rol = $usuario->roles()->first();
+        return view('admin.usuarios.edit', compact('usuario', 'roles', 'rol'));
     }
 
     /**
@@ -122,8 +122,10 @@ class UserController extends Controller
         $usuario = User::find($id);
         $usuario->fill($request->all());
         $usuario->save();
-        $usuario->roles()->attach(Role::where('name',$request->role)->first());
-        //$rol = DB::table('role_user')->where('user_id', '=', $id)->orderBy('created_at', 'desc')->first();
+        $rol_user = Role_User::where('user_id', $id)->first();
+        $rol = Role::where('name', $request->role)->first();
+        $rol_user->role_id = $rol->id;
+        $rol_user->save();
         Session::flash('message', 'Usuario actualizado correctamente!');
         return Redirect::to('/usuarios');
     }

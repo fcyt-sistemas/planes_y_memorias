@@ -26,7 +26,7 @@ class RevisorController extends Controller
         //Permitido solo para administradores
         $request->user()->authorizeRoles(['admin']);
         
-        $revisores = Revisor::all();
+        $revisores = Revisor::orderBy('sede_id')->paginate(20);
         // $i=0;
         // foreach($revisores as $re){
         //     print_r($i++.$re->docente.'<br>');
