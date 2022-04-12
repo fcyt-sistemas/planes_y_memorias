@@ -24,7 +24,12 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+/*
+        $baseUrl = env('API_ENDPOINT');
+        $this->app->singleton(Client::class, function($app) use ($baseUrl) {
+            return new Client(['base_uri' => $baseUrl]);
+        });
+*/
 
-        //
     }
 }

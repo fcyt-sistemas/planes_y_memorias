@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header">Contenidos cargados por el docente {{ Auth::user()->docente->apellidos}}, {{ Auth::user()->docente->nombres}}! </div>
                   <div class="card-body">
-                     Planificaciones: {{sizeof($planis)}} {!!link_to_action('PlanificacionController@index', $title = 'Revisar', $parameters = [], $attributes = ['class'=>'btn btn-secondary'])!!}
+                     Planificaciones: {{sizeof($planis)}} {!!link_to_action('PlanificacionController@index', $title = 'Ver', $parameters = [], $attributes = ['class'=>'btn btn-secondary'])!!}
                     <p>
                     <div class="card-deck">
                     <div class="card text-white bg-secondary mb-3">
@@ -39,7 +39,7 @@
                     </div>
 
                     </div>
-                      Memorias de cátedra: {{sizeof($memos)}} {!!link_to_action('MemoriaController@index', $title = 'Revisar', $parameters = [], $attributes = ['class'=>'btn btn-secondary'])!!}
+                      Memorias de cátedra: {{sizeof($memos)}} {!!link_to_action('MemoriaController@index', $title = 'Ver', $parameters = [], $attributes = ['class'=>'btn btn-secondary'])!!}
                       <p>
                     <div class="card-deck">
                     <div class="card text-white bg-secondary mb-3">

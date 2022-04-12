@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use GuzzleHttp\Client;
 use App\Planificacion;
 use App\Docente;
 use App\Memoria;
 
-class HomeController extends Controller
+class HomeController extends Controller 
 {
     /**
      * Create a new controller instance.
@@ -17,7 +18,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -26,9 +27,9 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
+    {   
         $tipo = \Session::get('tipoUsuario');
-
+       
         if ($request->user()->hasRole('admin') && !$tipo) {
             \Session::put('tipoUsuario', 'admin');
         } elseif ($request->user()->hasRole('control') && !$tipo) {
@@ -256,4 +257,5 @@ class HomeController extends Controller
         \Session::put('tipoUsuario', $perfil);
         return $this->index($request);
     }
+    
 }
