@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers\Auth;
 
+<<<<<<< HEAD
 use Auth;
+=======
+use Redirect;
+>>>>>>> 8937b13e00f892d46a6450c383d043f2751cc053
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use GuzzleHttp\Client;
-use App\Planificacion;
-use App\Docente;
-use App\Memoria;
 use Illuminate\Http\Request;
-use Redirect;
+use Illuminate\Support\Facades\Log;
+use GuzzleHttp\Client;
+use Auth;
 
 
 class LoginController extends Controller
@@ -50,15 +52,21 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function login()
-    {
-        if (Auth::attempt(request()->only('nro_documento', 'password'))) {
-            return redirect('/home');
+    public function login(Request $request){
+        $client = new Client(['headers' => ['Content-Type' => 'application/json']]);
+        $datos_login = ['usuario' => $request->get('nro_documento'), 'clave' => $request->get('password')];
+        $response=$client->post(
+            'http://10.0.60.27:8088/guarani/3.18/rest/password-uader', 
+            ['auth' => ['guarani', 'abc123456'],'body' => json_encode($datos_login),]
+        );
+        
+        if($response->getBody()) {
+          $entrar = json_decode($response->getBody()->getContents());
+          if ($entrar[0]) {
+            Auth::loginUsingId(1, true);
+            return redirect('home');
+          }
         }
-
-        return back()->withErrors([
-            'nro_documento' => 'invalid credentials',
-        ]);
     }
 
 }
