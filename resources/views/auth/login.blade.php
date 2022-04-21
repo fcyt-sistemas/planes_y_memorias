@@ -12,10 +12,10 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="nro_documento" class="col-sm-4 col-form-label text-md-right">{{ __('DNI') }}</label>
+                            <label for="nro_documento" class="col-sm-4 col-form-label text-md-right">{{ __('D.N.I.') }}</label>
 
                             <div class="col-md-6">
-                                <input id="nro_documento" type="number" class="form-control{{ $errors->has('nro_documento') ? ' is-invalid' : '' }}" name="nro_documento" value="{{ old('nro_documento') }}" required autofocus>
+                                <input id="nro_documento" type="nro_documento" class="form-control{{ $errors->has('nro_documento') ? ' is-invalid' : '' }}" name="nro_documento" value="{{ old('nro_documento') }}" required autofocus>
 
                                 @if ($errors->has('nro_documento'))
                                     <span class="invalid-feedback">
@@ -55,7 +55,7 @@
                                     {{ __('Acceso') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ url('http://guarani3w.uader.edu.ar/gestion/acceso/recuperar') }}">
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
                                     {{ __('¿Olvidó su contraseña?') }}
                                 </a>
                             </div>

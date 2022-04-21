@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-//Route::POST('login', 'LoginController@login')->name('login.home');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/perfil/{perfil}', 'HomeController@cambiarPerfil')->name('perfil');
