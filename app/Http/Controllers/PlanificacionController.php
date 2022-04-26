@@ -341,7 +341,7 @@ class PlanificacionController extends Controller
     /**
      * Impresión de versiones impresas completas de planificaciones
      **/
-    /**
+    /**Planificacion
      * toma en cuenta que para ver los mismos
      * datos debemos hacer la misma consulta
      **/

@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\SoftDeletes;
 class Docente extends Model 
 {
 
@@ -48,5 +49,27 @@ class Docente extends Model
         if(trim($nombre!="")){
             $query->where(\DB::raw("CONCAT(apellidos,' ',nombres)"),"LIKE","%$nombre%"); 
         }
+    }
+
+/*    public function scopeId($query, $id){
+        if(trim($id!="")){
+            $query->where(\DB::raw("CONCAT(id)"),"LIKE","%$id%");
+        }
+    }*/
+
+    public function scopeNro_documento($query, $nro_documento){
+        if($nro_documento != " "){
+            //$nro_documento= (integer) $nro_documento;
+            return $query->where('nro_documento',$nro_documento);
+        }
+    }
+
+    public function scopeId($query,$nro_documento){
+        if($nro_documento!=''){
+         return  $query->leftjoin('users','users.docente_id','=','docentes.id')
+                  ->where('nro_documento',$nro_documento)
+                  ->select('users.id'); 
+        }
+        
     }
 }

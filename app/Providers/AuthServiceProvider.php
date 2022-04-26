@@ -26,21 +26,6 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-       /* Auth::provider('external', function ($app, array $config) {
-            return new ExternalApiUserProvider();
-        });*/
-/*
-        $baseUrl = env('API_ENDPOINT');
-        $this->app->singleton(Client::class, function($app) use ($baseUrl) {
-            return new Client(['base_uri' => $baseUrl]);
-        });
-*/
-
     }
 
-    public function register(){
-        $this->app->singleton(ExternalApiUserProvider::class, function ($app) {
-            return new ExternalApiUserProvider();
-        });
-    }
 }
