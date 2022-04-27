@@ -58,20 +58,19 @@ class LoginController extends Controller
             'http://10.0.60.27:8088/guarani/3.18/rest/password-uader', 
             ['auth' => ['guarani', 'abc123456'],'body' => json_encode($datos_login)],
         );
-        //$nro_documento = Docente::nro_documento($request->get('nro_documento'))->get();
-        //$id  = Docente::id($request->get('nro_documento'))->get();
        
-        $id_users = User::id($request->get('id'));
-        echo $id_users;
-        die();
+        $usuarios = User::id($request->get('nro_documento'))->get();
+        $id_users = $usuarios[0]->id;
+
         //dd($id_users);
-       //$id=User::id($request->get('id'));
+
         if($response->getBody()) {
             $entrar = json_decode($response->getBody()->getContents());
             if ($entrar[0]) {
                 Auth::loginUsingId($id_users,true);
-                return redirect('/home');
-                //echo Auth::id();
+                return Redirect::to('/home');
+                //return view('/home');
+               // return redirect('home');
             }
         }
     }
