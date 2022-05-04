@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Log;
 use GuzzleHttp\Client;
 use App\User;
 use App\Docente;
+use App\Role_User;
+use Session;
 
 
 
@@ -60,17 +62,28 @@ class LoginController extends Controller
         );
        
         $usuarios = User::id($request->get('nro_documento'))->get();
-        $id_users = $usuarios[0]->id;
-
+        //dd($usuarios);
         //dd($id_users);
-
+        if(sizeof($usuarios) == 0){
+            // If User not logged in, then Throw exception
+            Session::flash('message', 'Credenciales incorrectas o usuario inexistente!');
+            return Redirect::to('login');
+        }   
+        $id_users = $usuarios[0]->id;
+        //dd($id_users);
+        $role_user = Role_User::Rol($request->get($id_users))->get();
+        $type_users= $role_user[1]->role_id;
+        if ($type_users == 1 ){
+            Auth::loginUsingId($id_users,true);
+            return Redirect::to('/home');
+        }
         if($response->getBody()) {
             $entrar = json_decode($response->getBody()->getContents());
             if ($entrar[0]) {
                 Auth::loginUsingId($id_users,true);
-                return Redirect::to('/home');
+                return Redirect::to('/home');             
                 //return view('/home');
-               // return redirect('home');
+                //return redirect('home');
             }
         }
     }

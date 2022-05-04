@@ -93,6 +93,32 @@ class User extends Authenticatable
                   ->select('users.id'); 
         }
     }    
+    public function scopeDni($query,$nro_documento){
+        if($nro_documento!=''){
+            $nro_documento=(integer) $nro_documento;
+            return $query->joing('docentes','users.docente_id','=','docentes.id')
+                        ->where('nro_docuemtno', $nro_documento)
+                        ->select('docentes.nro_documento');
+        }
+    }
+    public function scopeName($query,$name){
+        if(trim($name!="")){
+            $query->where(\DB::raw("CONCAT(name)"),"LIKE","%$name%"); 
+        }
+    }
+    public function scopeEmail($query,$email){
+        if(trim($email!="")){
+            $query->where(\DB::raw("CONCAT(email)"),"LIKE","%$email%"); 
+        }
+    }
+    public function scopeRole_user($query,$role_user){
+        if(trim($role_user!="")){
+            $query->join('role_user','users.id','=','role_user.user_id')
+                  ->join('roles','role_user.role_id', '=','roles.id')
+                  ->where('roles.name',"LIKE","%$role_user%")
+                  ->select('users.*');  
+        }
+    }
 
 }
 

@@ -26,7 +26,21 @@
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="email">EMail:</label>
+                            <label class="input-group-text" for="nro_documento">DNI:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="nro_documento" type="nro_documento" class="form-control{{ $errors->has('nro_documento') ? ' is-invalid' : '' }}" name="nro_documento" value="{{ old('nro_documento') }}" required>
+
+                            @if ($errors->has('nro_documento'))
+                            <span class="invalid-feedback">
+                                <strong>{{ $errors->first('nro_documento') }}</strong>
+                            </span>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="email">Email:</label>
                         </div>
                         <div class="col-md-6">
                             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>

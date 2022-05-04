@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-12">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -77,13 +77,13 @@
                                     @endif
                                     @if(Auth::user()->hasRole('admin'))
                                     <a class="dropdown-item" href="{{ route('revisores') }}">
-                                         {{ __('Usuarios Revisores') }}
+                                         {{ __('Administrar Revisores') }}
                                     </a>  
                                     <a class="dropdown-item" href="{{ route('docentes') }}">
-                                         {{ __('Administrar docentes') }}
+                                         {{ __('Administrar Docentes') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('usuarios') }}">
-                                         {{ __('Administrar usuarios') }}
+                                         {{ __('Administrar Usuarios') }}
                                     </a>    
                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"

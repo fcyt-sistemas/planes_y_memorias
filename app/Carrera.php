@@ -31,6 +31,11 @@ class Carrera extends Model
     public function planes() {
         return $this->hasMany('App\Plan');
     }
+    public function scopeNombre($query,$nombre){
+        if(trim($nombre!="")){
+            $query->where(\DB::raw("CONCAT(nombre)"),"LIKE","%$nombre%"); 
+        }
+    }
     
     
 }

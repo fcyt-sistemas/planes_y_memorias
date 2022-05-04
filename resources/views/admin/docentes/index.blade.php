@@ -4,7 +4,7 @@
 <div class="container">
      @include('admin.docentes.modal')
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header justify-content-between">Listado de docentes!
                     {!! Form::open(['route'=>'docentes','method'=>'GET','class'=>'form-inline','role'=>'search']) !!}
@@ -13,8 +13,18 @@
 	             	</div>
                     <div class="form-inline">
                         {!! Form::text('nombre',null,['type'=>'search','class'=>'form-control mr-sm-2','placeholder'=>'Búsqueda por nombre']) !!}    
-                        <button class="btn btn-default my-2 my-sm-0"type="submit">Buscar</button>
                     </div>
+                    <div class="form-inline">
+                        {!! Form::text('apellidos',null,['type'=>'search','name'=>'apellidos','class'=>'form-control mr-sm-2','placeholder'=>'Búsqueda por apellido']) !!}
+                    
+                    </div>
+                    <div class="form-inline">
+                        {!! Form::text('nro_documento',null,['type'=>'search','name'=>'nro_documento','class'=>'form-control mr-sm-2','placeholder'=>'Búsqueda por DNI']) !!}
+                    </div>
+                    <div class="form-inline">
+                        {!! Form::text('Localidad',null,['type'=>'search','name'=>'localidad','class'=>'form-control mr-sm-2','placeholder'=>'Búsqueda por Localidad']) !!}
+                    </div>
+                    <button class="btn btn-default my-2 my-sm-0"type="submit">Buscar</button>
                     {!! Form::close() !!}
                 </div>
                 @if(Session::has('message'))

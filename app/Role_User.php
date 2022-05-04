@@ -27,4 +27,10 @@ class Role_User extends Model
             ->belongsToMany('App\Role')
             ->withTimestamps();
     }
+    public function scopeRol($query,$id){
+        if($id!=''){
+            return   $query->where('user_id',$id)
+                     ->select('Role_User.id'); 
+        }
+    }
 }
