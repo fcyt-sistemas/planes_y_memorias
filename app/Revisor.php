@@ -73,19 +73,19 @@ class Revisor extends Model
                     ->select('sedes.*');
         }
     }
-    public function scopeCarrera($query, $carrera){
+    public function scopeCarrera_search($query, $carrera){
         if(trim($carrera!="")){
             $query->join('carreras','carreras.id','=','revisores.carrera_id')
                     ->where('carreras.nombre', $carrera)
                     ->select('carreras.nombre');
         }
     }
-   /* public function scopeAnio_academico($query,$anio_academico){
+    public function scopeAnio_academico($query,$anio_academico){
         if(trim($anio_academico!="")){
             //$query->where('planificaciones.anio_academico', $anio_academico);
-            $query->join('planificaciones','planificaciones.docente_id' '=','revisores.docente_id')
+            $query->join('planificaciones','planificaciones.docente_id', '=','revisores.docente_id')
             ->where(('planificaciones.anio_academico'),"LIKE","%$anio_academico%")
             ->select('revisores.*'); 
         }
-    }*/
+    }
 }

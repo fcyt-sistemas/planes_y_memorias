@@ -31,9 +31,9 @@ class RevisorController extends Controller
         $request->user()->authorizeRoles(['admin']);
         
         if($request->user()->hasRole('admin')){
-            $revisores = Revisor::carrera_id($request->get('carrera_id'))
-                        ->sede_id($request->get('sede_id'))
-                        ->docente_id($request->get('docente_id'))
+            $revisores = Revisor::carrera_search($request->get('carrera_id'))
+                        ->sede($request->get('sede_id'))
+                        ->docente($request->get('docente_id'))
                         ->orderBy('sede_id','Asc')
                         ->paginate(5);
             
