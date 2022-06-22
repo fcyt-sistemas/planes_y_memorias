@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
 <div class="container">
   @include('admin.memorias.modal')
   <div class="row justify-content-center">
@@ -11,24 +10,11 @@
         </div>
         <div class="card-header justify-content-between">
           {!! Form::open(['route'=>'memorias','method'=>'GET','role'=>'search']) !!}
-          <div class="row">
-            <div class="col-5">
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <label class="input-group-text" for="sede_id">Sede:</label>
-                </div>
-                {!! Form::select('sede',$sedes, null,['class'=>'custom-select','id'=>'sedes','placeholder'=>'Seleccione una sede...'] ) !!}
-              </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="sede_id">Sede:</label>
             </div>
-            <div class="col-2">
-              <input type="checkbox" name="entregadas" data-size="sm" data-toggle="toggle" data-on="ENTREG" data-off="ENTREG" data-onstyle="secondary" data-offstyle="outline-secondary">
-            </div>
-            <div class="col-2">
-              <input type="checkbox" name="aprobadas" data-size="sm" data-toggle="toggle" data-on="APROB" data-off="APROB" data-onstyle="success" data-offstyle="outline-success">
-            </div>
-            <div class="col-2">
-              <input type="checkbox" name="revisadas" data-size="sm" data-toggle="toggle" data-on="REVIS" data-off="REVIS" data-onstyle="danger" data-offstyle="outline-danger">
-            </div>
+            {!! Form::select('sede',$sedes, null,['class'=>'custom-select','id'=>'sedes','placeholder'=>'Seleccione una sede...'] ) !!}
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -46,7 +32,24 @@
           <div class="form-inline">
             {!! Form::text('asignatura',null,['type'=>'search','class'=>'form-control mr-sm-3','placeholder'=>'Asignatura']) !!}
             {!! Form::text('profesor',null,['type'=>'search','class'=>'form-control mr-sm-3','placeholder'=>'Apellido profesor/a']) !!}
-            <button class="btn btn-default my-3 my-sm-0" type="submit">Buscar</button>
+          </div>
+          <br>
+          <div>
+            <label class="col-2.3">
+              <input type="checkbox" name="entregadas" data-size="sm" data-toggle="toggle" data-on=" ENTREGADAS  " data-off=" ENTREGADAS " data-offstyle="btm btn-secondary">
+            </label>
+            <label class="col-2.3">
+              <input type="checkbox" name="aprobadas" data-size="sm" data-toggle="toggle" data-on=" APROBADAS " data-off=" APROBADAS " data-offstyle="btn btn-success">
+            </label>
+            <label class="col-2.3">
+              <input type="checkbox" name="revisadas" data-size="sm" data-toggle="toggle" data-on=" REVISDAS " data-off=" REVISADAS " data-offstyle="btn btn-danger">
+            </label>
+            <label class="col-2.3">
+              <input type="checkbox" name="para_revisar" data-size="sm" data-toggle="toggle" data-on=" A REVISAR " data-off=" A REVISAR " data-offstyle="btn btn-info">
+            </label>
+          </div>
+          <div>
+            <button class="btn btn-dark my-3 my-sm-0" type="submit">Buscar</button>
           </div>
           {!! Form::close() !!}
         </div>
@@ -70,7 +73,7 @@
               @if($m->aprobado) {!!link_to_action('MemoriaController@show', $title = 'APROBADA', $parameters = $m['id'], $attributes = ['class'=>'aprob'])!!} @endif
               </br>
               Docente: <b><i>{{$m->docente->apellidos}}, {{$m->docente->nombres}}</i></b></br>
-              <b>{{$m->carrera->nombre}}</b> (Plan {{$m->plan->nombre}}, Resol {{$m->plan->nro_resolucion}})</br>
+              <b>{{$m->carrera->nombre}}</b> Resol {{$m->plan->nro_resolucion}})</br>
               <b>{{$m->catedra->nombre}}, {{$m->anio_academico}}</b></br>
               {{strip_tags($m->equipo_docente)}}
               </br>

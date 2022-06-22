@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 
 <head>
-    <meta charset="utf-12">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -61,7 +61,7 @@
                             <a class="nav-link" href="{{ route('home') }}">{{ __('Inicio') }}</a>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                     {{ Auth::user()->name }} ({{Auth::user()->roles()->where('name', \Session::get('tipoUsuario'))->first()->description}}) <span class="caret"></span>
+                                    {{ Auth::user()->name }} ({{Auth::user()->roles()->where('name', \Session::get('tipoUsuario'))->first()->description}}) <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">

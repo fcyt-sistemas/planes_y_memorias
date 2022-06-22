@@ -43,12 +43,12 @@ class RevisorController extends Controller
             return view('admin.revisores.index',compact('revisores','anio_academico'));
         }
     }
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {   
         $sedes = Sede::pluck('nombre','id');

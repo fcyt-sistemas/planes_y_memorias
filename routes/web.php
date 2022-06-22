@@ -18,10 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/planificaciones/filter', 'FilterPlaniController@index')->name('planificaciones.filter');
+Route::get('/memorias/filter', 'FilterMemoController@index')->name('memorias.filter');
 Route::get('/perfil/{perfil}', 'HomeController@cambiarPerfil')->name('perfil');
 Route::get('/planificaciones', 'PlanificacionController@index')->name('planificaciones');
-//Route::get('/planificaciones/search', 'PlanificacionController@search')->name('planisearch');;
+//Route::get('/planificaciones/search', 'PlanificacionController@search')->name('planisearch');
 Route::get('/planificaciones/{id}/entregar', 'PlanificacionController@entregar');
 Route::get('/planificaciones/{id}/revisar', 'PlanificacionController@revisar');
 Route::get('/planificaciones/{id}/duplicar', 'PlanificacionController@duplicar');
@@ -30,7 +31,7 @@ Route::get('/planificaciones/{id}/programa', 'PlanificacionController@pdf')->nam
 Route::get('/planificaciones/{id}/impresion', 'PlanificacionController@impresion')->name('planificacion.impresion');
 Route::get('/planificaciones/reporte', 'PlanificacionController@reporte')->name('reporte.pdf');
 Route::get('/memorias/reporte', 'MemoriaController@reporte')->name('memoria.reporte');
-Route::resource('planificacion','PlanificacionController');
+Route::resource('planificaciones','PlanificacionController');
 Route::resource('memorias','MemoriaController');
 Route::resource('revisores','RevisorController');
 Route::resource('docentes','DocenteController');
@@ -50,9 +51,9 @@ Route::get('/memorias/{id}/impresion', 'MemoriaController@impresion')->name('mem
 Route::get('/memorias/carreras/{id}', 'MemoriaController@getCarreras');
 Route::get('/memorias/planes/{id}', 'MemoriaController@getPlanes');
 Route::get('/memorias/catedras/{id}', 'MemoriaController@getCatedras');
-Route::get('/planificacion/carreras/{id}', 'PlanificacionController@getCarreras');
-Route::get('/planificacion/planes/{id}', 'PlanificacionController@getPlanes');
-Route::get('/planificacion/catedras/{id}', 'PlanificacionController@getCatedras');
+Route::get('/planificaciones/carreras/{id}', 'PlanificacionController@getCarreras');
+Route::get('/planificaciones/planes/{id}', 'PlanificacionController@getPlanes');
+Route::get('/planificaciones/catedras/{id}', 'PlanificacionController@getCatedras');
 Route::get('/carreras/{id}', 'PlanificacionController@getCarreras');
 Route::get('/planes/{id}', 'PlanificacionController@getPlanes');
 Route::get('/catedras/{id}', 'PlanificacionController@getCatedras');

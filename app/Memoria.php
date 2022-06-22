@@ -191,5 +191,13 @@ class Memoria extends Model
             $query->where('memorias.entregado',true);
         }
     }
+    public function scopePara_revisar($query, $para_revisar){
+        if($para_revisar=='on'){
+            $query->where('memorias.observado','=',false)
+                  ->where('memorias.aprobado','=',false)
+                  ->where('memorias.entregado', '=', true)
+                  ->select('memorias.*');
+        }
+    }
 
 }

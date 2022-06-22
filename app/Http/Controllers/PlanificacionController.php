@@ -51,10 +51,18 @@ class PlanificacionController extends Controller
         ->aprobada($request->get('aprobadas'))
         ->revisada($request->get('revisadas'))
         ->anio($request->get('anio_academico'))
+        ->para_revisar($request->get('para_revisar'))
         ->paginate(10);
       return view('admin.planificaciones.index', compact('planificaciones', 'sedes', 'carreras', 'anio_academico'));
     } elseif (Auth::user()->hasRole('control') && \Session::get('tipoUsuario') == 'control') {
-
+      $sedes = Sede::pluck('nombre', 'id');
+      $carreras = Carrera::pluck('nombre', 'id');
+      //whereSede se nombro así porque enraba en conficto con la prop Sede 
+      $anios = Planificacion::pluck('anio_academico')->unique()->sort();
+      $anio_academico = array();
+      foreach ($anios as $anio) {
+        $anio_academico[$anio] = $anio;
+      }
       //dd($request->user()->getActualRole());
       foreach ($request->user()->docente->revisorDeCarreras as $carrera) {
         $idcarreras[] = $carrera->id;
@@ -63,6 +71,11 @@ class PlanificacionController extends Controller
       foreach ($request->user()->docente->revisorDeSedes as $sede) {
         $idsedes[] = $sede->id;
         $sedes[$sede->id] = $sede->nombre;
+      }
+      $anios = Planificacion::pluck('anio_academico')->unique()->sort();
+      $anio_academico = array();
+      foreach ($anios as $anio) {
+        $anio_academico[$anio] = $anio;
       }
       // $sedes = $request->user()->docente->revisorDeSedes;
       // $carreras = $request->user()->docente->revisorDeCarreras;
@@ -75,13 +88,14 @@ class PlanificacionController extends Controller
         ->entregada($request->get('entregadas'))
         ->aprobada($request->get('aprobadas'))
         ->revisada($request->get('revisadas'))
-        //->periodo($request->get('periodo'))
+        ->anio($request->get('anio_academico'))
+        ->para_revisar($request->get('para_revisar'))
         ->whereIn('carrera_id', $idcarreras)
         ->whereIn('sede_id', $idsedes)
         ->whereRaw('entregado is true and prox_version is null')
         ->paginate(10);
 
-      return view('revisor.planificaciones.index', compact('planificaciones', 'sedes', 'carreras'));
+      return view('revisor.planificaciones.index', compact('planificaciones', 'sedes', 'carreras', 'anio_academico'));
     } elseif (Auth::user()->hasRole('user') && \Session::get('tipoUsuario') == 'user') {
       //dd(Auth::user()->hasRole('user'),Auth::user()->getActualRole());
       //$planificaciones = Planificacion::where('docente_id',$request->user()->docente->id)->get();
