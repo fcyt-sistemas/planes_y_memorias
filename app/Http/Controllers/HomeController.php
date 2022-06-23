@@ -55,10 +55,10 @@ class HomeController extends Controller
 
             $dashp = [
                 'cargadas' => sizeof($planis),
-                'entregadas' => DB::table('planificaciones')->where('entregado', '=', true)->where('fecha_entrega', '<>', null)->count(),
-                'aprobadas' => DB::table('planificaciones')->where('aprobado', '=', true)->where('observado', '=', false)->count(),
-                'revisadas' => DB::table('planificaciones')->where('observado', '=', true)->where('aprobado','=',false)->count(),
-                'norevis' => DB::table('planificaciones')->where('entregado','=', true)->where('observado', '=', false)->where('aprobado','=',false)->count(),
+                'entregadas' => Planificacion::whereRaw('entregado is true and prox_version is null')->count(),
+                'aprobadas' => Planificacion::whereRaw('entregado is true and aprobado is true and prox_version is null')->count(),
+                'revisadas' => Planificacion::whereRaw('entregado is true and observado is true and (aprobado <> true or aprobado is null) and prox_version is null')->count(),
+                'norevis' => Planificacion::whereRaw('entregado is true and (observado <> true or observado is null) and (aprobado <> true or aprobado is null) and prox_version is null')->count(),
             ];
 
             $memorias = Memoria::all();
@@ -73,10 +73,10 @@ class HomeController extends Controller
 
             $dashm = [
                 'cargadas' => sizeof($memos),
-                'entregadas' => DB::table('memorias')->where('entregado', '=', true)->where('fecha_entrega', '<>', null)->count(),
-                'aprobadas' => DB::table('memorias')->where('aprobado', '=', true)->where('observado', '=', false)->count(),
-                'revisadas' => DB::table('memorias')->where('observado', '=', true)->count(),
-                'norevis' => DB::table('memorias')->where('entregado','=', true)->where('observado', '=', false)->where('aprobado','=',false)->count(),
+                'entregadas' => Memoria::whereRaw('entregado is true and prox_version is null')->count(),
+                'aprobadas' => Memoria::whereRaw('entregado is true and aprobado is true and prox_version is null')->count(),
+                'revisadas' => Memoria::whereRaw('entregado is true and observado is true and (aprobado <> true or aprobado is null) and prox_version is null')->count(),
+                'norevis' => Memoria::whereRaw('entregado is true and (observado <> true or observado is null) and (aprobado <> true or aprobado is null) and prox_version is null')->count(),
             ];
             return view('admin.home', compact('planis', 'dashp', 'memos', 'dashm'));
         } elseif (\Session::get('tipoUsuario') == 'control') {
@@ -109,19 +109,21 @@ class HomeController extends Controller
                     ->whereIn('sede_id', $idsedes)
                     ->whereRaw('entregado is true and prox_version is null')
                     ->count(),
+
                 'aprobadas' => Planificacion::whereIn('carrera_id', $idcarreras)
                     ->whereIn('sede_id', $idsedes)
-                    ->whereRaw('entregado is true and aprobado is true and observado is false')
+                    ->whereRaw('entregado is true and aprobado is true and prox_version is null')
                     ->count(),
                 'revisadas' => Planificacion::whereIn('carrera_id', $idcarreras)
                     ->whereIn('sede_id', $idsedes)
-                    ->whereRaw('entregado is true and observado is true')
+                    ->whereRaw('entregado is true and observado is true and (aprobado <> true or aprobado is null) and prox_version is null')
                     ->count(),
                 'norevis' => Planificacion::whereIn('carrera_id', $idcarreras)
                     ->whereIn('sede_id', $idsedes)
-                    ->whereRaw('entregado is true and observado is false and aprobado is false')
+                    ->whereRaw('entregado is true and (observado <> true or observado is null) and (aprobado <> true or aprobado is null) and prox_version is null')
                     ->count(),
             ];
+           
 
             $memorias = Memoria::whereIn('carrera_id', $idcarreras)
                 ->whereIn('sede_id', $idsedes)
@@ -143,15 +145,15 @@ class HomeController extends Controller
 
                 'aprobadas' => Memoria::whereIn('carrera_id', $idcarreras)
                     ->whereIn('sede_id', $idsedes)
-                    ->whereRaw('entregado is true and aprobado is true and observado is false')
+                    ->whereRaw('entregado is true and aprobado is true and prox_version is null')
                     ->count(),
                 'revisadas' => Memoria::whereIn('carrera_id', $idcarreras)
                     ->whereIn('sede_id', $idsedes)
-                    ->whereRaw('entregado is true and observado is true')
+                    ->whereRaw('entregado is true and observado is true and (aprobado <> true or aprobado is null) and prox_version is null')
                     ->count(),
                 'norevis' => Memoria::whereIn('carrera_id', $idcarreras)
                     ->whereIn('sede_id', $idsedes)
-                    ->whereRaw('entregado is true and observado is false and aprobado is false')
+                    ->whereRaw('entregado is true and (observado <> true or observado is null) and (aprobado <> true or aprobado is null) and prox_version is null')
                     ->count(),
             ];
             $request->user()->authorizeRoles(['control']);
