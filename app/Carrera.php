@@ -36,6 +36,6 @@ class Carrera extends Model
             $query->where(\DB::raw("CONCAT(nombre)"),"LIKE","%$nombre%"); 
         }
     }
-    
+       
     
 }

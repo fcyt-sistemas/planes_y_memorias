@@ -45,8 +45,6 @@ Route::get('/memorias/{id}/revisar', 'MemoriaController@revisar');
 Route::get('/memorias/{id}/duplicar', 'MemoriaController@duplicar');
 Route::get('/memorias/{id}/aprobar', 'MemoriaController@aprobar');
 Route::get('/memorias/{id}/impresion', 'MemoriaController@impresion')->name('memoria.impresion');
-
-
 //rutas del servicio dinamicas
 Route::get('/memorias/carreras/{id}', 'MemoriaController@getCarreras');
 Route::get('/memorias/planes/{id}', 'MemoriaController@getPlanes');

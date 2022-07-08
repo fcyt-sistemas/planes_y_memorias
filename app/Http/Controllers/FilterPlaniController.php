@@ -9,11 +9,11 @@ use App\Catedra;
 use App\Plan;
 use App\Carrera;
 use App\Sede;
+use App\Revisor;
 use App\Http\Requests\CreatePlanificacionRequest;
 use Session;
 use Redirect;
 use DateTime;
-use Barryvdh\DomPDF\Facade as PDF;
 
 class FilterPlaniController extends Controller
 {
@@ -52,6 +52,7 @@ class FilterPlaniController extends Controller
         ->para_revisar($request->get('para_revisar'))
         ->paginate(10);
       return view('admin.planificaciones.filter', compact('planificaciones', 'sedes', 'carreras', 'anio_academico'));
+      
     } elseif (Auth::user()->hasRole('control') && \Session::get('tipoUsuario') == 'control') {
         $sedes = Sede::pluck('nombre', 'id');
         $carreras = Carrera::pluck('nombre', 'id');
@@ -75,8 +76,16 @@ class FilterPlaniController extends Controller
         foreach ($anios as $anio) {
             $anio_academico[$anio] = $anio;
         }
-        // $sedes = $request->user()->docente->revisorDeSedes;
-        // $carreras = $request->user()->docente->revisorDeCarreras;
+        $sedes_id=$sede->id;
+        //$sede_id->sede_id;
+        $carreras_id = $request->user()->docente->revisorDeCarreras;
+
+        //$ids = Sede::nombre('sedes_id')->get();
+        //$nombre_sede = Auth()->user()->docente->revisorDeSedes;
+        
+        //dd($sede->nombre);
+        $nombre_sede = $sede->nombre;
+        $nombre_carrera = $carrera->nombre;
 
         //whereSede se nombro así porque enraba en conficto con la prop Sede 
         $planificaciones = Planificacion::whereSede($request->get('sede'))
@@ -92,8 +101,8 @@ class FilterPlaniController extends Controller
             ->whereIn('sede_id', $idsedes)
             ->whereRaw('entregado is true and prox_version is null')
             ->paginate(10);
-
-        return view('revisor.planificaciones.filter', compact('planificaciones', 'sedes', 'carreras', 'anio_academico'));
+            
+        return view('revisor.planificaciones.filter', compact('planificaciones', 'sedes', 'carreras', 'anio_academico', 'nombre_sede','nombre_carrera'));
     
        }
     }

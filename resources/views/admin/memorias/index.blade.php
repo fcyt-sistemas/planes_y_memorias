@@ -3,7 +3,7 @@
 <div class="container">
   @include('admin.memorias.modal')
   <div class="row justify-content-center">
-    <div class="col-md-8">
+    <div class="col-md-12">
       <div class="card">
         <div class="card-header form-inline">
           <h3 class="col-md-9">Memorias de Cátedra</h3>
@@ -48,8 +48,8 @@
               <input type="checkbox" name="para_revisar" data-size="sm" data-toggle="toggle" data-on=" A REVISAR " data-off=" A REVISAR " data-offstyle="btn btn-info">
             </label>
           </div>
-          <div>
-            <button class="btn btn-dark my-3 my-sm-0" type="submit">Buscar</button>
+          <div style="text-align: right;">
+            <label> <button class="btn btn-dark my-3 my-sm-0" type="submit">Buscar</button></label>
           </div>
           {!! Form::close() !!}
         </div>

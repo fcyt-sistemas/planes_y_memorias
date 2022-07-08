@@ -78,7 +78,11 @@ class PlanificacionController extends Controller
         $anio_academico[$anio] = $anio;
       }
       // $sedes = $request->user()->docente->revisorDeSedes;
-      // $carreras = $request->user()->docente->revisorDeCarreras;
+        $nombre_sede = $sede->nombre;
+        //dd($sede->nombre);
+        
+        $nombre_carrera = $carrera->nombre;
+        
 
       //whereSede se nombro así porque enraba en conficto con la prop Sede 
       $planificaciones = Planificacion::whereSede($request->get('sede'))
@@ -95,7 +99,7 @@ class PlanificacionController extends Controller
         ->whereRaw('entregado is true and prox_version is null')
         ->paginate(10);
 
-      return view('revisor.planificaciones.index', compact('planificaciones', 'sedes', 'carreras', 'anio_academico'));
+      return view('revisor.planificaciones.index', compact('planificaciones', 'sedes', 'carreras', 'anio_academico', 'nombre_sede','nombre_carrera'));
     } elseif (Auth::user()->hasRole('user') && \Session::get('tipoUsuario') == 'user') {
       //dd(Auth::user()->hasRole('user'),Auth::user()->getActualRole());
       //$planificaciones = Planificacion::where('docente_id',$request->user()->docente->id)->get();
@@ -120,7 +124,7 @@ class PlanificacionController extends Controller
         ->revisada($request->get('revisadas'))
         ->anio($request->get('anio_academico'))
         ->paginate(10);
-      return view('lectura.planificaciones.index', compact('planificaciones', 'sedes', 'carreras', 'anio_academico'));
+      return view('lectura.planificaciones.index', compact('planificaciones', 'sedes->id', 'carreras->id', 'anio_academico'));
     }
   }
 
@@ -147,20 +151,20 @@ class PlanificacionController extends Controller
   public function duplicar($id)
   {
     $old_plani = Planificacion::find($id);
-    $planificacion = $old_plani->replicate();
-    $planificacion->observado = null;
-    $planificacion->fecha_observado = null;
-    $planificacion->prev_version = $old_plani->id;
-    $planificacion->push();
-    $planificacion->save();
-    //dd($planificacion);
-    $old_plani->prox_version = $planificacion->id;
+    $planificaciones = $old_plani->replicate();
+    $planificaciones->observado = null;
+    $planificaciones->fecha_observado = null;
+    $planificaciones->prev_version = $old_plani->id;
+    $planificaciones->push();
+    $planificaciones->save();
+    //dd($planificaciones);
+    $old_plani->prox_version = $planificaciones->id;
     $old_plani->save();
     $catedras = Catedra::pluck('nombre', 'id');
     $planes = Plan::pluck('nombre', 'id');
     $carreras = Carrera::pluck('nombre', 'id');
     $sedes = Sede::pluck('nombre', 'id');
-    return view('usuario.planificaciones.edit', compact('planificacion', 'catedras', 'planes', 'carreras', 'sedes'));
+    return view('usuario.planificaciones.edit', compact('planificaciones', 'catedras', 'planes', 'carreras', 'sedes'));
   }
   /**
    * Store a newly created resource in storage.
@@ -183,42 +187,42 @@ class PlanificacionController extends Controller
    */
   public function entregar($id)
   {
-    $planificacion = Planificacion::find($id);
-    $planificacion->fecha_entrega = new DateTime;
-    $planificacion->entregado = true;
-    $planificacion->save();
+    $planificaciones = Planificacion::find($id);
+    $planificaciones->fecha_entrega = new DateTime;
+    $planificaciones->entregado = true;
+    $planificaciones->save();
     Session::flash('message', 'Planificación entregada correctamente!');
-    return Redirect::to('/planificacion');
+    return Redirect::to('/planificaciones');
   }
 
 
   public function aprobar($id)
   {
-    $planificacion = Planificacion::find($id);
-    $planificacion->fecha_aprobado = new DateTime;
-    $planificacion->aprobado = true;
+    $planificaciones = Planificacion::find($id);
+    $planificaciones->fecha_aprobado = new DateTime;
+    $planificaciones->aprobado = true;
     //elimino todos las observaciones previas
-    $planificacion->anio_academico_obs = null;
-    $planificacion->equipo_docente_obs = null;
-    $planificacion->anio_carrera_obs = null;
-    $planificacion->regimen_materia_obs = null;
-    $planificacion->carga_horaria_obs = null;
-    $planificacion->fundamentacion_obs = null;
-    $planificacion->objetivos_obs = null;
-    $planificacion->programa_contenidos_obs = null;
-    $planificacion->metodologia_trabajo_obs = null;
-    $planificacion->sistema_evaluacion_obs = null;
-    $planificacion->programa_practicos_obs = null;
-    $planificacion->bibliografia_obs = null;
-    $planificacion->requisitos_rendir_obs = null;
-    $planificacion->cronograma_trabajo_obs = null;
-    $planificacion->funciones_equipo_obs = null;
-    $planificacion->cronograma_actividades_obs = null;
-    $planificacion->mecanismos_autoeval_obs = null;
+    $planificaciones->anio_academico_obs = null;
+    $planificaciones->equipo_docente_obs = null;
+    $planificaciones->anio_carrera_obs = null;
+    $planificaciones->regimen_materia_obs = null;
+    $planificaciones->carga_horaria_obs = null;
+    $planificaciones->fundamentacion_obs = null;
+    $planificaciones->objetivos_obs = null;
+    $planificaciones->programa_contenidos_obs = null;
+    $planificaciones->metodologia_trabajo_obs = null;
+    $planificaciones->sistema_evaluacion_obs = null;
+    $planificaciones->programa_practicos_obs = null;
+    $planificaciones->bibliografia_obs = null;
+    $planificaciones->requisitos_rendir_obs = null;
+    $planificaciones->cronograma_trabajo_obs = null;
+    $planificaciones->funciones_equipo_obs = null;
+    $planificaciones->cronograma_actividades_obs = null;
+    $planificaciones->mecanismos_autoeval_obs = null;
     //finalmente grabo
-    $planificacion->save();
-    Session::flash('message', 'La planificacion ha sido aprobada!');
-    return Redirect::to('/planificacion');
+    $planificaciones->save();
+    Session::flash('message', 'La planificaciones ha sido aprobada!');
+    return Redirect::to('/planificaciones');
   }
 
   /**
@@ -229,19 +233,19 @@ class PlanificacionController extends Controller
    */
   public function show($id)
   {
-    $planificacion = Planificacion::find($id);
+    $planificaciones = Planificacion::find($id);
     $catedras = Catedra::pluck('nombre', 'id');
     $planes = Plan::pluck('nombre', 'id');
     $carreras = Carrera::pluck('nombre', 'id');
     $sedes = Sede::pluck('nombre', 'id');
     if (Auth::user()->hasRole('admin')) {
-      return view('admin.planificaciones.show', compact('planificacion', 'catedras', 'planes', 'carreras', 'sedes'));
+      return view('admin.planificaciones.show', compact('planificaciones', 'catedras', 'planes', 'carreras', 'sedes'));
     } elseif (Auth::user()->hasRole('control') && \Session::get('tipoUsuario') == 'control') {
-      return view('revisor.planificaciones.show', compact('planificacion', 'catedras', 'planes', 'carreras', 'sedes'));
+      return view('revisor.planificaciones.show', compact('planificaciones', 'catedras', 'planes', 'carreras', 'sedes'));
     } elseif (Auth::user()->hasRole('user') && \Session::get('tipoUsuario') == 'user') {
-      return view('usuario.planificaciones.show', compact('planificacion', 'catedras', 'planes', 'carreras', 'sedes'));
+      return view('usuario.planificaciones.show', compact('planificaciones', 'catedras', 'planes', 'carreras', 'sedes'));
     } elseif (Auth::user()->hasRole('lectura') && \Session::get('tipoUsuario') == 'lectura') {
-      return view('lectura.planificaciones.show', compact('planificacion', 'catedras', 'planes', 'carreras', 'sedes'));
+      return view('lectura.planificaciones.show', compact('planificaciones', 'catedras', 'planes', 'carreras', 'sedes'));
     }
   }
 
@@ -253,17 +257,17 @@ class PlanificacionController extends Controller
    */
   public function revisar($id)
   {
-    $planificacion = Planificacion::find($id);
+    $planificaciones = Planificacion::find($id);
     $catedras = Catedra::pluck('nombre', 'id');
     $planes = Plan::pluck('nombre', 'id');
     $carreras = Carrera::pluck('nombre', 'id');
     $sedes = Sede::pluck('nombre', 'id');
     if (Auth::user()->hasRole('admin')) {
-      return view('admin.planificaciones.review', compact('planificacion', 'catedras', 'planes', 'carreras', 'sedes'));
+      return view('admin.planificaciones.review', compact('planificaciones', 'catedras', 'planes', 'carreras', 'sedes'));
     } elseif (Auth::user()->hasRole('control') && \Session::get('tipoUsuario') == 'control') {
-      return view('revisor.planificaciones.review', compact('planificacion', 'catedras', 'planes', 'carreras', 'sedes'));
+      return view('revisor.planificaciones.review', compact('planificaciones', 'catedras', 'planes', 'carreras', 'sedes'));
     } elseif (Auth::user()->hasRole('user') && \Session::get('tipoUsuario') == 'user') {
-      return view('usuario.planificaciones.show', compact('planificacion', 'catedras', 'planes', 'carreras', 'sedes'));
+      return view('usuario.planificaciones.show', compact('planificaciones', 'catedras', 'planes', 'carreras', 'sedes'));
     }
   }
 
@@ -276,13 +280,13 @@ class PlanificacionController extends Controller
    */
   public function edit($id)
   {
-    $planificacion = Planificacion::find($id);
+    $planificaciones = Planificacion::find($id);
     $catedras = Catedra::pluck('nombre', 'id');
     $planes = Plan::pluck('nombre', 'id');
     $carreras = Carrera::pluck('nombre', 'id');
     $sedes = Sede::pluck('nombre', 'id');
 
-    return view('usuario.planificaciones.edit', compact('planificacion', 'catedras', 'planes', 'carreras', 'sedes'));
+    return view('usuario.planificaciones.edit', compact('planificaciones', 'catedras', 'planes', 'carreras', 'sedes'));
   }
 
   /**
@@ -294,11 +298,11 @@ class PlanificacionController extends Controller
   public function update($id, Request $request)
   {
     //dd($request->all());
-    $planificacion = Planificacion::find($id);
-    $planificacion->fill($request->all());
-    $planificacion->save();
+    $planificaciones = Planificacion::find($id);
+    $planificaciones->fill($request->all());
+    $planificaciones->save();
     Session::flash('message', 'Planificacion actualizada correctamente!');
-    return Redirect::to('/planificacion');
+    return Redirect::to('/planificaciones');
   }
 
   /**
@@ -311,7 +315,7 @@ class PlanificacionController extends Controller
   {
     Planificacion::destroy($id);
     Session::flash('message', 'Planificación eliminada correctamente!');
-    return Redirect::to('/planificacion');
+    return Redirect::to('/planificaciones');
   }
 
   public function pdf($id)
@@ -320,54 +324,84 @@ class PlanificacionController extends Controller
      * toma en cuenta que para ver los mismos
      * datos debemos hacer la misma consulta
      **/
-    $planificacion = Planificacion::find($id);
+    $planificaciones = Planificacion::find($id);
 
-    //return view('admin.planificaciones.pdf', compact('planificacion'));
+    //return view('admin.planificaciones.pdf', compact('planificaciones'));
     PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
 
-    $pdf = PDF::loadView('admin.planificaciones.pdf2', compact('planificacion'));
-
-    return $pdf->download('programa.pdf');
+    $image = base64_encode(file_get_contents(public_path('/images/logo-tr.png')));
+    return PDF::loadView('admin.planificaciones.pdf2', ['image' => $image], compact('planificaciones'))->stream('programa.pdf');
   }
+
   public function reporte(Request $request)
   {
     /**
      * toma en cuenta que para ver los mismos
      * datos debemos hacer la misma consulta
      **/
-    $planificaciones = Planificacion::whereSede($request->get('sede'))
+    $planificaciones = Planificacion::anio($request->get('anio_academico'))
       ->carrera($request->get('carrera'))
+      ->whereSede($request->get('sede'))
       ->asignatura($request->get('asignatura'))
       ->profesor($request->get('profesor'))
-      ->anio($request->get('anio_academico'))
-      ->get();
+      ->get(['anio_academico','equipo_docente', 'carrera_id', 'catedra_id', 'sede_id','entregado','aprobado','observado','docente_id']);
     //dd($request->get('sede'));
     //return view('admin.planificaciones.pdf', compact('planificacion'));
-    PDF::setOptions(['defaultFont' => 'sans-serif']);
+    foreach ($planificaciones as $p) {
+      if($p->aprobado){
+        $estado = 'APROBADO';
+      }
+      elseif ($p->observado) {
+        $estado = 'REVISADO';
+      }
+      else{
+        $estado = 'ENTREGADO';
+      }
+    
+      $plani[] = array(
+        'anio_academico' => $p->anio_academico,
+        'carrera' => $p->carrera->nombre,
+        'sede' => $p->sede->nombre,
+        'catedra' => $p->catedra->nombre,
+        'estado' => $estado,
+        'equipo_docente' => html_entity_decode(strip_tags($p->equipo_docente))
+      );
+    }
+        
+   // dd($plani);
+    PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
+    $image = base64_encode(file_get_contents(public_path('/images/logo-fcyt.png'))); 
+    //dd(html_entity_decode('j&oacute;'));
+    //dd(html_entity_decode(strip_tags($planificaciones[0])));
+    //dd(htmlspecialchars($planificaciones[0]->equipo_docente));
+    return PDF::loadView('admin.planificaciones.reporte', ['image' => $image], compact('plani'))->stream('reporte.pdf');
 
-    $pdf = PDF::loadView('admin.planificaciones.reporte', compact('planificaciones'));
-
-    return $pdf->download('planificaciones.pdf');
   }
+
 
   public function impresion($id)
   {
     /**
-     * Impresión de versiones impresas completas de planificaciones
+     * Impresi  n de versiones impresas completas de planificaciones
      **/
-    /**Planificacion
+    /**
      * toma en cuenta que para ver los mismos
      * datos debemos hacer la misma consulta
      **/
-    $planificacion = Planificacion::find($id);
+    $planificaciones = Planificacion::find($id);
 
-    //return view('admin.planificaciones.pdf', compact('planificacion'));
+    //return view('admin.planificaciones.pdf', compact('planificaciones'));
     PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
 
-    $pdf = PDF::loadView('admin.planificaciones.impresion', compact('planificacion'));
+    $image = base64_encode(file_get_contents(public_path('/images/logo-tr.png')));
+    return PDF::loadView('admin.planificaciones.impresion', ['image' => $image], compact('planificaciones'))->stream($planifilanificaciones->catedra->nombre . '-' . $planificaciones->anio_academico . '.pdf');
 
-    return $pdf->download($planificacion->catedra->nombre . '-' . $planificacion->anio_academico . '.pdf');
+//    $pdf = PDF::loadView('admin.planificaciones.impresion', compact('planificaciones'));
+//   return PDF::loadView('admin.planificaciones.impresion', compact('planificaciones'))->stream($planificaciones->catedra->n$
+//    return PDF::loadView('admin.planificaciones.impresion', ['image' => $image], compact('planificaciones'))->stream('plani$
+//    return $pdf->download($planificaciones->catedra->nombre . '-' . $planificaciones->anio_academico . '.pdf');
   }
+
 
   public function getCarreras($id)
   {

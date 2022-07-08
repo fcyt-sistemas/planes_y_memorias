@@ -9,11 +9,11 @@ $allowable_tags = '<a><b><i><strong><br><p><em><code><cite><table><th><tr><td>'
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <title>Reporte completo de Planinificación de cátedra</title>
+        <img src="data:image/png;base64,{{ $image }}"></img>
     </head>
 <body>
 
 <div class="container">
-    <img src="{{ asset('images/logo-tr.png') }}">
     &nbsp;&nbsp;&nbsp;{{ config('app.name', 'Laravel') }}
     <br><hr>
     <div class="card">

@@ -7,22 +7,17 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header form-inline">
-				        <h3 class="col-md-9">Memorias de Cátedra (revisión)</h3>
+				        <h3 class="col-md-9">Memorias de Cátedra</h3>
         		</div>
             <div class="card-header justify-content-between">
               {!! Form::open(['route'=>'memorias','method'=>'GET','role'=>'search']) !!}
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <label class="input-group-text" for="sede_id">Sede:</label>
-                </div>
-                {!! Form::select('sede',$sedes, null,['class'=>'custom-select','id'=>'sedes','placeholder'=>'Seleccione una sede...'] ) !!}
+              <div class="label">
+                <b>Revisor de la sede:</b> {{ $nombre_sede }}
               </div>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <label class="input-group-text" for="carrera_id">Carrera:</label>
-                </div>
-                {!! Form::select('carrera',$carreras, null,['class'=>'custom-select','id'=>'carreras','placeholder'=>'Seleccione una carrera..'] ) !!}
+              <div class="label">
+                <b>Revisor de la carrera:</b> {{ $nombre_carrera }} 
               </div>
+              <br>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <label class="input-group-text" for="anio_academico">Año Academico:</label>
