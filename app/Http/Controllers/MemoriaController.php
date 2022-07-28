@@ -330,81 +330,54 @@ class MemoriaController extends Controller
       ->revisada($request->get('revisadas'))
       ->profesor($request->get('profesor'))
       ->anio($request->get('anio_academico'))
+      ->orderBy('anio_academico')
+      ->orderBy('sede_id')
+      ->orderBy('carrera_id')
       ->get();
+      
+      $ap=0;
+      $ob=0;
+      $en=0;
+      $materia=0;
+      
+      foreach ($memorias as $m) {
+        if($m->aprobado){
+          $estado = 'APROBADO';
+          $ap++;
+        }
+        elseif ($m->observado) {
+          $estado = 'REVISADO';
+          $ob++;
+        }
+        else{
+          $estado = 'ENTREGADO';
+          $en++;
+        }
+  
+        $memo[] = array(
+          'id_carrera' => $m->carrera_id,
+          'anio_academico' => $m->anio_academico,
+          'carrera' => $m->carrera->nombre,
+          'sede' => $m->sede->nombre,
+          'catedra' => $m->catedra->nombre,
+          'estado' => $estado,
+          'equipo_docente' => html_entity_decode(strip_tags($m->equipo_docente))
+        );
+        if($m->catedra){
+          $materia++;
+        } 
+        $aux= Plan::cant_materias($m->carrera->id)->get();
+        $cant_mat[$m->carrera->id] = $aux[0]->cant_materias;
+        
+      }
+
       PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
       $image = base64_encode(file_get_contents(public_path('/images/logo-fcyt.png')));
       $pdf = app('dompdf.wrapper');
       $pdf->getDomPDF()->set_option("enable_php", true);  
       
-      return PDF::loadView('admin.memorias.reporte', ['image' => $image], compact('memorias', 'pdf'))->stream('reporte.pdf');
-     /* if($request == 'entregadas'){
-        $entregada = Memoria::whereSede($request->get('sede'))
-        ->carrera($request->get('carrera'))
-        ->asignatura($request->get('asignatura'))
-        ->entregada($request->get('entregadas'))
-        ->profesor($request->get('profesor'))
-        ->anio($request->get('anio_academico'))
-        ->get();
-  
-        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
-        $image = base64_encode(file_get_contents(public_path('/images/logo-fcyt.png')));
-        $pdf = app('dompdf.wrapper');
-        $pdf->getDomPDF()->set_option("enable_php", true);  
-  
-        return PDF::loadView('admin.memorias.reporte', ['image' => $image], compact('entregada', 'pdf'))->stream('reporte.pdf');
-      }
-      elseif($request == 'aprobadas'){
-        $aprobada = Memoria::whereSede($request->get('sede'))
-        ->carrera($request->get('carrera'))
-        ->asignatura($request->get('asignatura'))
-        ->entregada($request->get('entregadas'))
-        ->aprobada($request->get('aprobadas'))
-        ->profesor($request->get('profesor'))
-        ->anio($request->get('anio_academico'))
-        ->get();
-  
-        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
-        $image = base64_encode(file_get_contents(public_path('/images/logo-fcyt.png')));
-        $pdf = app('dompdf.wrapper');
-        $pdf->getDomPDF()->set_option("enable_php", true);  
-  
-        return PDF::loadView('admin.memorias.reporte', ['image' => $image], compact('aprobada', 'pdf'))->stream('reporte.pdf');
-      }
-      elseif($request == 'revisadas'){
-        $revisada = Memoria::whereSede($request->get('sede'))
-        ->carrera($request->get('carrera'))
-        ->asignatura($request->get('asignatura'))
-        ->entregada($request->get('entregadas'))
-        ->revisada($request->get('revisadas'))
-        ->profesor($request->get('profesor'))
-        ->anio($request->get('anio_academico'))
-        ->get();
-  
-        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
-        $image = base64_encode(file_get_contents(public_path('/images/logo-fcyt.png')));
-        $pdf = app('dompdf.wrapper');
-        $pdf->getDomPDF()->set_option("enable_php", true);  
-  
-        return PDF::loadView('admin.memorias.reporte', ['image' => $image], compact('revisada', 'pdf'))->stream('reporte.pdf');
-      }
-      elseif($request == 'aprobadas' && $request == 'revisadas'){
-        $memorias = Memoria::whereSede($request->get('sede'))
-        ->carrera($request->get('carrera'))
-        ->asignatura($request->get('asignatura'))
-        ->entregada($request->get('entregadas'))
-        ->aprobada($request->get('aprobadas'))
-        ->revisada($request->get('revisadas'))
-        ->profesor($request->get('profesor'))
-        ->anio($request->get('anio_academico'))
-        ->get();
-        PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
-        $image = base64_encode(file_get_contents(public_path('/images/logo-fcyt.png')));
-        $pdf = app('dompdf.wrapper');
-        $pdf->getDomPDF()->set_option("enable_php", true);  
-  
-        return PDF::loadView('admin.memorias.reporte', ['image' => $image], compact('memorias', 'pdf'))->stream('reporte.pdf');
-  
-      }*/
+      return PDF::loadView('admin.memorias.reporte', ['image' => $image], compact('memorias','en','ob','ap','materia','memo','cant_mat', 'pdf'))->stream('reporte.pdf');
+    
   }
 
   public function getCarreras($id)

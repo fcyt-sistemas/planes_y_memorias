@@ -15,6 +15,7 @@ use Session;
 use Redirect;
 use DateTime;
 use Barryvdh\DomPDF\Facade as PDF;
+use dompdf;
 
 
 class PlanificacionController extends Controller
@@ -344,21 +345,32 @@ class PlanificacionController extends Controller
       ->whereSede($request->get('sede'))
       ->asignatura($request->get('asignatura'))
       ->profesor($request->get('profesor'))
+      ->orderBy('anio_academico')
+      ->orderBy('sede_id')
+      ->orderBy('carrera_id')
       ->get(['anio_academico','equipo_docente', 'carrera_id', 'catedra_id', 'sede_id','entregado','aprobado','observado','docente_id']);
-    //dd($request->get('sede'));
-    //return view('admin.planificaciones.pdf', compact('planificacion'));
+    
+    $ap=0;
+    $ob=0;
+    $en=0;
+    $materia=0;
+    
     foreach ($planificaciones as $p) {
       if($p->aprobado){
         $estado = 'APROBADO';
+        $ap++;
       }
       elseif ($p->observado) {
         $estado = 'REVISADO';
+        $ob++;
       }
       else{
         $estado = 'ENTREGADO';
+        $en++;
       }
-    
+
       $plani[] = array(
+        'id_carrera' => $p->carrera_id,
         'anio_academico' => $p->anio_academico,
         'carrera' => $p->carrera->nombre,
         'sede' => $p->sede->nombre,
@@ -366,15 +378,17 @@ class PlanificacionController extends Controller
         'estado' => $estado,
         'equipo_docente' => html_entity_decode(strip_tags($p->equipo_docente))
       );
+      if($p->catedra){
+        $materia++;
+      } 
+      $aux= Plan::cant_materias($p->carrera->id)->get();
+      $cant_mat[$p->carrera->id] = $aux[0]->cant_materias;
+      
     }
-        
-   // dd($plani);
+    
     PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
     $image = base64_encode(file_get_contents(public_path('/images/logo-fcyt.png'))); 
-    //dd(html_entity_decode('j&oacute;'));
-    //dd(html_entity_decode(strip_tags($planificaciones[0])));
-    //dd(htmlspecialchars($planificaciones[0]->equipo_docente));
-    return PDF::loadView('admin.planificaciones.reporte', ['image' => $image], compact('plani'))->stream('reporte.pdf');
+    return PDF::loadView('admin.planificaciones.reporte', ['image' => $image], compact('planificaciones','plani','cant_mat','materia','ap','ob','en'))->stream('reporte.pdf');
 
   }
 

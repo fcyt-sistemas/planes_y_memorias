@@ -17,19 +17,58 @@
                 bottom: 100px;*/
             }
             
+            
         </style>
     </head>
     <body>
+        <?php
+            $num=1;
+        ?>
         <header>
             <img style="width:30%;" src="data:image/png;base64,{{ $image }}">
             <h2 style="text-align: center;">Reporte de Memorias de las Cátedras</h2>
         </header>
-
-        <main>
-            <table style="width: 700px;">
-                <?php $c = ""; ?>
-                @foreach ($memorias as $m)
+        <footer>
+            {{ $num }}
+        </footer>
+        @if(count($memorias) === 0)
+            <div class="alert alert-success" role="alert">
+                No hay elementos cargados
+            </div>
+        @endif  
+        <table>
+            <?php 
+                $c = ""; 
+                $m1 = 0; //Materias de la carrera X
+                $e=0; //Entregadas de la carrera X;
+                $a = 0; //aprobadas de la carrera X;
+                $o = 0; // observadas de la carrera x 
+            ?>
+            @foreach($memo as $m)
                 @if($m['anio_academico'].$m['sede'].$m['carrera'] != $c)
+                    @if($c != "")
+                        <!-- Total por TABLA -->
+                        
+                            <tr>
+                                <td colspan="3">
+                                    <table width="100%">
+                                        <tr>
+                                            <td style="text-align:left;  border:1px solid #000; padding: 5px; width:45%;">
+                                                <b>MATERIAS DE LA CARRERA:    </b> {{ $cant_mat[$m['id_carrera']] }}
+                                            </td>
+                                            <td style="text-align:left;  border:1px solid #000; padding: 5px; width:45%;">
+                                                <b>MEMORIAS OBTENIDAS: </b> {{$m1}}
+                                                <br><b>ENTREGADAS: </b>{{$e}}
+                                                <br><b>APROBADAS: </b>{{$a}}
+                                                <br><b>REVISADAS: </b>{{$o}}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr><td colspan="3" style="text-align:center;">&nbsp;</td></tr>
+                            <tr><td colspan="3" style="text-align:center;">&nbsp;</td></tr>
+                @endif
                 <tr>
                     <td colspan="3" style="text-align:center;  border-width:1px;">
                         <b>AÑO ACADEMICO:    </b> {{ $m['anio_academico']}}
@@ -42,17 +81,69 @@
                     <td style="text-align:center; border:1px solid #000;"><b>EQUIPO DOCENTE </b></td>
                     <td style="text-align:center; border:1px solid #000;"><b>ESTADO</b> </td>
                 </tr>
-            @endif
-            <tr>
-            <td style="text-align:left; border:1px solid #000;"> {{$m['catedra']}}</td>
-            <td style="text-align:left; border:1px solid #000;"> {{$m['equipo_docente']}}</td>
-            <td style="text-align:center; border:1px solid #000;"> {{$m['estado']}}</td>
-            </tr>
-            <?php 
-                $c = $m['anio_academico'].$m['sede'].$m['carrera'];
-            ?>
-                @endforeach
-            </table> 
-        </main>
+                <?php
+                    $m1 = 0; //Materias de la carrera X
+                    $e=0; //Entregadas de la carrera X;
+                    $a = 0; //aprobadas de la carrera X;
+                    $o = 0; // observadas de la carrera x 
+                ?>
+                @endif
+                <?php
+                    $m1++;
+                    if($m['estado']=='APROBADO'){
+                        $a++;
+                    }
+                    elseif ($m['estado']=='ENTREGADO') {
+                        $e++;
+                    }
+                    elseif ($m['estado']=='REVISADO') {
+                        $o++;
+                    }
+                ?>
+                <tr>
+                    <td style="text-align:left; border:1px solid #000; padding: 5px;">{{$m['catedra']}}</td>
+                    <td style="text-align:left; border:1px solid #000; padding: 5px;">{{$m['equipo_docente']}}</td>
+                    <td style="text-align:center; border:1px solid #000;"> {{$m['estado']}}</td>
+                </tr>
+
+
+                <?php 
+                    $c = $m['anio_academico'].$m['sede'].$m['carrera'];
+                    $num++;
+                ?> 
+            @endforeach
+                    <!-- Total por Sede -->
+                    <tr><td colspan="3" style="text-align:center;">&nbsp;</td></tr>
+                    <tr><td colspan="3" style="text-align:center;">&nbsp;</td></tr>
+                    <tr>
+                        <td colspan="3">
+                            <table width="100%">
+                                <tr>
+                                    <td style="text-align:left;  border:1px solid #000; padding: 5px; width:45%;">
+                                        <b>MATERIAS DE LA CARRERA:    </b> {{ $cant_mat[$m['id_carrera']] }}
+                                    </td>
+                                    <td style="text-align:left;  border:1px solid #000; padding: 5px; width:45%;">
+                                        <b>MEMORIAS OBTENIDAS: </b> {{$m1}}
+                                        <br><b>ENTREGADAS: </b>{{$e}}
+                                        <br><b>APROBADAS: </b>{{$a}}
+                                        <br><b>REVISADAS: </b>{{$o}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                <!-- Total de totales -->
+                <tr><td colspan="3" style="text-align:center;">&nbsp;</td></tr>
+                <tr><td colspan="3" style="text-align:center;">&nbsp;</td></tr>
+                <tr>
+                    <td colspan="3" style="text-align:center; padding: 5px;">
+                        <br><br><b>TOTALES 
+                        <br><b>TOTAL MATERIAS:    </b> {{$materia}}
+                        <br><b>TOTAL APROBADAS:   </b> {{$ap}}
+                        <br><b>TOTAL REVISADAS:   </b> {{$ob}}
+                        <br><b>TOTAL ENTREGADAS:  </b> {{$en}}
+                    </td>
+                </tr>
+        </table>
     </body>
 </html>

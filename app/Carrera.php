@@ -36,6 +36,12 @@ class Carrera extends Model
             $query->where(\DB::raw("CONCAT(nombre)"),"LIKE","%$nombre%"); 
         }
     }
+    public function scopeId($query,$nombre){
+        if(trim($nombre!="")){
+            $query->where('nombre',$nombre)
+                ->select('id');
+        }
+    }
        
     
 }

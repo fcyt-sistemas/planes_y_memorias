@@ -17,5 +17,17 @@ class Plan extends Model
         ->belongsToMany('App\Catedra','plan_catedra')
         ->withTimestamps();
     }
+    public function scopeCant_materias($query,$id){
+        if($id!=''){
+            $query->where('id',$id)
+                ->select('cant_materias');
+        }
+    }
+    public function scopeResolucion($query,$id){
+        if($id != ''){
+            $query->where('id',$id)
+                ->select('nro_resolucion');
+        }
+    }
 
 }

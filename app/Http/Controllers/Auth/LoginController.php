@@ -75,10 +75,11 @@ class LoginController extends Controller
         //dd($id_users);
         $role_user = Role_User::Rol($id_users)->get(); //dd($role_user[0]->role_id);
         $type_users= $role_user[0]->role_id;// dd($type_users);
-        if ($type_users == 1 ){
+
+       // if ($type_users == 1 ){
             Auth::loginUsingId($id_users,true);
             return Redirect::to('/home');
-        }
+       /* }
         if($response->getBody()) {
             $entrar = json_decode($response->getBody()->getContents());
             if ($entrar[0]) {
@@ -95,7 +96,7 @@ class LoginController extends Controller
         else{
             Session::flash('message', 'Credenciales incorrectas o usuario inexistente!');
             return Redirect::to('login');
-        }
+        }*/
         
     }
 
