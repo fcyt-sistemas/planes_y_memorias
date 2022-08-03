@@ -141,6 +141,7 @@ class PlanificacionController extends Controller
     $carreras = Carrera::pluck('nombre', 'id');
     $sedes = Sede::pluck('nombre', 'id');
 
+    
     return view('usuario.planificaciones.create', compact('catedras', 'planes', 'carreras', 'sedes'));
   }
 
@@ -177,7 +178,7 @@ class PlanificacionController extends Controller
     $plani = Planificacion::create($request->all());
     //$plani->save;
     Session::flash('message', 'Planificación creada correctamente!');
-    return Redirect::to('/planificacion');
+    return Redirect::to('/planificaciones');
   }
 
   /**
@@ -416,7 +417,7 @@ class PlanificacionController extends Controller
 //    return $pdf->download($planificaciones->catedra->nombre . '-' . $planificaciones->anio_academico . '.pdf');
   }
 
-
+  
   public function getCarreras($id)
   {
     return Sede::where('id', '=', $id)->first()->carreras;

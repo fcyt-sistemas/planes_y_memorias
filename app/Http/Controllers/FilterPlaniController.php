@@ -10,7 +10,7 @@ use App\Plan;
 use App\Carrera;
 use App\Sede;
 use App\Revisor;
-use App\Http\Requests\CreatePlanificacionRequest;
+use App\Http\Requests\FilterPlanificacionesRequest;
 use Session;
 use Redirect;
 use DateTime;
@@ -106,4 +106,34 @@ class FilterPlaniController extends Controller
     
        }
     }
+
+    public function busca(Request $request){
+
+      $catedras = Catedra::pluck('nombre', 'id');
+      $planes = Plan::pluck('nombre', 'id');
+      $carreras = Carrera::pluck('nombre', 'id');
+      $sedes = Sede::pluck('nombre', 'id');
+
+      $planificaciones = Planificacion::whereSede($request->get('sede'))
+        ->carrera($request->get('carrera'))
+        ->asignatura($request->get('asignatura'))
+        ->anio($request->get('anio_academico'))
+        ->get();
+
+      $plani = $planificaciones->find('id');
+
+      if(isset($plani)){
+        Session::flash('message','Planificación ya existente para la cátedra');
+        return view('filterone', compact('plani','catedras','planes','carreras','sedes'));
+      }
+      return view('usuario.planificaciones.filter', compact('planificaciones','catedras','planes','carreras','sedes'));
+       
+    }
+
+    public function store(FilterPlanificacionesRequest $request){
+      $plani = Planificacion::busca($request->all());
+      Session::flash('message', 'Validado correctamente');
+      return view('usuario.planificaciones.create', compact('plani','catedras','planes','carreras','sedes'));
+    }
+    
 }

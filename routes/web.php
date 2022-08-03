@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/planificaciones/filter', 'FilterPlaniController@index')->name('planificaciones.filter');
+Route::get('usuario/planificaciones/create', 'PlanificacionController@create')->name('create');
+Route::get('usuario/planificaciones/filter', 'FilterPlaniController@busca')->name('filterone');
 Route::get('/memorias/filter', 'FilterMemoController@index')->name('memorias.filter');
 Route::get('/perfil/{perfil}', 'HomeController@cambiarPerfil')->name('perfil');
 Route::get('/planificaciones', 'PlanificacionController@index')->name('planificaciones');
@@ -36,6 +38,7 @@ Route::resource('memorias','MemoriaController');
 Route::resource('revisores','RevisorController');
 Route::resource('docentes','DocenteController');
 Route::resource('usuarios','UserController');
+Route::resource('planificaciones/filter', 'FilterPlaniController');
 Route::get('revisores','RevisorController@index')->name('revisores');
 Route::get('docentes','DocenteController@index')->name('docentes');
 Route::get('usuarios','UserController@index')->name('usuarios');

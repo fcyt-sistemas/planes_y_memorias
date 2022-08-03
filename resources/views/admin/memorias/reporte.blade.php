@@ -5,31 +5,33 @@
         <style>
             /** Define the margins of your page **/
             @page {
-                margin: 200px 25px 50px 50px; /** arriba derecha abajo izquierda**/
+                margin: 200px 25px 80px 50px; /** arriba derecha abajo izquierda**/
             }
 
             header {
                 position: fixed;
                 top: -150px;
                 left: 0px;
-                /*right: 0px;
-                height: 150px;
-                bottom: 100px;*/
             }
-            
-            
+            footer{
+                position: fixed;
+                bottom: -30px;
+            }
+            #footer .page:after {content: counter(page);}
         </style>
     </head>
     <body>
-        <?php
-            $num=1;
-        ?>
         <header>
             <img style="width:30%;" src="data:image/png;base64,{{ $image }}">
             <h2 style="text-align: center;">Reporte de Memorias de las Cátedras</h2>
         </header>
         <footer>
-            {{ $num }}
+            <?php
+                if ( isset($pdf) ) {
+                    $font = $pdf->get_font();
+                    $pdf->page_text(72, 18, "{PAGE_NUM} of {PAGE_COUNT}", $font, 6, array(255,0,0));
+                }
+            ?>
         </footer>
         @if(count($memorias) === 0)
             <div class="alert alert-success" role="alert">
@@ -59,7 +61,7 @@
                                             <td style="text-align:left;  border:1px solid #000; padding: 5px; width:45%;">
                                                 <b>MEMORIAS OBTENIDAS: </b> {{$m1}}
                                                 <br><b>ENTREGADAS: </b>{{$e}}
-                                                <br><b>APROBADAS: </b>{{$a}}
+                                                <br><b>APROBADAS: </b>{{$a}}image
                                                 <br><b>REVISADAS: </b>{{$o}}
                                             </td>
                                         </tr>
@@ -109,7 +111,6 @@
 
                 <?php 
                     $c = $m['anio_academico'].$m['sede'].$m['carrera'];
-                    $num++;
                 ?> 
             @endforeach
                     <!-- Total por Sede -->

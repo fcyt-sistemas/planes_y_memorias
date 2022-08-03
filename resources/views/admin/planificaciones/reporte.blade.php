@@ -23,7 +23,9 @@
             <img style="width:30%;" src="data:image/png;base64,{{ $image }}">
             <h2 style="text-align: center;">Reporte de Planificaciones de las Cátedras</h2>
         </header>
-        
+        <footer>
+            {PAGE_NUM} of {PAGE_COUNT}
+        </footer>
         <main>
             <table style="width: 700px; padding: 5px;">
                 <?php 
@@ -98,13 +100,9 @@
 
                     <?php 
                         $c = $p['anio_academico'].$p['sede'].$p['carrera'];
+                        
                     ?> 
-                <footer>
-                    <?php
-                        $num=1;
-                    ?>
-                    {{ $num }}
-                </footer>
+                
                 @endforeach
                     <!-- Total por Sede -->
                     <tr><td colspan="3" style="text-align:center;">&nbsp;</td></tr>

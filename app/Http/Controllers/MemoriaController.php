@@ -14,6 +14,8 @@ use Redirect;
 use DateTime;
 use App\Http\Requests\CreateMemoriaRequest;
 use Barryvdh\DomPDF\Facade as PDF;
+use Dompdf\Cpdf;
+//use DOMPDF\FontMetrics;
 
 class MemoriaController extends Controller
 {
@@ -371,13 +373,12 @@ class MemoriaController extends Controller
         
       }
 
-      PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
+      //$pdf = PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
       $image = base64_encode(file_get_contents(public_path('/images/logo-fcyt.png')));
-      $pdf = app('dompdf.wrapper');
-      $pdf->getDomPDF()->set_option("enable_php", true);  
+      //$pdf = app('dompdf.wrapper');
+      //$pdf->getDomPDF()->set_option("enable_php", true);  
       
-      return PDF::loadView('admin.memorias.reporte', ['image' => $image], compact('memorias','en','ob','ap','materia','memo','cant_mat', 'pdf'))->stream('reporte.pdf');
-    
+      return PDF::loadView('admin.memorias.reporte', ['image' => $image], compact('memorias','en','ob','ap','materia','memo','cant_mat'))->stream('reporte.pdf');
   }
 
   public function getCarreras($id)
