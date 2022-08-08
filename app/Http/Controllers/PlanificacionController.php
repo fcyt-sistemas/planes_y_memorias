@@ -141,7 +141,7 @@ class PlanificacionController extends Controller
     $carreras = Carrera::pluck('nombre', 'id');
     $sedes = Sede::pluck('nombre', 'id');
 
-    
+    Session::flash('message', 'Validado correctamente');
     return view('usuario.planificaciones.create', compact('catedras', 'planes', 'carreras', 'sedes'));
   }
 
