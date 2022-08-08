@@ -61,7 +61,7 @@
                             <a class="nav-link" href="{{ route('home') }}">{{ __('Inicio') }}</a>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                     {{ Auth::user()->name }} ({{Auth::user()->roles()->where('name', \Session::get('tipoUsuario'))->first()->description}}) <span class="caret"></span>
+                                    {{ Auth::user()->name }} ({{Auth::user()->roles()->where('name', \Session::get('tipoUsuario'))->first()->description}}) <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -77,13 +77,13 @@
                                     @endif
                                     @if(Auth::user()->hasRole('admin'))
                                     <a class="dropdown-item" href="{{ route('revisores') }}">
-                                         {{ __('Usuarios Revisores') }}
+                                         {{ __('Administrar Revisores') }}
                                     </a>  
                                     <a class="dropdown-item" href="{{ route('docentes') }}">
-                                         {{ __('Administrar docentes') }}
+                                         {{ __('Administrar Docentes') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('usuarios') }}">
-                                         {{ __('Administrar usuarios') }}
+                                         {{ __('Administrar Usuarios') }}
                                     </a>    
                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}"

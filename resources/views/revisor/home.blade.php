@@ -4,77 +4,141 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">Contenidos a revisar por el/la docente {{ Auth::user()->docente->apellidos}}, {{ Auth::user()->docente->nombres}}!</div>
                   <div class="card-body">
-                    Planificaciones: {{sizeof($planis)}} {!!link_to_action('PlanificacionController@index', $title = 'Revisar', $parameters = [], $attributes = ['class'=>'btn btn-secondary'])!!}
-                    <p>
-                    <div class="card-deck">
-                    <div class="card text-white bg-secondary mb-3">
-                      <div class="card-header">{{$dashp['cargadas']}} Cargadas</div>
-                      <div class="card-body bg-light text-dark">
-                        <h5 class="card-title">Planificaciones en su Espacio</h5>
-                        <p class="card-text">Cantidad de planificaciones cargadas en su espacio de revisión.</p>
-                      </div>
-                    </div>                      
-                    <div class="card text-white bg-secondary mb-3" >
-                      <div class="card-header">{{$dashp['entregadas']}} Entregadas</div>
-                      <div class="card-body bg-light text-dark">
-                        <h5 class="card-title">Planificaciones entregadas</h5>
-                        <p class="card-text">Entregadas por los docentes y puestas a su consideración.</p>
-                      </div>
-                    </div>
-                    <div class="card text-white bg-secondary mb-3">
-                      <div class="card-header">{{$dashp['aprobadas']}} Aprobadas</div>
-                      <div class="card-body bg-light text-dark">
-                        <h5 class="card-title">Planificaciones aprobadas</h5>
-                        <p class="card-text">Entregadas y aprobadas por Ud. o una autoridad revisora.</p>
-                      </div>
-                    </div>
-                    <div class="card text-white bg-danger mb-3">
-                      <div class="card-header">{{$dashp['revisadas']}} Revisadas</div>
-                      <div class="card-body bg-light text-dark">
-                        <h5 class="card-title">Planificaciones revisadas</h5>
-                        <p class="card-text">Fueron entregadas por los docentes, pero fueron observadas por Ud.</p>
-                      </div>
-                    </div>
+                    <!DOCTYPE html>
+                      <html lang="en" style="height: auto;">
+                      <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                        <link rel="stylesheet" href="/AdminLte/plugins/fontawesome-free/css/all.min.css">
+                        <link rel="stylesheet" href="/AdminLte/css/adminlte.min.css">
+                        <label><H2>PLANIFICACIONES<a href="{{ route('planificaciones.filter') }}" class="small-box-footer">  Ver <i class="fas fa-arrow-circle-right"></i></a></H2></label>
+                      </head>  
+                        <body>
+                          <div class="row">
+                            <div class="col-lg-3 col-6">
+                            
+                              <div class="small-box bg-info">
+                              <div class="inner">
+                                <h3>{{$dashp['entregadas']}}</h3>
+                                <p>Todas las Entregadas</p>
+                              </div>
+                              <div class="icon">
+                                <i class="ion ion-bag"></i>
+                              </div>
+                            </div>
+                          </div>
+                              
+                          <div class="col-lg-3 col-6">
+                              
+                            <div class="small-box bg-success">
+                              <div class="inner">
+                                <h3>{{$dashp['aprobadas']}}<sup style="font-size: 20px"></sup></h3>
+                                <p>Aprobadas</p>
+                              </div>
+                              <div class="icon">
+                                <i class="ion ion-stats-bars"></i>
+                              </div>
+                            </div>
+                          </div>
+                              
+                            <div class="col-lg-3 col-6">
+                              
+                              <div class="small-box bg-warning">
+                                <div class="inner">
+                                <h3>{{$dashp['norevis']}}</h3>
+                                  <p>A Revisar</p>
+                                </div>
+                                <div class="icon">
+                                  <i class="ion ion-person-add"></i>
+                                </div>
+                                
+                              </div>
+                            </div>
+                              
+                            <div class="col-lg-3 col-6">
+                              
+                              <div class="small-box bg-danger">
+                                <div class="inner">
+                                  <h3>{{$dashp['revisadas']}}</h3>
+                                  <p>Revisadas</p>
+                                </div>
+                                <div class="icon">
+                                  <i class="ion ion-pie-graph"></i>
+                                </div>
+                                  
+                                </div>
+                              </div>
+                            
+                            </div>
 
-                    </div>
-                      Memorias de cátedra: {{sizeof($memos)}} {!!link_to_action('MemoriaController@index', $title = 'Revisar', $parameters = [], $attributes = ['class'=>'btn btn-secondary'])!!}
-                      <p>
-                    <div class="card-deck">
-                    <div class="card text-white bg-secondary mb-3">
-                      <div class="card-header">{{$dashm['cargadas']}} Cargadas</div>
-                      <div class="card-body bg-light text-dark">
-                        <h5 class="card-title">Memorias de cátedras en su espacio.</h5>
-                        <p class="card-text">Cantidad de memorias cargadas en su espacio de revisión.</p>
-                      </div>
-                    </div>                      
-                    <div class="card text-white bg-secondary mb-3" >
-                      <div class="card-header">{{$dashm['entregadas']}} Entregadas</div>
-                      <div class="card-body bg-light text-dark">
-                        <h5 class="card-title">Memorias  de cátedra entregadas</h5>
-                        <p class="card-text">Entregadas por los docentes y puestas a su consideración.</p>
-                      </div>
-                    </div>
-                    <div class="card text-white bg-secondary mb-3">
-                      <div class="card-header">{{$dashm['aprobadas']}} Aprobadas</div>
-                      <div class="card-body bg-light text-dark">
-                        <h5 class="card-title">Memorias de cátedra aprobadas</h5>
-                        <p class="card-text">Entregadas y aprobadas por una autoridad revisora.</p>
-                      </div>
-                    </div>
-                    <div class="card text-white bg-danger mb-3">
-                      <div class="card-header">{{$dashm['revisadas']}} Revisadas</div>
-                      <div class="card-body bg-light text-dark">
-                        <h5 class="card-title">Memorias de cátedra revisadas</h5>
-                        <p class="card-text">Fueron entregadas por los docentes, pero fueron observadas por Ud.</p>
-                      </div>
-                    </div>
-
-                    </div>
-                </div>
+                            <label><H2>MEMORIAS<a href="{{ route('memorias.filter') }}" class="small-box-footer" style="align: center;"> Ver <i class="fas fa-arrow-circle-right"></i></a></H2></label>
+                            <div class="row">
+                              <div class="col-lg-3 col-6">
+                              
+                                <div class="small-box bg-info">
+                                <div class="inner">
+                                  <h3>{{$dashm['entregadas']}}</h3>
+                                  <p>Todas las Entregadas</p>
+                                </div>
+                                <div class="icon">
+                                  <i class="ion ion-bag"></i>
+                                </div>
+                               
+                              </div>
+                            </div>
+                                
+                            <div class="col-lg-3 col-6">
+                                
+                              <div class="small-box bg-success">
+                                <div class="inner">
+                                  <h3>{{$dashm['aprobadas']}}<sup style="font-size: 20px"></sup></h3>
+                                  <p>Aprobadas</p>
+                                </div>
+                                <div class="icon">
+                                  <i class="ion ion-stats-bars"></i>
+                                </div>
+                                
+                              </div>
+                            </div>
+                                
+                              <div class="col-lg-3 col-6">
+                                
+                                <div class="small-box bg-warning">
+                                  <div class="inner">
+                                  <h3>{{$dashm['norevis']}}</h3>
+                                    <p>A Revisar</p>
+                                  </div>
+                                  <div class="icon">
+                                    <i class="ion ion-person-add"></i>
+                                  </div>
+                                  
+                                </div>
+                              </div>
+                                
+                              <div class="col-lg-3 col-6">
+                                
+                                <div class="small-box bg-danger">
+                                  <div class="inner">
+                                    <h3>{{$dashm['revisadas']}}</h3>
+                                    <p>Revisadas</p>
+                                  </div>
+                                  <div class="icon">
+                                    <i class="ion ion-pie-graph"></i>
+                                  </div>
+                                   
+                                  </div>
+                                </div>
+                              
+                              </div>
+                          
+                        </body>
+                    </html>
+                 </div>
             </div>
         </div>
     </div>
+  </div>
 </div>
 @endsection

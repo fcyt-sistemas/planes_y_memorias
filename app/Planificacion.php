@@ -189,4 +189,12 @@ class Planificacion extends Model
             $query->where('planificaciones.entregado',true);
         }
     }
+    public function scopePara_revisar($query, $para_revisar){
+        if($para_revisar=='on'){
+            $query->where('planificaciones.observado','=',false)
+                  ->where('planificaciones.aprobado','=',false)
+                  ->where('planificaciones.entregado', '=', true)
+                  ->select('planificaciones.*');
+        }
+    }
 }

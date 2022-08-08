@@ -10,7 +10,6 @@ use App\Sede;
 use App\Docente;
 use App\Role;
 use App\User;
-
 use Session;
 use Redirect;
 
@@ -23,27 +22,33 @@ class RevisorController extends Controller
      */
     public function index(Request $request)
     {
+        $carrera_id = trim($request->get('carrera_id'));
+        $sede_id = trim($request->get('sede_id'));
+        $docente_id = trim($request->get('docente_id'));
+        $anio_academico = trim($request->get('anio_academico'));
+
         //Permitido solo para administradores
         $request->user()->authorizeRoles(['admin']);
         
-        $revisores = Revisor::orderBy('sede_id')->paginate(20);
-        // $i=0;
-        // foreach($revisores as $re){
-        //     print_r($i++.$re->docente.'<br>');
+        if($request->user()->hasRole('admin')){
+            $revisores = Revisor::carrera_search($request->get('carrera_id'))
+                        ->sede($request->get('sede_id'))
+                        ->docente($request->get('docente_id'))
+                        ->orderBy('sede_id','Asc')
+                        ->paginate(5);
             
-        // }
-        
-        //dd($revisores);
-        return view('admin.revisores.index',compact('revisores'));
-
-        
+            return view('admin.revisores.index',compact('revisores','anio_academico'));
+        }
+        else{
+            return view('admin.revisores.index',compact('revisores','anio_academico'));
+        }
     }
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {   
         $sedes = Sede::pluck('nombre','id');
@@ -138,4 +143,5 @@ class RevisorController extends Controller
 		Session::flash('message','Docente revisor eliminado/a correctamente!');
 		return Redirect::to('/revisores');
     }
+   
 }

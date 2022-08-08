@@ -4,7 +4,7 @@
 <div class="container">
      @include('admin.usuarios.modal')
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header justify-content-between">Listado de usuarios!
                     {!! Form::open(['route'=>'usuarios','method'=>'GET','class'=>'form-inline','role'=>'search']) !!}
@@ -12,7 +12,17 @@
 		        		{!!link_to_route('usuarios.create', $title = 'Agregar un usuario...', $parameters = null, $attributes = ['class'=>'btn btn-secondary'])!!}
 	             	</div>
                     <div class="form-inline">
-                        {!! Form::text('email',null,['type'=>'search','class'=>'form-control mr-sm-2','placeholder'=>'Búsqueda por email']) !!}    
+                        {!! Form::text('name',null,['type'=>'search','class'=>'form-control mr-sm-2','placeholder'=>'Búsqueda por Nombre']) !!}
+                        {!! Form::text('email',null,['type'=>'search','class'=>'form-control mr-sm-2','placeholder'=>'Búsqueda por email']) !!}
+                        <div class="input-group mb-3">
+      
+                            <select name="role_user" id="role_user">
+                                <option value="" selected disabled hidden>Seleccione un rol...</option>
+                                @foreach($roles as $role)
+                                <option value="{{$role->name}}">{{$role->description}}</option>
+                                @endforeach
+                            </select>
+                        </div>    
                         <button class="btn btn-default my-2 my-sm-0"type="submit">Buscar</button>
                     </div>
                     {!! Form::close() !!}
@@ -26,8 +36,9 @@
                 <div class="card-body" data-form="deleteForm">
                         <li class="list-group-item"> 
                              <div class="row">
-                                  <div class="col"><b>Nombre de Usuario</b></div>
+                                  <div class="col"><b>Nombre</b></div>
                                   <div class="col"><b>Email</b></div>
+                                  <div class="col"><b>Operacion</b></div>
                             </div> 
 		                </li>
                       @foreach($usuarios as $r)

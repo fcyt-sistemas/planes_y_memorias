@@ -13,6 +13,7 @@ use Illuminate\Database\Events\QueryExecuted;
 use Session;
 use Redirect;
 use DB;
+use App\Ḑocente;
 use App\Role_User;
 
 class UserController extends Controller
@@ -28,12 +29,18 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
+        $name = trim($request->get('name'));
+        $email = trim($request->get('email'));
+
         $request->user()->authorizeRoles(['admin']);
 
         if ($request->user()->hasRole('admin')) {
-            $usuarios = User::orderBy('name')->paginate(20);
-            return view('admin.usuarios.index', compact('usuarios'));
-        }
+            $usuarios = User::name($request->get('name'))->email($request->get('email'))->dni($request->get('nro_documento'))->role_user($request->get('role_user'))->orderBy('users.name', 'DESC')
+            ->paginate(5);
+            $roles = Role::all();
+           // $nro_documento = Docente::all();
+            return view('admin.usuarios.index', compact('usuarios','roles'));
+        }    
     }
 
     /**
@@ -56,8 +63,9 @@ class UserController extends Controller
     {
         $rules = [
             'name' => 'required|string|max:255',
+            'nro_documento' => 'required|string|max:10|unique:users',
             'email' => 'required|string|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:4|confirmed',
             'password_confirmation' => 'required',
            
         ];
@@ -66,8 +74,11 @@ class UserController extends Controller
             'name.required' => 'El campo nombre de usuario no puede ser vacio.',
             'name.max' =>'El nombre de usuario no puede ser mayor a :max caracteres.',
             'name.unique' => 'El nombre de usuario ya está en uso.',
-            'email.required' => 'El campo correo electrónico no puede ser vacio.',
-            'email.max' =>'El correo electrónico no puede ser mayor a :max caracteres.',
+            'nro_documento.required' => 'El campo DNI no puede ser vacio.',
+            'nro_documento.max' =>'El DNI no puede ser mayor a :max caracteres.',
+            'email.required' => 'El campo Email de usuario no puede ser vacio',
+            'email.max' => 'El email de usuario no puede ser mayor a :max caracteres',
+            'email.unique' => 'El mail ingresado ya está en uso',
             'password.required' => 'El campo contraseña no puede ser vacio.',
             'password.min' => 'La contraseña debe ser mayor a :min caracteres.',
             'password.confirmed' => 'Las contraseñas no coinciden.',
@@ -76,6 +87,7 @@ class UserController extends Controller
         $this->validate($request, $rules, $messages);
         $usuario = new User;
         $usuario->name = $request->name;
+        $usuario->nro_documento = $request->nro_documento;
         $usuario->email = $request->email;
         $usuario->password = Hash::make($request->password);
         $usuario->save();
@@ -124,7 +136,7 @@ class UserController extends Controller
         $usuario->save();
         $rol_user = Role_User::where('user_id', $id)->first();
         $rol = Role::where('name', $request->role)->first();
-        $rol_user->role_id = $rol->id;
+        //$rol_user->role_id = $rol->id;
         $rol_user->save();
         Session::flash('message', 'Usuario actualizado correctamente!');
         return Redirect::to('/usuarios');

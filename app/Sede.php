@@ -26,5 +26,10 @@ class Sede extends Model
         ->belongsToMany('App\Carrera')
         ->withTimestamps();
     }
+    public function scopeNombre($query,$nombre){
+        if(trim($nombre!="")){
+            $query->where(\DB::raw("CONCAT(nombre)"),"LIKE","%$nombre%"); 
+        }
+    }
 
 }
