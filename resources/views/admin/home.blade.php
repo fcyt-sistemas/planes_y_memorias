@@ -31,7 +31,6 @@
                           </div>
                               
                           <div class="col-lg-3 col-6">
-                              
                             <div class="small-box bg-success">
                               <div class="inner">
                                 <h3>{{$dashp['aprobadas']}}<sup style="font-size: 20px"></sup></h3>
@@ -44,21 +43,18 @@
                           </div>
                               
                             <div class="col-lg-3 col-6">
-                              
                               <div class="small-box bg-warning">
                                 <div class="inner">
-                                <h3>{{$dashp['norevis']}}</h3>
+                                  <h3>{{$dashp['norevis']}}</h3>
                                   <p>A Revisar</p>
                                 </div>
                                 <div class="icon">
                                   <i class="ion ion-person-add"></i>
                                 </div>
-                                
                               </div>
                             </div>
                               
                             <div class="col-lg-3 col-6">
-                              
                               <div class="small-box bg-danger">
                                 <div class="inner">
                                   <h3>{{$dashp['revisadas']}}</h3>
@@ -67,16 +63,13 @@
                                 <div class="icon">
                                   <i class="ion ion-pie-graph"></i>
                                 </div>
-                                  
                                 </div>
                               </div>
-                            
                             </div>
 
                             <label><H2>MEMORIAS<a href="{{ route('memorias.filter') }}" class="small-box-footer" style="align: center;"> Ver <i class="fas fa-arrow-circle-right"></i></a></H2></label>
                             <div class="row">
                               <div class="col-lg-3 col-6">
-                              
                                 <div class="small-box bg-info">
                                 <div class="inner">
                                   <h3>{{$dashm['entregadas']}}</h3>
@@ -89,8 +82,7 @@
                               </div>
                             </div>
                                 
-                            <div class="col-lg-3 col-6">
-                                
+                            <div class="col-lg-3 col-6"> 
                               <div class="small-box bg-success">
                                 <div class="inner">
                                   <h3>{{$dashm['aprobadas']}}<sup style="font-size: 20px"></sup></h3>
@@ -104,7 +96,6 @@
                             </div>
                                 
                               <div class="col-lg-3 col-6">
-                                
                                 <div class="small-box bg-warning">
                                   <div class="inner">
                                   <h3>{{$dashm['norevis']}}</h3>
@@ -118,7 +109,6 @@
                               </div>
                                 
                               <div class="col-lg-3 col-6">
-                                
                                 <div class="small-box bg-danger">
                                   <div class="inner">
                                     <h3>{{$dashm['revisadas']}}</h3>

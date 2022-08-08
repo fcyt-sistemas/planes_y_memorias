@@ -17,7 +17,7 @@
             <div class="card">
                 <div class="card-header">Planificación cargada por el/la  docente {{ $planificacion->docente->apellidos}}, {{ $planificacion->docente->nombres}}! </div>
                   <div class="card-body">
-                  	{!! Form::model($planificacion,['route'=>['planificacion.update',$planificacion->id], 'method' => 'PUT'])!!}
+                  	{!! Form::model($planificacion,['route'=>['planificaciones.update',$planificacion->id], 'method' => 'PUT'])!!}
 					
 					<div class="input-group mb-3">
 					  <div class="input-group-prepend">
@@ -139,7 +139,7 @@
 					</div>
 					<div class="btn-group" role="group">
 			            <div class="btn-group">
-  				        	{!!link_to_route('planificacion.index', $title = 'Aceptar', $parameters = null, $attributes = ['class'=>'btn btn-secondary'])!!}
+  				        	{!!link_to_route('planificaciones.index', $title = 'Aceptar', $parameters = null, $attributes = ['class'=>'btn btn-secondary'])!!}
 						</div>
 		            </div>
 					{!! Form::close() !!}

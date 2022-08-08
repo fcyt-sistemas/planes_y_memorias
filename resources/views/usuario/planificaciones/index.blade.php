@@ -10,15 +10,9 @@
                     <div class="card-header form-inline">
                         <h4 class="col-md-9">Listado de planificaciones!</h4>
                         <div class="button push-right">
-                            {!!link_to_route('planificaciones.create', $title = 'Agregar planificación..', $parameters = null, $attributes = ['class'=>'btn btn-secondary'])!!}
+                            {!!link_to_route('filterone', $title = 'Agregar planificación..', $parameters = null, $attributes = ['class'=>'btn btn-secondary'])!!}
                         </div>
                     </div>
-                    @if(Session::has('message'))
-                    <div class="alert alert-success alert-dismissible" role="alert">
-                        <a class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
-                    {{Session::get('message')}}
-                    </div>
-                    @endif
                     <div class="card-body" data-form="deleteForm">
                         <ul class="list-group list-group-flush">
                         @if(count($planificaciones) === 0)

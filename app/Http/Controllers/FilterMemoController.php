@@ -64,6 +64,9 @@ class FilterMemoController extends Controller
       foreach ($request->user()->docente->revisorDeSedes as $sede)
         $idsedes[] = $sede->id;
 
+
+      $nombre_sede = $sede->nombre;
+      $nombre_carrera = $carrera->nombre;
       $memorias = Memoria::whereSede($request->get('sede'))
         ->carrera($request->get('carrera'))
         ->asignatura($request->get('asignatura'))
@@ -77,7 +80,7 @@ class FilterMemoController extends Controller
         ->whereIn('sede_id', $idsedes)
         ->whereRaw('entregado is true and prox_version is null')
         ->paginate(5);
-      return view('revisor.memorias.filter', compact('memorias', 'sedes', 'carreras', 'anio_academico'));
+      return view('revisor.memorias.filter', compact('memorias', 'sedes', 'carreras', 'anio_academico', 'nombre_sede','nombre_carrera'));
     }
   }
 }

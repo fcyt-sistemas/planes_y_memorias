@@ -88,4 +88,18 @@ class Revisor extends Model
             ->select('revisores.*'); 
         }
     }
+    public function scopeName_sede($query,$id_sede){
+        if(trim($id_sede!="")){
+            $query->join('sedes','sedes.id','=','revisores.sede_id')
+                ->where('sedes.id',$id_sede )
+                ->select('sedes.nombre');
+        }
+    }
+    public function scopeNamecarrera($query,$id_carrera){
+        if(trim($id_carrera!="")){
+            $query->join('carreras','carreras.id','=','revisores.carrera_id')
+                ->where('carreras.id',$id_carrera)
+                ->select('carreras.nombre');
+        }
+    }
 }

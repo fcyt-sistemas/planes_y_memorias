@@ -13,11 +13,11 @@
 <div class="container">
 	@include('admin.planificaciones.modal')
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Planificación cargada por el docente {{ $planificacion->docente->apellidos}}, {{ $planificacion->docente->nombres}}! </div>
+                <div class="card-header">Planificación cargada por el docente {{ $planificaciones->docente->apellidos}}, {{ $planificaciones->docente->nombres}}! </div>
                   <div class="card-body">
-                  	{!! Form::model($planificacion,['route'=>['planificacion.update',$planificacion->id], 'method' => 'PUT'])!!}
+                  	{!! Form::model($planificaciones,['route'=>['planificaciones.update',$planificaciones->id], 'method' => 'PUT'])!!}
 					{!! Form::hidden('observado', null, array('id' => 'observado')) !!}
 					{!! Form::hidden('aprobado', null, array('id' => 'aprobado')) !!}
 					
@@ -248,12 +248,12 @@
                         	{!! Form::submit('Aceptar', ['class'=>'btn btn-primary']) !!}
 			            </div>
 			            <div class="btn-group">
-  				          	{!!link_to_route('planificacion.index', $title = 'Cancelar', $parameters = null, $attributes = ['class'=>'btn btn-secondary'])!!}
+  				          	{!!link_to_route('planificaciones.index', $title = 'Cancelar', $parameters = null, $attributes = ['class'=>'btn btn-secondary'])!!}
 						</div>
 		            </div>
 					{!! Form::close() !!}
 					<div class="btn-group">
-						{!!link_to_action('PlanificacionController@aprobar', $title = 'Aprobar Planificacion!', $parameters = $planificacion->id, $attributes = ['class'=>'btn btn-success'])!!}
+						{!!link_to_action('PlanificacionController@aprobar', $title = 'Aprobar Planificacion!', $parameters = $planificaciones->id, $attributes = ['class'=>'btn btn-success'])!!}
 				    </div>
 				</div>
             </div>

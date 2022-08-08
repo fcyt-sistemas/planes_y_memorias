@@ -31,5 +31,11 @@ class Sede extends Model
             $query->where(\DB::raw("CONCAT(nombre)"),"LIKE","%$nombre%"); 
         }
     }
+    public function scopeName($query, $sedes_id){
+        if($sedes_id!=""){
+            $query->where('id', $sedes_id);
+                  //->select('nombre');
+        }
+    }
 
 }

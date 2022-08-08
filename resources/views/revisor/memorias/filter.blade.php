@@ -4,22 +4,16 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">Todos los contenidos cargados!</div>           
-                    <H2>MEMORIAS</H2>
+                <div class="card-header"><H2>MEMORIAS</H2></div>     
                    <div class="card-header justify-content-between">
                    {!! Form::open(['route'=>'memorias','method'=>'GET','role'=>'search']) !!}
-                      <div class="input-group mb-3">
-                         <div class="input-group-prepend">
-                          <label class="input-group-text" for="sede_id">Sede:</label>
-                        </div>
-                            {!! Form::select('sede',$sedes, null,['class'=>'custom-select','id'=>'sedes','placeholder'=>'Seleccione una sede...'] ) !!}
+                          <div class="label">
+                            <b>Revisor de la sede:</b> {{ $nombre_sede }}
                           </div>
-                          <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                              <label class="input-group-text" for="carrera_id">Carrera:</label>
-                            </div>
-                            {!! Form::select('carrera',$carreras, null,['class'=>'custom-select','id'=>'carreras','placeholder'=>'Seleccione una carrera..'] ) !!}
+                          <div class="label">
+                            <b>Revisor de la carrera:</b> {{ $nombre_carrera }} 
                           </div>
+                          <br>
                           <div class="input-group mb-3">
                             <div class="input-group-prepend">
                               <label class="input-group-text" for="anio_academico">Año Academico:</label>

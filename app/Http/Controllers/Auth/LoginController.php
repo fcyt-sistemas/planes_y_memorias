@@ -70,13 +70,16 @@ class LoginController extends Controller
             return Redirect::to('login');
         }   
         $id_users = $usuarios[0]->id;
+        //$password = 1234;
+       // $login = [$id_users,$password];
         //dd($id_users);
-        $role_user = Role_User::Rol($request->get($id_users))->get();
-        $type_users= $role_user[1]->role_id;
-        if ($type_users == 1 ){
+        $role_user = Role_User::Rol($id_users)->get(); //dd($role_user[0]->role_id);
+        $type_users= $role_user[0]->role_id;// dd($type_users);
+
+       // if ($type_users == 1 ){
             Auth::loginUsingId($id_users,true);
             return Redirect::to('/home');
-        }
+       /* }
         if($response->getBody()) {
             $entrar = json_decode($response->getBody()->getContents());
             if ($entrar[0]) {
@@ -85,7 +88,16 @@ class LoginController extends Controller
                 //return view('/home');
                 //return redirect('home');
             }
+            else{
+                Session::flash('message', 'Credenciales incorrectas o usuario inexistente!');
+                return Redirect::to('login');
+            }
         }
+        else{
+            Session::flash('message', 'Credenciales incorrectas o usuario inexistente!');
+            return Redirect::to('login');
+        }*/
+        
     }
 
 

@@ -14,6 +14,8 @@ use Redirect;
 use DateTime;
 use App\Http\Requests\CreateMemoriaRequest;
 use Barryvdh\DomPDF\Facade as PDF;
+use Dompdf\Cpdf;
+//use DOMPDF\FontMetrics;
 
 class MemoriaController extends Controller
 {
@@ -64,7 +66,8 @@ class MemoriaController extends Controller
 
       foreach ($request->user()->docente->revisorDeSedes as $sede)
         $idsedes[] = $sede->id;
-
+        $nombre_sede = $sede->nombre;
+        $nombre_carrera = $carrera->nombre;
       $memorias = Memoria::whereSede($request->get('sede'))
         ->carrera($request->get('carrera'))
         ->asignatura($request->get('asignatura'))
@@ -78,7 +81,7 @@ class MemoriaController extends Controller
         ->whereIn('sede_id', $idsedes)
         ->whereRaw('entregado is true and prox_version is null')
         ->paginate(5);
-      return view('revisor.memorias.index', compact('memorias', 'sedes', 'carreras', 'anio_academico'));
+      return view('revisor.memorias.index', compact('memorias', 'sedes', 'carreras', 'anio_academico','nombre_sede','nombre_carrera'));
     } elseif ($request->user()->hasRole('user') && \Session::get('tipoUsuario') == 'user') {
       //$planificaciones = Planificacion::where('docente_id',$request->user()->docente->id)->get();
       $memorias = Memoria::whereRaw('docente_id =' . $request->user()->docente->id . ' and prox_version is null')
@@ -304,8 +307,14 @@ class MemoriaController extends Controller
      **/
     $memoria = Memoria::find($id);
     PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
-    $pdf = PDF::loadView('admin.memorias.impresion', compact('memoria'));
-    return $pdf->download($memoria->catedra->nombre . '-' . $memoria->anio_academico . '.pdf');
+    //$page = lastpage();
+    $image = base64_encode(file_get_contents(public_path('/images/logo-fcyt.png')));
+    $data = array();
+    //$pdf = app('dompdf.wrapper');
+    $pdf = \App::make('dompdf.wrapper');
+    $pdf->getDomPDF()->set_option("enable_php", true); 
+    $pdf->setPaper('L', 'landscape');
+    return PDF::loadView('admin.memorias.impresion', ['image' => $image], compact('memoria', 'pdf','data'))->stream($memoria->catedra->nombre . '-' . $memoria->anio_academico . '.pdf');
   }
 
   public function reporte(Request $request)
@@ -314,17 +323,62 @@ class MemoriaController extends Controller
      * toma en cuenta que para ver los mismos
      * datos debemos hacer la misma consulta
      **/
-    $memorias = Memoria::whereSede($request->get('sede'))
+     // require_once 'dompdf/autoload.inc.php';
+      $memorias = Memoria::whereSede($request->get('sede'))
       ->carrera($request->get('carrera'))
       ->asignatura($request->get('asignatura'))
+      ->entregada($request->get('entregadas'))
+      ->aprobada($request->get('aprobadas'))
+      ->revisada($request->get('revisadas'))
       ->profesor($request->get('profesor'))
       ->anio($request->get('anio_academico'))
+      ->orderBy('anio_academico')
+      ->orderBy('sede_id')
+      ->orderBy('carrera_id')
       ->get();
-    PDF::setOptions(['defaultFont' => 'sans-serif']);
+      
+      $ap=0;
+      $ob=0;
+      $en=0;
+      $materia=0;
+      
+      foreach ($memorias as $m) {
+        if($m->aprobado){
+          $estado = 'APROBADO';
+          $ap++;
+        }
+        elseif ($m->observado) {
+          $estado = 'REVISADO';
+          $ob++;
+        }
+        else{
+          $estado = 'ENTREGADO';
+          $en++;
+        }
+  
+        $memo[] = array(
+          'id_carrera' => $m->carrera_id,
+          'anio_academico' => $m->anio_academico,
+          'carrera' => $m->carrera->nombre,
+          'sede' => $m->sede->nombre,
+          'catedra' => $m->catedra->nombre,
+          'estado' => $estado,
+          'equipo_docente' => html_entity_decode(strip_tags($m->equipo_docente))
+        );
+        if($m->catedra){
+          $materia++;
+        } 
+        $aux= Plan::cant_materias($m->carrera->id)->get();
+        $cant_mat[$m->carrera->id] = $aux[0]->cant_materias;
+        
+      }
 
-    $pdf = PDF::loadView('admin.memorias.reporte', compact('memorias'));
-
-    return $pdf->download('memorias.pdf');
+      //$pdf = PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
+      $image = base64_encode(file_get_contents(public_path('/images/logo-fcyt.png')));
+      //$pdf = app('dompdf.wrapper');
+      //$pdf->getDomPDF()->set_option("enable_php", true);  
+      
+      return PDF::loadView('admin.memorias.reporte', ['image' => $image], compact('memorias','en','ob','ap','materia','memo','cant_mat'))->stream('reporte.pdf');
   }
 
   public function getCarreras($id)

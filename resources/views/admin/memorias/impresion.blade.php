@@ -1,18 +1,62 @@
 <!doctype html>
 <html lang="es">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <title>Reporte de impresión completa de Memoria de Cátedra</title>
+        <meta charset="utf-12">
+        <style>
+            body {
+                margin-top: 2cm;
+                margin-left: 2cm;
+                margin-right: 2cm;
+                margin-bottom: 2cm;
+            }
+            
+            /** Define the header rules **/
+            header {
+                position: fixed;
+                top: 0cm;
+                left: 0cm;
+                right: 0cm;
+                height: 2cm;
+                /** Extra personal styles **/
+                color: black;
+            }
+            footer {
+                position: fixed;
+                bottom: 0cm;
+                right: 0cm;
+                /**height: 2cm;
+                /** Extra personal styles **/
+                color: black;
+            }
+        </style>
     </head>
 <body>
-
-<div class="container">
-    <img src="{{ asset('images/logo-tr.png') }}">
-    &nbsp;&nbsp;&nbsp;{{ config('app.name', 'Laravel') }}
-    <br><br>
-    <div class="card">
+    <header>
+        <table style="width:100%;">
+            <tr>
+                <td><img style="width:30%;" src="data:image/png;base64,{{ $image }}"></img></td>
+                <td style="width:48%; text-align: right; font-size:12px;">
+                        <b>Sede:</b> {{$memoria->sede->nombre}}<br>
+                        <b>Carrera:</b> {{$memoria->carrera->nombre}}<br>
+                        <b>Cátedra:</b> {{$memoria->catedra->nombre}}<br>
+                </td>
+            </tr>
+        </table>
+        
+    </header>
+    <footer>
+        <table style="width:100%;">
+            <tr>
+                <td style="width:48%; text-align: left; font-size:12px;">
+                    <b>Equipo docente:</b> {{strip_tags($memoria->equipo_docente)}}
+                </td style="width:48%; text-align: right; font-size:12px;">
+                
+            </tr>
+        </table>
+    </footer>
+    <div class="container">
+        <br><br>
+        <div class="card">
         <div class="card-header">
             Memoria de cátedra cargada por el docente: {{ $memoria->docente->apellidos}}, {{ $memoria->docente->nombres}}!<br>
             Sede: {{$memoria->sede->nombre}}<br>
@@ -86,17 +130,12 @@
             {!!$memoria->cumpl_cron_trabajo!!}
         </div>
         <hr><br>
-        <div class="card-body">
-            Funciones de cada integrante del equipo de cátedra:<br>
-            {!!$memoria->cumpl_equipo_catedra!!}
-        </div>
-        <hr><br>
-        <div class="card-body">
-            Mecanismos de autoevaluación de cátedra:<br>
-            {!!$memoria->cumpl_mecan_autoeval!!}
         </div>
         <hr><br>
     </div>
+    
 </div>
+
 </body>
+
 </html>
