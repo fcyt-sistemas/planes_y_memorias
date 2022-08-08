@@ -129,6 +129,7 @@ class FilterPlaniController extends Controller
           ->carrera($request->get('carrera'))
           ->asignatura($request->get('asignatura'))
           ->anio($request->get('anio_academico'))
+          ->orderBy('sede_id')
           ->paginate(10);
       }
 
@@ -145,6 +146,7 @@ class FilterPlaniController extends Controller
       ->carrera($request->get('carrera'))
       ->asignatura($request->get('asignatura'))
       ->anio($request->get('anio_academico'))
+      ->orderBy('sede_id')
       ->paginate(10);
 
       if(isset($planificaciones)){
