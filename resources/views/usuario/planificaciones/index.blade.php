@@ -27,7 +27,7 @@
                                 @if($p->observado & !$p->aprobado) {!!link_to_action('PlanificacionController@show', $title = 'REVISADA', $parameters = $p['id'], $attributes = ['class'=>'rev'])!!} @endif
                                 @if($p->aprobado) {!!link_to_action('PlanificacionController@show', $title = 'APROBADA', $parameters = $p['id'], $attributes = ['class'=>'aprob'])!!} @endif
                                 <b>{{$p->carrera->nombre}}</b> Resol {{$p->plan->nro_resolucion}}</br>
-                                <b>{{$p->catedra->nombre}}, {{$p->anio_academico}}</b></br>
+                                <b>{{$p->catedra->id}}, {{$p->catedra->nombre}}, {{$p->anio_academico}}</b></br>
                                 {{strip_tags($p['equipo_docente'])}}</br>
                                     <div align="right">
                                     <div class="btn-group" role="group">

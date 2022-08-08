@@ -22,7 +22,7 @@
                                 {{ Session::get('message') }}
                             </div>
                         @endif
-                        {!! Form::open(['action' => 'FilterPlaniController@busca','method'=>'GET','role'=>'search']) !!}
+                        {!! Form::open(['action' => 'FilterPlaniController@control','method'=>'GET','role'=>'search']) !!}
                         {!! Form::hidden('docente_id', Auth::user()->docente->id) !!}
                         
                         <div class="input-group mb-3">

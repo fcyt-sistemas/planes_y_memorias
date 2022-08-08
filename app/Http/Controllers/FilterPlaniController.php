@@ -121,7 +121,10 @@ class FilterPlaniController extends Controller
       if ($request->user()->hasRole('user')) {
         $sedes = Sede::pluck('nombre', 'id');
         $carreras = Carrera::pluck('nombre', 'id');
-        $catedras = Catedra::pluck('nombre', 'id');
+        $lista_catedras = Catedra::pluck('nombre', 'id');
+
+		foreach($lista_catedras as $indice => $valor)
+			$catedras[$indice] = $valor.' - '.$indice;
   
         //whereSede se nombro así porque enraba en conficto con la prop Sede 
         
@@ -149,13 +152,13 @@ class FilterPlaniController extends Controller
       ->orderBy('sede_id')
       ->paginate(10);
 
-      if(isset($planificaciones)){
+      if(empty($planificaciones[0])){
         Session::flash('message', 'Validado correctamente');
         return view('usuario.planificaciones.create', compact('catedras', 'planes', 'carreras', 'sedes'));
       }
       else{
-        Session::flash('message', 'Planificacion ya existente');
-        return redirect::to('usuario.planificaciones.filter', compact('catedras', 'planes', 'carreras', 'sedes'));
+        Session::flash('error', 'Planificacion ya existente');
+        return view('usuario.planificaciones.filter', compact('catedras', 'planes', 'carreras', 'sedes'));
       }
     }
 }

@@ -42,6 +42,9 @@ class HomeController extends Controller
         };
 
         if (\Session::get('tipoUsuario') == 'admin') {
+/*
+			// --------------------------------------------------
+			// esto lo comento porque no se usa
             $planificaciones = Planificacion::all();
 
             $planis = array();
@@ -52,15 +55,18 @@ class HomeController extends Controller
                     'equipo_docente' => $plani->equipo_docente,
                 ];
             };
-
+*/
             $dashp = [
-                'cargadas' => sizeof($planis),
+                // 'cargadas' => sizeof($planis),
                 'entregadas' => Planificacion::whereRaw('entregado is true and prox_version is null')->count(),
                 'aprobadas' => Planificacion::whereRaw('entregado is true and aprobado is true and prox_version is null')->count(),
                 'revisadas' => Planificacion::whereRaw('entregado is true and observado is true and (aprobado <> true or aprobado is null) and prox_version is null')->count(),
                 'norevis' => Planificacion::whereRaw('entregado is true and (observado <> true or observado is null) and (aprobado <> true or aprobado is null) and prox_version is null')->count(),
             ];
 
+/*
+			// ----------------------------------------
+			// esto lo comento porque no se usa
             $memorias = Memoria::all();
             $memos = array();
             foreach ($memorias as $memo) {
@@ -70,15 +76,18 @@ class HomeController extends Controller
                     'equipo_docente' => $memo->equipo_docente,
                 ];
             };
-
+*/
             $dashm = [
-                'cargadas' => sizeof($memos),
+                // 'cargadas' => sizeof($memos),
                 'entregadas' => Memoria::whereRaw('entregado is true and prox_version is null')->count(),
                 'aprobadas' => Memoria::whereRaw('entregado is true and aprobado is true and prox_version is null')->count(),
                 'revisadas' => Memoria::whereRaw('entregado is true and observado is true and (aprobado <> true or aprobado is null) and prox_version is null')->count(),
                 'norevis' => Memoria::whereRaw('entregado is true and (observado <> true or observado is null) and (aprobado <> true or aprobado is null) and prox_version is null')->count(),
             ];
-            return view('admin.home', compact('planis', 'dashp', 'memos', 'dashm'));
+			
+			// esto lo comento porque plani y memos no se usa
+            // return view('admin.home', compact('planis', 'dashp', 'memos', 'dashm'));
+            return view('admin.home', compact('dashp', 'dashm'));
         } elseif (\Session::get('tipoUsuario') == 'control') {
 
             $doc_id = $request->user()->docente_id;
