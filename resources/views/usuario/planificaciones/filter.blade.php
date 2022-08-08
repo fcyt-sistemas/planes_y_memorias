@@ -17,12 +17,12 @@
                     <div class="card-body">
                         @include('errors')
                         @if(Session::has('message'))
-                            <div class="alert alert-success alert-danger" role="alert">
+                            <div class="alert alert-success alert-susses" role="alert">
                                 <a class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
-                                {{Session::get('message')}}
+                                {{ Session::get('message') }}
                             </div>
                         @endif
-                        {!! Form::open(['action' => 'FilterPlaniController@store','method' => 'POST'])!!}
+                        {!! Form::open(['action' => 'FilterPlaniController@busca','method'=>'GET','role'=>'search']) !!}
                         {!! Form::hidden('docente_id', Auth::user()->docente->id) !!}
                         
                         <div class="input-group mb-3">
@@ -51,7 +51,7 @@
                         </div>
                         <div class="btn-group" role="group">
                             <div class="btn-group">
-                                {!!link_to_route('create', $title = 'Aceptar y Continuar', $parameters = null, $attributes = ['class'=>'btn btn-primary'])!!}
+                                {!!link_to_route('control', $title = 'Aceptar y Continuar', $parameters = null, $attributes = ['class'=>'btn btn-primary'])!!}
                           </div>
                           <div class="btn-group">
                                 {!!link_to_route('planificaciones.index', $title = 'Cancelar', $parameters = null, $attributes = ['class'=>'btn btn-secondary'])!!}

@@ -145,32 +145,16 @@ class Planificacion extends Model
             $query->where('planificaciones.sede_id',$sede);
         }
     }
-    public function scopeBusca_sede($query,$sede){
-        if($sede != ''){
-            $query->where('planificaciones.sede_id',$sede)
-                  ->select('sede_id');
-        }
-    }
+
     public function scopeAnio($query,$anio_academico){
         if($anio_academico!=''){
             $query->where('planificaciones.anio_academico',$anio_academico);
         }
     }
-    public function scopeAnio_academico($query,$anio_academico){
-        if($anio_academico!=''){
-            $query->where('planificaciones.anio_academico',$anio_academico)
-                  ->select('anio_academico');
-        }
-    }
+
     public function scopeCarrera($query,$carrera){
         if($carrera!=''){
             $query->where('planificaciones.carrera_id',$carrera);
-        }
-    }
-    public function scopeBusca_carrera($query,$carrera){
-        if($carrera!=''){
-            $query->where('planificaciones.carrera_id',$carrera)
-                  ->select('carrera_id');
         }
     }
 
@@ -179,14 +163,6 @@ class Planificacion extends Model
             $query->join('catedras','planificaciones.catedra_id','=','catedras.id')
                   ->where('catedras.nombre',"LIKE","%$asignatura%")
                   ->select('planificaciones.*'); 
-        }
-    }
-
-    public function scopeBusca_asignatura($query,$asignatura){
-        if($asignatura!=''){
-            $query->join('catedras','planificaciones.catedra_id','=','catedras.id')
-                  ->where('catedras.nombre',"LIKE","%$asignatura%")
-                  ->select('catedras.nombre'); 
         }
     }
 
@@ -230,5 +206,9 @@ class Planificacion extends Model
                 ->select('id');
         }
     }
-
+    public function scopeBuscarpor($query, $anio, $asignatura, $sede, $carrera) {
+    	if ( ($anio) && ($asignatura) && ($sede) && ($carrera)) {
+            return $query->where($anio,'like',"%$asignatura%");
+        }
+    }
 }
