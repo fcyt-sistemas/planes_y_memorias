@@ -57,12 +57,21 @@ Route::get('/memorias/{id}/impresion', 'MemoriaController@impresion')->name('mem
 Route::get('/memorias/carreras/{id}', 'MemoriaController@getCarreras');
 Route::get('/memorias/planes/{id}', 'MemoriaController@getPlanes');
 Route::get('/memorias/catedras/{id}', 'MemoriaController@getCatedras');
+Route::get('usuario/memorias/carreras/{id}', 'MemoriaController@getCarreras');
+Route::get('usuario/memorias/planes/{id}', 'MemoriaController@getPlanes');
+Route::get('usuario/memorias/catedras/{id}', 'MemoriaController@getCatedras');
+Route::get('usuario/memorias/planes/{id}', 'MemoriaController@getCatedrasPlan');
+Route::get('usuario/carreras/{id}', 'MemoriaController@getCarreras');
+Route::get('usuario/planes/{id}', 'MemoriaController@getCatedrasPlan');
+Route::get('usuario/catedras/{id}', 'MemoriaController@getCatedras');
+
 Route::get('/planificaciones/carreras/{id}', 'PlanificacionController@getCarreras');
 Route::get('/planificaciones/planes/{id}', 'PlanificacionController@getPlanes');
 Route::get('/planificaciones/catedras/{id}', 'PlanificacionController@getCatedras');
 Route::get('/carreras/{id}', 'PlanificacionController@getCarreras');
 Route::get('/planes/{id}', 'PlanificacionController@getPlanes');
 Route::get('/catedras/{id}', 'PlanificacionController@getCatedras');
+
 
 Route::get('usuario/planificaciones/carreras/{id}', 'PlanificacionController@getCarreras');
 Route::get('usuario/planificaciones/planes/{id}', 'PlanificacionController@getCatedrasPlan');

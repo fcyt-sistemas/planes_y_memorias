@@ -29,7 +29,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="sede_id">Catedra:</label>
                             </div>
-                            {!! Form::select('catedra', $catedras,null, ['style'=>'width: 800px', 'id'=>'catedras', 'placeholder'=>'Seleccione una cátedra']) !!}
+                            {!! Form::select('catedras', $catedras,null, ['style'=>'width: 800px', 'id'=>'catedras', 'placeholder'=>'Seleccione una cátedra']) !!}
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">

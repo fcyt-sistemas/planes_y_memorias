@@ -159,7 +159,7 @@ class MemoriaController extends Controller
       return view('usuario.memorias.filter', compact('catedras','planes','carreras','sedes','anio_academico'));
     }
     else{
-      Session::flash('message', 'Planificación ya existe!');
+      Session::flash('message', 'Memoria ya existe!');
       return view('usuario.memorias.filter', compact('catedras','planes','carreras','sedes','anio_academico'));
     }
   }
@@ -434,4 +434,10 @@ class MemoriaController extends Controller
   {
     return Plan::where('id', '=', $id)->first()->catedras;
   }
+
+    //Id que viene es de carrera
+    public function getCatedrasPlan($id)
+    {
+      return Plan::where('carrera_id', '=', $id)->where('estado', '=', 'V')->first()->catedras;
+    }
 }

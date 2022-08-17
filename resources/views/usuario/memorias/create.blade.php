@@ -11,7 +11,7 @@
 </script>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-13">
             <div class="card">
                 <div class="card-header">Nueva memoria de cátedra</div>
                   <div class="card-body">
@@ -19,7 +19,12 @@
 					{!! Form::open(['action' => 'MemoriaController@store','method' => 'POST'])!!}
 					
 					{!! Form::hidden('docente_id', Auth::user()->docente->id) !!}
-
+					@if(Session::has('message'))
+						<div class="alert alert-success alert-sesses" role="alert">
+							<a class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+							{{Session::get('message')}}
+						</div>
+                    @endif
 					<div class="input-group mb-3">
 					  <div class="input-group-prepend">
 					    <label class="input-group-text" for="sede_id">Sede:</label>
