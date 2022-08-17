@@ -5,8 +5,8 @@
         <div class="col-md-13">
             <div class="card">
                    <div class="card-header justify-content-between">
-                    <div class="card-header">La Planificación que desea crear es para:</div>
-                    {!! Form::open(['action' => 'PlanificacionController@control','method' => 'POST'])!!}
+                    <div class="card-header">La Memoria que desea crear es para:</div>
+                    {!! Form::open(['action' => 'MemoriaController@control','method' => 'POST'])!!}
                         @if(Session::has('message'))
                             <div class="alert alert-danger alert-danger" role="alert">
                                 <a class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
@@ -41,7 +41,7 @@
                         <br>                    
                             <div><button class="btn btn-primary" type="submit">Aceptar y Continuar</button>
                                 <div class="btn-group">
-                                    {!!link_to_route('planificaciones.index', $title = 'Cancelar', $parameters = null, $attributes = ['class'=>'btn btn-secondary'])!!}
+                                    {!!link_to_route('memorias', $title = 'Cancelar', $parameters = null, $attributes = ['class'=>'btn btn-secondary'])!!}
                                 </div>
                             </div>
                         </div>

@@ -83,4 +83,46 @@ class FilterMemoController extends Controller
       return view('revisor.memorias.filter', compact('memorias', 'sedes', 'carreras', 'anio_academico', 'nombre_sede','nombre_carrera'));
     }
   }
+  public function busca(Request $request){
+
+    $estado = trim($request->get('estado'));
+    $materia = trim($request->get('materia'));
+
+    $request->user()->authorizeRoles(['user', 'admin', 'control', 'lectura']);
+    Auth::user()->hasRole('user') && \Session::get('tipoUsuario') == 'user';
+    $anios = Memoria::pluck('anio_academico')->unique()->sort();
+    $anio_academico = array();
+    foreach ($anios as $anio) {
+      $anio_academico[$anio] = $anio;
+    }
+      $request->user()->hasRole('user') ;
+      $sedes = Sede::pluck('nombre', 'id');
+      $carreras = Carrera::pluck('nombre', 'id');
+      $catedras = Catedra::pluck('nombre', 'id');
+
+      //whereSede se nombro así porque enraba en conficto con la prop Sede 
+     // $Memorias = Memoria::whereRaw('docente_id =' . $request->user()->docente->id . ' and prox_version is null')
+     // ->paginate(10);
+      $memorias = Memoria::whereRaw('docente_id =' . $request->user()->docente->id . ' and prox_version is null')
+        ->whereSede($request->get('sede'))
+        ->carrera($request->get('carrera'))
+        ->asignatura($request->get('asignatura'))
+        ->anio($request->get('anio_academico'))
+        ->orderBy('sede_id')
+        ->paginate(10);
+
+    return view('usuario.memorias.filter', compact('memorias','sedes', 'carreras', 'anio_academico','catedras'));
+  }
+  
+/*
+  public function control(Request $request){
+    if(empty($request->$sedes)){
+      Session::flash('message', 'Validado correctamente');
+      return view('usuario.Memorias.create', compact('catedras', 'planes', 'carreras', 'sedes'));
+    }
+    else{
+      Session::flash('error', 'memoria ya existente');
+      return view('usuario.memorias.filter', compact('catedras', 'planes', 'carreras', 'sedes'));
+    }
+  }*/
 }

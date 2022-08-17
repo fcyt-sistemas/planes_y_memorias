@@ -140,9 +140,51 @@ class PlanificacionController extends Controller
     $planes = Plan::pluck('nombre', 'id');
     $carreras = Carrera::pluck('nombre', 'id');
     $sedes = Sede::pluck('nombre', 'id');
+    
 
     Session::flash('message', 'Validado correctamente');
     return view('usuario.planificaciones.create', compact('catedras', 'planes', 'carreras', 'sedes'));
+  }
+
+  public function control(Request $request){
+
+    //busqueda
+    $sede = trim($request->get('sede'));
+    $carrera = trim($request->get('carrera'));
+    $asignatura = trim($request->get('asignatura'));
+    $anio = trim($request->get('anio_academico'));
+    $docentes = trim(Auth::user());
+    
+    $planificaciones = Planificacion::whereSede($request->get('sede'))
+    ->carrera($request->get('carrera'))
+    ->asignatura($request->get('asignatura'))
+    ->anio($request->get('anio_academico'))
+    ->get();
+
+    $input = $request->all();
+
+    //dd(isset($planificaciones[0]));
+      $catedras = Catedra::pluck('nombre', 'id');
+      $planes = Plan::pluck('nombre', 'id');
+      $carreras = Carrera::pluck('nombre', 'id');
+      $sedes = Sede::pluck('nombre', 'id');
+      $anios = Planificacion::pluck('anio_academico')->unique()->sort();
+      $anio_academico = array();
+      foreach ($anios as $anio) {
+        $anio_academico[$anio] = $anio;
+      }
+    if(!isset($planificaciones[0])){
+      Session::flash('message', 'Validado Correctamente!');
+      return view('usuario.planificaciones.create', compact('catedras','planes','carreras','sedes'));
+    }
+    else if(!isset($input)){
+      Session::flash('message', 'Debe completar los campos!');
+      return view('usuario.planificaciones.filter', compact('catedras','planes','carreras','sedes','anio_academico'));
+    }
+    else{
+      Session::flash('message', 'Planificación ya existe!');
+      return view('usuario.planificaciones.filter', compact('catedras','planes','carreras','sedes','anio_academico'));
+    }
   }
 
   /**
@@ -429,5 +471,12 @@ class PlanificacionController extends Controller
   public function getCatedras($id)
   {
     return Plan::where('id', '=', $id)->first()->catedras;
+  }
+
+
+  //Id que viene es de carrera
+  public function getCatedrasPlan($id)
+  {
+    return Plan::where('carrera_id', '=', $id)->where('estado', '=', 'V')->first()->catedras;
   }
 }

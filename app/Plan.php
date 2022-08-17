@@ -15,7 +15,7 @@ class Plan extends Model
     public function catedras() {
         return $this
         ->belongsToMany('App\Catedra','plan_catedra')
-        ->withTimestamps();
+        ->withTimestamps()->orderBy('nombre');
     }
     public function scopeCant_materias($query,$id){
         if($id!=''){

@@ -16,32 +16,31 @@
                 <div class="card-header">Nueva Planificación</div>
                   <div class="card-body">
 					@include('errors')
+					{!! Form::open(['action' => 'PlanificacionController@store','method' => 'POST'])!!}
+					{!! Form::hidden('docente_id', Auth::user()->docente->id) !!}
 					@if(Session::has('message'))
 						<div class="alert alert-success alert-sesses" role="alert">
 							<a class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
 							{{Session::get('message')}}
 						</div>
                     @endif
-					{!! Form::open(['action' => 'PlanificacionController@store','method' => 'POST'])!!}
-					{!! Form::hidden('docente_id', Auth::user()->docente->id) !!}
-					
 					<div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="sede_id">Sede:</label>
                         </div>
-                        {!! Form::select('sede_id',$sedes, null,['id'=>'sedes','placeholder'=>'Seleccione una sede...'] ) !!}
+                        {!! Form::select('sede',$sedes, null,['id'=>'sedes','placeholder'=>'Seleccione una sede...'] ) !!}
 					</div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text" for="sede_id">Carrera:</label>
+                            <label class="input-group-text" for="carreras_seleccion">Carrera:</label>
                         </div>
-                        {!! Form::select('carrera_id',$carreras, null,['id'=>'carreras','placeholder'=>'Seleccione una carrera'] ) !!}
+                        {!! Form::select('carrera',$carreras, null,['id'=>'carreras','placeholder'=>'Seleccione una carrera'] ) !!}
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="sede_id">Catedra:</label>
                         </div>
-                        {!! Form::select('catedra_id', $catedras,null, ['id'=>'catedras', 'placeholder'=>'Seleccione una cátedra']) !!}
+                        {!! Form::select('catedra', $catedras,null, ['id'=>'catedras', 'placeholder'=>'Seleccione una cátedra']) !!}
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">

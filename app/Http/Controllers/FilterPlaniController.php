@@ -109,56 +109,17 @@ class FilterPlaniController extends Controller
 
     public function busca(Request $request){
 
-      $estado = trim($request->get('estado'));
-      $materia = trim($request->get('materia'));
-  
-      $request->user()->authorizeRoles(['user', 'admin', 'control', 'lectura']);
-      $anios = Planificacion::pluck('anio_academico')->unique()->sort();
-      $anio_academico = array();
-      foreach ($anios as $anio) {
-        $anio_academico[$anio] = $anio;
-      }
-      if ($request->user()->hasRole('user')) {
-        $sedes = Sede::pluck('nombre', 'id');
-        $carreras = Carrera::pluck('nombre', 'id');
-        $lista_catedras = Catedra::pluck('nombre', 'id');
-
-		foreach($lista_catedras as $indice => $valor)
-			$catedras[$indice] = $valor.' - '.$indice;
-  
-        //whereSede se nombro así porque enraba en conficto con la prop Sede 
-        
-        $planificaciones = Planificacion::whereSede($request->get('sede'))
-          ->carrera($request->get('carrera'))
-          ->asignatura($request->get('asignatura'))
-          ->anio($request->get('anio_academico'))
-          ->orderBy('sede_id')
-          ->paginate(10);
-      }
-
-      return view('usuario.planificaciones.filter', compact('planificaciones','sedes', 'carreras', 'anio_academico','catedras'));
-    }
-
-    public function control(Request $request){
       $catedras = Catedra::pluck('nombre', 'id');
       $planes = Plan::pluck('nombre', 'id');
       $carreras = Carrera::pluck('nombre', 'id');
       $sedes = Sede::pluck('nombre', 'id');
-      
-      $planificaciones = Planificacion::whereSede($request->get('sede'))
-      ->carrera($request->get('carrera'))
-      ->asignatura($request->get('asignatura'))
-      ->anio($request->get('anio_academico'))
-      ->orderBy('sede_id')
-      ->paginate(10);
+      $anios = Planificacion::pluck('anio_academico')->unique()->sort();
+      $anio_academico = array();
+      foreach ($anios as $anio) {
+          $anio_academico[$anio] = $anio;
+      }
 
-      if(empty($planificaciones[0])){
-        Session::flash('message', 'Validado correctamente');
-        return view('usuario.planificaciones.create', compact('catedras', 'planes', 'carreras', 'sedes'));
-      }
-      else{
-        Session::flash('error', 'Planificacion ya existente');
-        return view('usuario.planificaciones.filter', compact('catedras', 'planes', 'carreras', 'sedes'));
-      }
+    return view('usuario.planificaciones.filter', compact('sedes', 'carreras', 'anio_academico','catedras'));
     }
+
 }

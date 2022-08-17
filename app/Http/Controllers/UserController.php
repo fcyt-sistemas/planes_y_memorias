@@ -83,16 +83,23 @@ class UserController extends Controller
             'password.min' => 'La contraseña debe ser mayor a :min caracteres.',
             'password.confirmed' => 'Las contraseñas no coinciden.',
         ];
-
-        $this->validate($request, $rules, $messages);
-        $usuario = new User;
+       $usuario = User::create($request->all());
+        //$this->validate($request, $rules, $messages);
+       /* $usuario = new User;
         $usuario->name = $request->name;
         $usuario->nro_documento = $request->nro_documento;
         $usuario->email = $request->email;
-        $usuario->password = Hash::make($request->password);
-        $usuario->save();
+        $usuario->password = Hash::make($request->password);*/
+       /* $user = User::create([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password'])
+        ]);
         
-        $usuario->roles()->attach(Role::where('name',$request->role)->first());
+        $user->roles()->attach(Role::where('name','user')->first());*/
+        //$usuario->save;
+        
+        //$usuario->roles()->attach(Role::where('name',$request->role)->first());
         
         Session::flash('message', 'Usuario creado correctamente!');
         return Redirect::to('/usuarios');

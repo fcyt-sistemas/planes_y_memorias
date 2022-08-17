@@ -9,7 +9,7 @@
                 <div class="card-header form-inline">
 				        <h3 class="col-md-9">Memorias de Cátedra</h3>
     					<div>
-        		        	{!!link_to_route('memorias.create', $title = 'Agregar memoria...', $parameters = null, $attributes = ['class'=>'btn btn-secondary', 'id'=>'agregar_memoria'])!!}
+        		        	{!!link_to_route('filtertwo', $title = 'Agregar memoria...', $parameters = null, $attributes = ['class'=>'btn btn-secondary', 'id'=>'agregar_memoria'])!!}
         	            </div>
     				</div>
                 @if(Session::has('message'))

@@ -123,6 +123,47 @@ class MemoriaController extends Controller
     return view('usuario.memorias.create', compact('catedras', 'planes', 'carreras', 'sedes'));
   }
 
+  public function control(Request $request){
+
+    //busqueda
+    $sede = trim($request->get('sede'));
+    $carrera = trim($request->get('carrera'));
+    $asignatura = trim($request->get('asignatura'));
+    $anio = trim($request->get('anio_academico'));
+    $docentes = trim(Auth::user());
+    
+    $memorias = Memoria::whereSede($request->get('sede'))
+    ->carrera($request->get('carrera'))
+    ->asignatura($request->get('asignatura'))
+    ->anio($request->get('anio_academico'))
+    ->get();
+
+    $input = $request->all();
+
+    //dd(isset($planificaciones[0]));
+      $catedras = Catedra::pluck('nombre', 'id');
+      $planes = Plan::pluck('nombre', 'id');
+      $carreras = Carrera::pluck('nombre', 'id');
+      $sedes = Sede::pluck('nombre', 'id');
+      $anios = Memoria::pluck('anio_academico')->unique()->sort();
+      $anio_academico = array();
+      foreach ($anios as $anio) {
+        $anio_academico[$anio] = $anio;
+      }
+    if(!isset($memorias[0])){
+      Session::flash('message', 'Validado Correctamente!');
+      return view('usuario.memorias.create', compact('catedras','planes','carreras','sedes'));
+    }
+    else if(!isset($input)){
+      Session::flash('message', 'Debe completar los campos!');
+      return view('usuario.memorias.filter', compact('catedras','planes','carreras','sedes','anio_academico'));
+    }
+    else{
+      Session::flash('message', 'Planificación ya existe!');
+      return view('usuario.memorias.filter', compact('catedras','planes','carreras','sedes','anio_academico'));
+    }
+  }
+
   public function duplicar($id)
   {
     $old_memo = Memoria::find($id);
