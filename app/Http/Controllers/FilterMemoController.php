@@ -100,9 +100,12 @@ class FilterMemoController extends Controller
       $carreras = Carrera::pluck('nombre', 'id');
       $catedras = Catedra::pluck('nombre', 'id');
 
-      //whereSede se nombro así porque enraba en conficto con la prop Sede 
-     // $Memorias = Memoria::whereRaw('docente_id =' . $request->user()->docente->id . ' and prox_version is null')
-     // ->paginate(10);
+     $input = array(
+       'sede' => null,
+       'carrera' => null,
+       'catedra' => null,
+       'anio_academico' => null
+     );
       $memorias = Memoria::whereRaw('docente_id =' . $request->user()->docente->id . ' and prox_version is null')
         ->whereSede($request->get('sede'))
         ->carrera($request->get('carrera'))
@@ -111,7 +114,7 @@ class FilterMemoController extends Controller
         ->orderBy('sede_id')
         ->paginate(10);
 
-    return view('usuario.memorias.filter', compact('memorias','sedes', 'carreras', 'anio_academico','catedras'));
+    return view('usuario.memorias.filter', compact('input','memorias','sedes', 'carreras', 'anio_academico','catedras'));
   }
   
 /*
