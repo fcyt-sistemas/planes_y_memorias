@@ -161,8 +161,8 @@ class PlanificacionController extends Controller
     ->anio($request->get('anio_academico'))
     ->get();
 
-    $input = $request->all();
-
+    
+     $input = $request->all();
     //dd(isset($planificaciones[0]));
       $catedras = Catedra::pluck('nombre', 'id');
       $planes = Plan::pluck('nombre', 'id');
@@ -177,13 +177,10 @@ class PlanificacionController extends Controller
       Session::flash('message', 'Validado Correctamente!');
       return view('usuario.planificaciones.create', compact('catedras','planes','carreras','sedes'));
     }
-    else if(!isset($input)){
-      Session::flash('message', 'Debe completar los campos!');
-      return view('usuario.planificaciones.filter', compact('catedras','planes','carreras','sedes','anio_academico'));
-    }
+  
     else{
       Session::flash('message', 'Planificación ya existe!');
-      return view('usuario.planificaciones.filter', compact('catedras','planes','carreras','sedes','anio_academico'));
+      return view('usuario.planificaciones.filter', compact('planificaciones','input','catedras','planes','carreras','sedes','anio_academico'));
     }
   }
 

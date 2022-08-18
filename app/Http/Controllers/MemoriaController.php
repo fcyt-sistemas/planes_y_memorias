@@ -139,7 +139,6 @@ class MemoriaController extends Controller
     ->get();
 
     $input = $request->all();
-
     //dd(isset($planificaciones[0]));
       $catedras = Catedra::pluck('nombre', 'id');
       $planes = Plan::pluck('nombre', 'id');
@@ -154,13 +153,10 @@ class MemoriaController extends Controller
       Session::flash('message', 'Validado Correctamente!');
       return view('usuario.memorias.create', compact('catedras','planes','carreras','sedes'));
     }
-    else if(!isset($input)){
-      Session::flash('message', 'Debe completar los campos!');
-      return view('usuario.memorias.filter', compact('catedras','planes','carreras','sedes','anio_academico'));
-    }
+   
     else{
       Session::flash('message', 'Memoria ya existe!');
-      return view('usuario.memorias.filter', compact('catedras','planes','carreras','sedes','anio_academico'));
+      return view('usuario.memorias.filter', compact('input','catedras','planes','carreras','sedes','anio_academico'));
     }
   }
 

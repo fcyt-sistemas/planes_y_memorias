@@ -102,6 +102,7 @@ class FilterPlaniController extends Controller
             ->whereRaw('entregado is true and prox_version is null')
             ->paginate(10);
             
+          
         return view('revisor.planificaciones.filter', compact('planificaciones', 'sedes', 'carreras', 'anio_academico', 'nombre_sede','nombre_carrera'));
     
        }
@@ -109,17 +110,37 @@ class FilterPlaniController extends Controller
 
     public function busca(Request $request){
 
-      $catedras = Catedra::pluck('nombre', 'id');
-      $planes = Plan::pluck('nombre', 'id');
-      $carreras = Carrera::pluck('nombre', 'id');
-      $sedes = Sede::pluck('nombre', 'id');
+      $estado = trim($request->get('estado'));
+      $materia = trim($request->get('materia'));
+  
+      $request->user()->authorizeRoles(['user', 'admin', 'control', 'lectura']);
+      Auth::user()->hasRole('user') && \Session::get('tipoUsuario') == 'user';
       $anios = Planificacion::pluck('anio_academico')->unique()->sort();
       $anio_academico = array();
       foreach ($anios as $anio) {
-          $anio_academico[$anio] = $anio;
+        $anio_academico[$anio] = $anio;
       }
+        $request->user()->hasRole('user') ;
+        $sedes = Sede::pluck('nombre', 'id');
+        $carreras = Carrera::pluck('nombre', 'id');
+        $catedras = Catedra::pluck('nombre', 'id');
 
-    return view('usuario.planificaciones.filter', compact('sedes', 'carreras', 'anio_academico','catedras'));
+        $input = array(
+          'sede'=> null,
+          'carrera' => null,
+          'catedra' => null,
+          'anio_academico' => null
+        );
+         
+        $planificaciones = Planificacion::whereRaw('docente_id =' . $request->user()->docente->id . ' and prox_version is null')
+          ->whereSede($request->get('sede'))
+          ->carrera($request->get('carrera'))
+          ->asignatura($request->get('asignatura'))
+          ->anio($request->get('anio_academico'))
+          ->orderBy('sede_id')
+          ->paginate(10);
+  
+      return view('usuario.planificaciones.filter', compact('input','planificaciones','sedes', 'carreras', 'anio_academico','catedras'));
     }
 
 }

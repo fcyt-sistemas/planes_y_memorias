@@ -17,25 +17,25 @@
                             <div class="input-group-prepend">
                             <label class="input-group-text" for="sede_id">Sede:</label>
                             </div>
-                            {!! Form::select('sede',$sedes, null,['style'=>'width: 700px', 'class'=>'custom-select','id'=>'sedes','placeholder'=>'Seleccione una sede...'] ) !!}
+                            {!! Form::select('sede',$sedes, $input['sede'],['style'=>'width: 700px', 'class'=>'custom-select','id'=>'sedes','placeholder'=>'Seleccione una sede...'] ) !!}
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                             <label class="input-group-text" for="carreras_seleccion">Carrera:</label>
                             </div>
-                            {!! Form::select('carrera',$carreras, null,['style'=>'width: 700px', 'class'=>'custom-select','id'=>'carreras_seleccion','placeholder'=>'Seleccione una carrera..'] ) !!}
+                            {!! Form::select('carrera',$carreras, $input['carrera'],['style'=>'width: 700px', 'class'=>'custom-select','id'=>'carreras_seleccion','placeholder'=>'Seleccione una carrera..'] ) !!}
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="sede_id">Catedra:</label>
                             </div>
-                            {!! Form::select('catedra', $catedras,null, ['style'=>'width: 800px', 'id'=>'catedras', 'placeholder'=>'Seleccione una cátedra']) !!}
+                            {!! Form::select('catedra', $catedras, $input['catedra'], ['style'=>'width: 800px', 'id'=>'catedras', 'placeholder'=>'Seleccione una cátedra']) !!}
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                             <label class="input-group-text" for="anio_academico">Año Academico:</label>
                             </div>
-                            {!! Form::select('anio_academico',$anio_academico, null,['style'=>'width: 700px', 'class'=>'custom-select','id'=>'anio_academico','placeholder'=>'Seleccione un año academico..'] ) !!}
+                            {!! Form::select('anio_academico',$anio_academico,$input['anio_academico'],['style'=>'width: 700px', 'class'=>'custom-select','id'=>'anio_academico','placeholder'=>'Seleccione un año academico..'] ) !!}
                         </div>
                 
                         <br>                    
