@@ -17,7 +17,7 @@
             <div class="card">
                 <div class="card-header">Planificación cargada por el docente {{ $planificaciones->docente->apellidos}}, {{ $planificaciones->docente->nombres}}! </div>
                   <div class="card-body">
-                  	{!! Form::model($planificaciones,['route'=>['planificacion.update',$planificaciones->id], 'method' => 'PUT'])!!}
+                  	{!! Form::model($planificaciones,['route'=>['planificaciones.update',$planificaciones->id], 'method' => 'PUT'])!!}
 
 					<div class="input-group mb-3">
 					  <div class="input-group-prepend">

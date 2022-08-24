@@ -29,5 +29,11 @@ class Plan extends Model
                 ->select('nro_resolucion');
         }
     }
-
+    public function scopePlan($query,$carrera){
+        if($carrera != ''){
+            $query->where('carrera_id',$carrera)
+                  ->where('estado','V')
+                  ->select('id', 'nombre');
+        }
+    }
 }

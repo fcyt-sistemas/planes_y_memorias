@@ -13,36 +13,36 @@ $allowable_tags = '<a><b><i><strong><br><p><em><code><cite><h4><h5><h6><table><t
 <body>
 
 <div class="container">
-    <img src="{{ asset('images/logo-tr.png') }}"></img>
+    <img src="{{ asset('images/logo-tr.png') }}">
     &nbsp;&nbsp;&nbsp;{{ config('app.name', 'Laravel') }}
     <br><br>
     <div class="card">
         <div class="card-header">
-            Planificación cargada por el docente: {{ $planificacion->docente->apellidos}}, {{ $planificacion->docente->nombres}}!<br>
-            Carrera: {{$planificacion->carrera->nombre}} (Plan {{$planificacion->plan->nombre}}, Resol {{$planificacion->plan->nro_resolucion}})<br>
-            Cátedra: <b>{{$planificacion->catedra->nombre}}</b><br>
-            Año Académico: <b>{{$planificacion->anio_academico}}</b><br>
-            Equipo docente: {{strip_tags($planificacion->equipo_docente)}}
+            Planificación cargada por el docente: {{ $planificaciones->docente->apellidos}}, {{ $planificaciones->docente->nombres}}!<br>
+            Carrera: {{$planificaciones->carrera->nombre}} (Plan {{$planificaciones->plan->nombre}}, Resol {{$planificaciones->plan->nro_resolucion}})<br>
+            Cátedra: <b>{{$planificaciones->catedra->nombre}}</b><br>
+            Año Académico: <b>{{$planificaciones->anio_academico}}</b><br>
+            Equipo docente: {{strip_tags($planificaciones->equipo_docente)}}
             <hr><br>
         </div>
         <div class="card-body">
             <strong>Programa de contenidos:</strong><br>
-            {!!strip_tags($planificacion->programa_contenidos, $allowable_tags)!!}
+            {!!strip_tags($planificaciones->programa_contenidos, $allowable_tags)!!}
         </div>
         <hr><br>
         <div class="card-body">
             <strong>Sistema de Evaluación:</strong><br>
-            {!!strip_tags($planificacion->sistema_evaluacion, $allowable_tags)!!}
+            {!!strip_tags($planificaciones->sistema_evaluacion, $allowable_tags)!!}
         </div>
         <hr><br>
         <div class="card-body">
             <strong>Programa de trabajos prácticos::</strong><br>
-            {!!strip_tags($planificacion->programa_practicos, $allowable_tags)!!}
+            {!!strip_tags($planificaciones->programa_practicos, $allowable_tags)!!}
         </div>
         <hr><br>
         <div class="card-body">
             <strong>Bibliografía:</strong><br>
-            {!!strip_tags($planificacion->bibliografia, $allowable_tags)!!}
+            {!!strip_tags($planificaciones->bibliografia, $allowable_tags)!!}
         </div>
     </div>
 </div>

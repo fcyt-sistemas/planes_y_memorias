@@ -12,15 +12,12 @@
                 position: fixed;
                 top: -150px;
                 left: 0px;
-                /*right: 0px;
-                height: 150px;
-                bottom: 100px;*/
             }
-        </style>
+            </style>
     </head>
     <body>
         <header>
-            <img style="width:30%;" src="data:image/png;base64,{{ $image }}">
+            <img src="data:image/png;base64,{{ $image }}"></img>
             <h2 style="text-align: center;">Reporte de Planificaciones de las Cátedras</h2>
         </header>
         <footer>

@@ -109,9 +109,6 @@ class FilterPlaniController extends Controller
     }
 
     public function busca(Request $request){
-
-      $estado = trim($request->get('estado'));
-      $materia = trim($request->get('materia'));
   
       $request->user()->authorizeRoles(['user', 'admin', 'control', 'lectura']);
       Auth::user()->hasRole('user') && \Session::get('tipoUsuario') == 'user';

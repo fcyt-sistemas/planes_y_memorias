@@ -18,42 +18,28 @@
 					@include('errors')
 					{!! Form::open(['action' => 'PlanificacionController@store','method' => 'POST'])!!}
 					{!! Form::hidden('docente_id', Auth::user()->docente->id) !!}
-					@if(Session::has('message'))
-						<div class="alert alert-success alert-sesses" role="alert">
-							<a class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
-							{{Session::get('message')}}
-						</div>
-                    @endif
-					<div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="sede_id">Sede:</label>
-                        </div>
-                        {!! Form::select('sede',$sedes, null,['id'=>'sedes','placeholder'=>'Seleccione una sede...'] ) !!}
-					</div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="carreras_seleccion">Carrera:</label>
-                        </div>
-                        {!! Form::select('carrera',$carreras, null,['id'=>'carreras','placeholder'=>'Seleccione una carrera'] ) !!}
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="sede_id">Catedra:</label>
-                        </div>
-                        {!! Form::select('catedra', $catedras,null, ['id'=>'catedras', 'placeholder'=>'Seleccione una cátedra']) !!}
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="sede_id">Año académico:</label>
-                        </div>
-                        {!! Form::number('anio_academico',date('Y'), ['class'=>'form-control']) !!}
-                    </div>
-					<div class="input-group mb-3">
-					  <div class="input-group-prepend">
-					    <label class="input-group-text" for="sede_id">Plan de estudios:</label>
+					{!! Form::hidden('sede_id', $input['sede']) !!}
+					{!! Form::hidden('carrera_id', $input['carrera']) !!}
+					{!! Form::hidden('catedra_id', $input['catedra']) !!}
+					{!! Form::hidden('anio_academico', $input['anio_academico']) !!}
+					{!! Form::hidden('plan_id', $plan[0]->id) !!}
+					  <div class="label">
+						<b>Sede:</b> {{ $sedes->nombre }}
 					  </div>
-					  {!! Form::select('plan_id',$planes,null, ['id'=>'planes','placeholder'=>'Seleccione un plan']) !!}
-					</div>
+					  <div class="label">
+						<b>Carrera:</b> {{ $carreras->nombre }} 
+					  </div>
+					  <div class="label">
+						<b>Carrera:</b> {{ $catedras->nombre }} 
+					  </div>
+					  <div class="label">
+						<b>Año Academico:</b> {{ $input['anio_academico'] }} 
+					  </div>
+					  <div class="label">
+						<b>Plan:</b> {{ $plan[0]->nombre }} 
+					  </div>
+					  <br>
+					
 					<div class="form-group">
 						{!! Form::label('equipo_docente', 'Equipo docente:') !!}
 						{!! Form::textarea('equipo_docente',null, ['class'=>'form-control', 'rows'=>'3']) !!}

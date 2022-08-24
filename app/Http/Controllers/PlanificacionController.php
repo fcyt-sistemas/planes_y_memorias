@@ -104,6 +104,7 @@ class PlanificacionController extends Controller
     } elseif (Auth::user()->hasRole('user') && \Session::get('tipoUsuario') == 'user') {
       //dd(Auth::user()->hasRole('user'),Auth::user()->getActualRole());
       //$planificaciones = Planificacion::where('docente_id',$request->user()->docente->id)->get();
+      
       $planificaciones = Planificacion::whereRaw('docente_id =' . $request->user()->docente->id . ' and prox_version is null')
         ->paginate(10);
       return view('usuario.planificaciones.index', compact('planificaciones'));
@@ -133,22 +134,41 @@ class PlanificacionController extends Controller
    * Show the form for creating a new resource.
    *
    * @return Response
-   */
+   * *
+   * */
+/*
   public function create()
   {
-    $catedras = Catedra::pluck('nombre', 'id');
+     $catedras = Catedra::pluck('nombre', 'id');
     $planes = Plan::pluck('nombre', 'id');
     $carreras = Carrera::pluck('nombre', 'id');
     $sedes = Sede::pluck('nombre', 'id');
-    
-
+    $input = $request->all();
+    $input = ['sede'=>'','carrera'=>'','catedra'=>'','anio_academico'=>''];
+    $plan = Plan::plan(1)->get('plan');
     Session::flash('message', 'Validado correctamente');
-    return view('usuario.planificaciones.create', compact('catedras', 'planes', 'carreras', 'sedes'));
+    return view('usuario.planificaciones.create', compact('input','catedras', 'plan', 'carreras', 'sedes'));
+  }
+*/
+  /**
+   * Store a newly created resource in storage.
+   *
+   * @return Response
+   */
+  
+  public function store(CreatePlanificacionRequest $request)
+  {
+   // dd($reuqest);
+    $plani = Planificacion::create($request->all());
+    //$plani = Planificacion::control($request->all());
+
+    $plani->save;
+    Session::flash('message', 'Planificación creada correctamente!');
+    return Redirect::to('/planificaciones');
   }
 
-  public function control(Request $request){
-
-    //busqueda
+  public function create(Request $request){
+   // dd($reuqest);
     $sede = trim($request->get('sede'));
     $carrera = trim($request->get('carrera'));
     $asignatura = trim($request->get('asignatura'));
@@ -162,26 +182,36 @@ class PlanificacionController extends Controller
     ->get();
 
     
-     $input = $request->all();
-    //dd(isset($planificaciones[0]));
-      $catedras = Catedra::pluck('nombre', 'id');
-      $planes = Plan::pluck('nombre', 'id');
-      $carreras = Carrera::pluck('nombre', 'id');
-      $sedes = Sede::pluck('nombre', 'id');
+      $input = $request->all();
+      //dd(isset($planificaciones[0]));
+     // dd($input['catedra'],['nombre']);
+      $catedras = Catedra::find($input['catedra'],['nombre']);
+      $planes = Plan::pluck('id','nombre');
+      $carreras = Carrera::find($input['carrera'],['nombre']);;
+      $sedes = Sede::find($input['sede'],['nombre']);;
       $anios = Planificacion::pluck('anio_academico')->unique()->sort();
       $anio_academico = array();
       foreach ($anios as $anio) {
         $anio_academico[$anio] = $anio;
       }
-    if(!isset($planificaciones[0])){
-      Session::flash('message', 'Validado Correctamente!');
-      return view('usuario.planificaciones.create', compact('catedras','planes','carreras','sedes'));
-    }
+      $plan = Plan::plan($input['carrera'])->get('plan');
+      //dd($input['anio_academico']);
+      if(!isset($planificaciones[0])){
+        return view('usuario.planificaciones.create', compact('input','catedras','plan','carreras','sedes','anio_academico'));
+      }
   
-    else{
-      Session::flash('message', 'Planificación ya existe!');
-      return view('usuario.planificaciones.filter', compact('planificaciones','input','catedras','planes','carreras','sedes','anio_academico'));
-    }
+      else{
+        $anios = Planificacion::pluck('anio_academico')->unique()->sort();
+        $anio_academico = array();
+        foreach ($anios as $anio) {
+          $anio_academico[$anio] = $anio;
+        }
+        $sedes = Sede::pluck('nombre', 'id');
+        $carreras = Carrera::pluck('nombre', 'id');
+        $catedras = Catedra::pluck('nombre', 'id');
+        Session::flash('message', 'Planificación ya existe!');
+        return view('usuario.planificaciones.filter', compact('planificaciones','input','catedras','carreras','sedes','anio_academico'));
+      }
   }
 
   /**
@@ -207,18 +237,7 @@ class PlanificacionController extends Controller
     $sedes = Sede::pluck('nombre', 'id');
     return view('usuario.planificaciones.edit', compact('planificaciones', 'catedras', 'planes', 'carreras', 'sedes'));
   }
-  /**
-   * Store a newly created resource in storage.
-   *
-   * @return Response
-   */
-  public function store(CreatePlanificacionRequest $request)
-  {
-    $plani = Planificacion::create($request->all());
-    //$plani->save;
-    Session::flash('message', 'Planificación creada correctamente!');
-    return Redirect::to('/planificaciones');
-  }
+
 
   /**
    * Poner a disposición del las autoridades
@@ -422,7 +441,8 @@ class PlanificacionController extends Controller
         $materia++;
       } 
       $aux= Plan::cant_materias($p->carrera->id)->get();
-      $cant_mat[$p->carrera->id] = $aux[0]->cant_materias;
+      
+      $cant_mat[$p->carrera->id] = 1;// $aux[0]['cant_materias'];
       
     }
     
@@ -448,7 +468,7 @@ class PlanificacionController extends Controller
     PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
 
     $image = base64_encode(file_get_contents(public_path('/images/logo-tr.png')));
-    return PDF::loadView('admin.planificaciones.impresion', ['image' => $image], compact('planificaciones'))->stream($planifilanificaciones->catedra->nombre . '-' . $planificaciones->anio_academico . '.pdf');
+    return PDF::loadView('admin.planificaciones.impresion', ['image' => $image], compact('planificaciones'))->stream($planificaciones->catedra->nombre . '-' . $planificaciones->anio_academico . '.pdf');
 
 //    $pdf = PDF::loadView('admin.planificaciones.impresion', compact('planificaciones'));
 //   return PDF::loadView('admin.planificaciones.impresion', compact('planificaciones'))->stream($planificaciones->catedra->n$

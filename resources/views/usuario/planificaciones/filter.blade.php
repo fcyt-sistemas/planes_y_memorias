@@ -6,7 +6,7 @@
             <div class="card">
                    <div class="card-header justify-content-between">
                     <div class="card-header">La Planificación que desea crear es para:</div>
-                    {!! Form::open(['action' => 'PlanificacionController@control','method' => 'POST'])!!}
+                    {!! Form::open(['action' => 'PlanificacionController@create','method' => 'GET'])!!}
                         @if(Session::has('message'))
                             <div class="alert alert-danger alert-danger" role="alert">
                                 <a class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
@@ -27,7 +27,7 @@
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <label class="input-group-text" for="sede_id">Catedra:</label>
+                                <label class="input-group-text" for="carreras_seleccion">Catedra:</label>
                             </div>
                             {!! Form::select('catedra', $catedras, $input['catedra'], ['style'=>'width: 800px', 'id'=>'catedras', 'placeholder'=>'Seleccione una cátedra']) !!}
                         </div>
@@ -37,7 +37,6 @@
                             </div>
                             {!! Form::select('anio_academico',$anio_academico,$input['anio_academico'],['style'=>'width: 700px', 'class'=>'custom-select','id'=>'anio_academico','placeholder'=>'Seleccione un año academico..'] ) !!}
                         </div>
-                
                         <br>                    
                             <div><button class="btn btn-primary" type="submit">Aceptar y Continuar</button>
                                 <div class="btn-group">

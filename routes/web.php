@@ -19,9 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/planificaciones/filter', 'FilterPlaniController@index')->name('planificaciones.filter');
-Route::get('usuario/planificaciones/create', 'PlanificacionController@create')->name('create');
-Route::post('usuario/planificaciones/create','PlanificacionController@control')->name('control');
-Route::post('usuario/memorias/create', 'MemoriaController@control')->name('controlM');
+
+//Route::get('usuario/planificaciones/create', 'PlanificacionController@create')->name('create');
+Route::post('usuario/planificaciones/store','PlanificacionController@store')->name('store');
+Route::post('usuario/planificaciones/create','PlanificacionController@create')->name('create');
+Route::get('usuario/memorias/create', 'MemoriaController@control')->name('controlM');
 Route::get('usuario/planificaciones/filter', 'FilterPlaniController@busca')->name('filterone');
 Route::get('usuario/memorias/filter', 'FilterMemoController@busca')->name('filtertwo');
 //Route::get('usuario/planificaciones/create', 'FilterPlaniController@control')->name('control');
