@@ -27,7 +27,7 @@
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <label class="input-group-text" for="carreras_seleccion">Catedra:</label>
+                                <label class="input-group-text" for="sede_id">Catedra:</label>
                             </div>
                             {!! Form::select('catedra', $catedras, $input['catedra'], ['style'=>'width: 800px', 'id'=>'catedras', 'placeholder'=>'Seleccione una cátedra']) !!}
                         </div>

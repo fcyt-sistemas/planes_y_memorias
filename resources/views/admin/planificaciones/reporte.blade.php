@@ -17,7 +17,7 @@
     </head>
     <body>
         <header>
-            <img src="data:image/png;base64,{{ $image }}"></img>
+            <img style="width:30%;" src="data:image/png;base64,{{ $image }}"></img>
             <h2 style="text-align: center;">Reporte de Planificaciones de las Cátedras</h2>
         </header>
         <footer>
@@ -28,8 +28,8 @@
                 <?php 
                     $c = ""; 
                     $m1 = 0; //Materias de la carrera X
-                    $e=0; //Entregadas de la carrera X;
-                    $a = 0; //aprobadas de la carrera X;
+                    $e=0; //Entregadas de la carrera X
+                    $a = 0; //aprobadas de la carrera X
                     $o = 0; // observadas de la carrera x 
                 ?>
                 @foreach ($plani as $p)

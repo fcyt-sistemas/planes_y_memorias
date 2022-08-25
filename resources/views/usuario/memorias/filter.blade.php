@@ -6,7 +6,7 @@
             <div class="card">
                    <div class="card-header justify-content-between">
                     <div class="card-header">La Memoria que desea crear es para:</div>
-                    {!! Form::open(['action' => 'MemoriaController@control','method' => 'POST'])!!}
+                    {!! Form::open(['action' => 'MemoriaController@create','method' => 'POST'])!!}
                         @if(Session::has('message'))
                             <div class="alert alert-danger alert-danger" role="alert">
                                 <a class="close" data-dismiss="alert" aria-hidden="true">&times;</a>

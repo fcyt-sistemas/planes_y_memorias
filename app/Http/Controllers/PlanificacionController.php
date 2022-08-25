@@ -168,7 +168,7 @@ class PlanificacionController extends Controller
   }
 
   public function create(Request $request){
-   // dd($reuqest);
+   
     $sede = trim($request->get('sede'));
     $carrera = trim($request->get('carrera'));
     $asignatura = trim($request->get('asignatura'));

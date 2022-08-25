@@ -113,7 +113,7 @@ class MemoriaController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function create()
+ /* public function create()
   {
     $catedras = Catedra::pluck('nombre', 'id');
     $planes = Plan::pluck('nombre', 'id');
@@ -121,11 +121,11 @@ class MemoriaController extends Controller
     $sedes = Sede::pluck('nombre', 'id');
 
     return view('usuario.memorias.create', compact('catedras', 'planes', 'carreras', 'sedes'));
-  }
+  }*/
 
-  public function control(Request $request){
+  public function create(Request $request){
 
-    //busqueda
+    
     $sede = trim($request->get('sede'));
     $carrera = trim($request->get('carrera'));
     $asignatura = trim($request->get('asignatura'));
@@ -138,26 +138,34 @@ class MemoriaController extends Controller
     ->anio($request->get('anio_academico'))
     ->get();
 
-    $input = $request->all();
-    //dd(isset($planificaciones[0]));
-      $catedras = Catedra::pluck('nombre', 'id');
-      $planes = Plan::pluck('nombre', 'id');
-      $carreras = Carrera::pluck('nombre', 'id');
-      $sedes = Sede::pluck('nombre', 'id');
+    
+      $input = $request->all();
+      $catedras = Catedra::find($input['catedra'],['nombre']);
+      $planes = Plan::pluck('id','nombre');
+      $carreras = Carrera::find($input['carrera'],['nombre']);;
+      $sedes = Sede::find($input['sede'],['nombre']);;
       $anios = Memoria::pluck('anio_academico')->unique()->sort();
       $anio_academico = array();
       foreach ($anios as $anio) {
         $anio_academico[$anio] = $anio;
       }
-    if(!isset($memorias[0])){
-      Session::flash('message', 'Validado Correctamente!');
-      return view('usuario.memorias.create', compact('catedras','planes','carreras','sedes'));
-    }
-   
-    else{
-      Session::flash('message', 'Memoria ya existe!');
-      return view('usuario.memorias.filter', compact('input','catedras','planes','carreras','sedes','anio_academico'));
-    }
+      $plan = Plan::plan($input['carrera'])->get('plan');
+      if(!isset($memorias[0])){
+        return view('usuario.memorias.create', compact('input','catedras','plan','carreras','sedes','anio_academico'));
+      }
+  
+      else{
+        $anios = Memoria::pluck('anio_academico')->unique()->sort();
+        $anio_academico = array();
+        foreach ($anios as $anio) {
+          $anio_academico[$anio] = $anio;
+        }
+        $sedes = Sede::pluck('nombre', 'id');
+        $carreras = Carrera::pluck('nombre', 'id');
+        $catedras = Catedra::pluck('nombre', 'id');
+        Session::flash('message', 'Memoria ya existe!');
+        return view('usuario.memorias.filter', compact('memorias','input','catedras','carreras','sedes','anio_academico'));
+      }
   }
 
   public function duplicar($id)

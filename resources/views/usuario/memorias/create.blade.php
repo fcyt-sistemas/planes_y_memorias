@@ -19,42 +19,28 @@
 					{!! Form::open(['action' => 'MemoriaController@store','method' => 'POST'])!!}
 					
 					{!! Form::hidden('docente_id', Auth::user()->docente->id) !!}
-					@if(Session::has('message'))
-						<div class="alert alert-success alert-sesses" role="alert">
-							<a class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
-							{{Session::get('message')}}
-						</div>
-                    @endif
-					<div class="input-group mb-3">
-					  <div class="input-group-prepend">
-					    <label class="input-group-text" for="sede_id">Sede:</label>
+					{!! Form::hidden('docente_id', Auth::user()->docente->id) !!}
+					{!! Form::hidden('sede_id', $input['sede']) !!}
+					{!! Form::hidden('carrera_id', $input['carrera']) !!}
+					{!! Form::hidden('catedra_id', $input['catedra']) !!}
+					{!! Form::hidden('anio_academico', $input['anio_academico']) !!}
+					{!! Form::hidden('plan_id', $plan[0]->id) !!}
+					  <div class="label">
+						<b>Sede:</b> {{ $sedes->nombre }}
 					  </div>
-					  {!! Form::select('sede_id',$sedes, null,['id'=>'sedes','placeholder'=>'Seleccione una sede...'] ) !!}
-					</div>
-					<div class="input-group mb-3">
-					  <div class="input-group-prepend">
-					    <label class="input-group-text" for="carrera_id">Carrera:</label>
+					  <div class="label">
+						<b>Carrera:</b> {{ $carreras->nombre }} 
 					  </div>
-					  {!! Form::select('carrera_id',$carreras, null, ['id'=>'carreras','placeholder'=>'Seleccione una carrera...'] ) !!}
-					</div>
-					<div class="input-group mb-3">
-					  <div class="input-group-prepend">
-					    <label class="input-group-text" for="plan_id">Plan de estudios:</label>
+					  <div class="label">
+						<b>Carrera:</b> {{ $catedras->nombre }} 
 					  </div>
-					  {!! Form::select('plan_id',$planes,null, ['id'=>'planes','placeholder'=>'Seleccione un plan...']) !!}
-					</div>
-					<div class="input-group mb-3">
-					  <div class="input-group-prepend">
-					    <label class="input-group-text" for="catedra_id">Catedra:</label>
+					  <div class="label">
+						<b>Año Academico:</b> {{ $input['anio_academico'] }} 
 					  </div>
-					  {!! Form::select('catedra_id', $catedras,null, ['id'=>'catedras', 'placeholder'=>'Seleccione una cátedra']) !!}
-					</div>
-					<div class="input-group mb-3">
-						  <div class="input-group-prepend">
-						    <span class="input-group-text" id="inputGroup-sizing-default">Anio académico de la Memoria:</span>
-						  </div>
-						  {!! Form::number('anio_academico',date("Y")-1, ['class'=>'form-control']) !!}
-					</div>
+					  <div class="label">
+						<b>Plan:</b> {{ $plan[0]->nombre }} 
+					  </div>
+					  <br>
 					<div class="form-group">
 						{!! Form::label('equipo_docente', 'Equipo docente:') !!}
 						{!! Form::textarea('equipo_docente',null, ['class'=>'form-control', 'rows'=>'3']) !!}
