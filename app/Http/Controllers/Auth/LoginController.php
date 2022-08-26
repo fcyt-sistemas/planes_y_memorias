@@ -57,7 +57,7 @@ class LoginController extends Controller
         $client = new Client(['headers' => ['Content-Type' => 'application/json']]);
         $datos_login = ['usuario' => $request->get('nro_documento'), 'clave' => $request->get('password')];
         $response=$client->post(
-            'http://10.0.60.27:8088/guarani/3.18/rest/password-uader', 
+            'http://g3testing.uader.edu.ar/guarani/3.18/rest/password-uader',
             ['auth' => ['guarani', 'abc123456'],'body' => json_encode($datos_login)],
         );
        
