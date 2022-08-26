@@ -58,7 +58,7 @@ class LoginController extends Controller
         $datos_login = ['usuario' => $request->get('nro_documento'), 'clave' => $request->get('password')];
         $response=$client->post(
             'http://g3testing.uader.edu.ar/guarani/3.18/rest/password-uader',
-            ['auth' => ['guarani', 'abc123456'],'body' => json_encode($datos_login)],
+            ['auth' => ['sicer1', 'vfr4%TGB'],'body' => json_encode($datos_login)],
         );
        
         $usuarios = User::id($request->get('nro_documento'))->get();
