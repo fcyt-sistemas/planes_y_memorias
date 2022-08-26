@@ -17,12 +17,9 @@
     </head>
     <body>
         <header>
-            <img style="width:30%;" src="data:image/png;base64,{{ $image }}"></img>
+            <img style="width:30%;" src="data:image/png;base64,{{ $image }}">
             <h2 style="text-align: center;">Reporte de Planificaciones de las Cátedras</h2>
         </header>
-        <footer>
-            {PAGE_NUM} of {PAGE_COUNT}
-        </footer>
         <main>
             <table style="width: 700px; padding: 5px;">
                 <?php 

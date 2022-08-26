@@ -443,13 +443,21 @@ class PlanificacionController extends Controller
       $aux= Plan::cant_materias($p->carrera->id)->get();
       
       $cant_mat[$p->carrera->id] = 1;// $aux[0]['cant_materias'];
-      
     }
-    
+    /*$dompdf = new DOMPDF();
+    $html="     <script type='text/php'>";  
+        if ( isset($pdf) ) { 
+            $font = Font_Metrics::get_font("yourfont", "normal");
+            $size = 9;
+            $y = $pdf->get_height() - 24;
+            $x = $pdf->get_width() - 15 - Font_Metrics::get_text_width("1/1", $font, $size);
+            $pdf->page_text($x, $y, "{PAGE_NUM}/{PAGE_COUNT}", $font, $size);
+        } 
+        $dompdf->load_html($html);
+    $dompdf->render();*/
     PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
     $image = base64_encode(file_get_contents(public_path('/images/logo-fcyt.png'))); 
     return PDF::loadView('admin.planificaciones.reporte', ['image' => $image], compact('planificaciones','plani','cant_mat','materia','ap','ob','en'))->stream('reporte.pdf');
-
   }
 
 

@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/planificaciones/filter', 'FilterPlaniController@index')->name('planificaciones.filter');
+Route::get('/planificaciones/{id}/ver', 'PlanificacionController@show');
 Route::post('usuario/planificaciones/store','PlanificacionController@store')->name('store');
 Route::post('usuario/planificaciones/create','PlanificacionController@create')->name('create');
 Route::post('usuario/memorias/create', 'MemoriaController@create')->name('createM');

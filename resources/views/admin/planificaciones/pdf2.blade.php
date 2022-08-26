@@ -13,7 +13,7 @@ $allowable_tags = '<a><b><i><strong><br><p><em><code><cite><h4><h5><h6><table><t
 <body>
 
 <div class="container">
-    <img src="{{ asset('images/logo-tr.png') }}">
+    <img style="width:30%;" src="data:image/png;base64,{{ $image }}">
     &nbsp;&nbsp;&nbsp;{{ config('app.name', 'Laravel') }}
     <br><br>
     <div class="card">

@@ -13,7 +13,7 @@
 </script>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-13">
             <div class="card">
                 <div class="card-header">Planificación cargada por el/la  docente {{ $planificaciones->docente->apellidos}}, {{ $planificaciones->docente->nombres}}! </div>
                   <div class="card-body">
