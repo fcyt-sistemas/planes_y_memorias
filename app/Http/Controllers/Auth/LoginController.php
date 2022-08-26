@@ -70,7 +70,7 @@ class LoginController extends Controller
             return Redirect::to('login');
         }   
         $id_users = $usuarios[0]->id;
-        $password = 1234;
+        $password = fcytadmin1234;
         $login = [$id_users,$password];
         //dd($id_users);
         $role_user = Role_User::Rol($id_users)->get(); //dd($role_user[0]->role_id);
