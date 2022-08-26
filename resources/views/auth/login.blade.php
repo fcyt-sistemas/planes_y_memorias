@@ -60,7 +60,7 @@
                                     {{ __('Acceso') }}
                                 </button>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <a class="btn btn-link" href="{{ url('http://guarani3w.uader.edu.ar/gestion/acceso/recuperar') }}">
                                     {{ __('¿Olvidó su contraseña?') }}
                                 </a>
                             </div>
