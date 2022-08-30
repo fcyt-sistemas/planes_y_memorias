@@ -119,6 +119,11 @@ class User extends Authenticatable
                   ->select('users.*');  
         }
     }
+    public function scopePass($query, $password){
+        if(trim($password!="")){
+            $query->where('password',$password);
+        }
+    }
 
 }
 

@@ -72,13 +72,14 @@
                         <a href="{{ url('home') }}">Inicio</a>
                     @else
                         <a href="{{ route('login') }}">Acceder</a>
+                        <a href="{{ route('register') }}">Registrarse</a>
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div>
-                    <img src="{{ asset('images/logo_full.jpg') }}" class="img-fluid"></img>
+                    <img src="{{ asset('images/logo_full.jpg') }}" class="img-fluid">
                 </div>
                 
                 <div class="title m-b-md">

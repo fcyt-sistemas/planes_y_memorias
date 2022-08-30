@@ -9,16 +9,21 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
+                        @if(Session::has('message'))
+                        <div class="alert alert-danger alert-dismissible" role="alert">
+                          <a class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                          {{Session::get('message')}}
+                        </div>
+                        @endif
                         <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('Correo Electrónico') }}</label>
+                            <label for="nro_documento" class="col-sm-4 col-form-label text-md-right">{{ __('D.N.I.') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="nro_documento" type="nro_documento" class="form-control{{ $errors->has('nro_documento') ? ' is-invalid' : '' }}" name="nro_documento" value="{{ old('nro_documento') }}" required autofocus>
 
-                                @if ($errors->has('email'))
+                                @if ($errors->has('nro_documento'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('nro_documento') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -36,8 +41,9 @@
                                     </span>
                                 @endif
                             </div>
+                            
                         </div>
-
+                       
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="checkbox">
